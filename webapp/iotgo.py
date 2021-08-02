@@ -1,4 +1,4 @@
-#this file was updated on Mon Aug  2 18:25:42 2021
+#this file was updated on Mon Aug  2 18:25:44 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide")
@@ -15,7 +15,7 @@ applogo, empty1, empty2, mission, persona, empty3, thing, empty4,empty5  = st.be
 with applogo:
     st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo3.png",width=250)
 with mission:
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/noMission.png", width=missionCardWidth)
+    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/EN-mission-8.png", width=missionCardWidth)
 with persona:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/noPersona.png", width=cardWidth)
 with thing:
