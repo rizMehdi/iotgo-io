@@ -1,8 +1,8 @@
-#this file was updated on Mon Aug  2 18:24:27 2021
+#this file was updated on Mon Aug  2 18:25:13 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide")
-urlis=""
+urlis="https://makecode.microbit.org/--docs?md=Not%20Enough%20cards%20to%20generate%20code"
 
 cardWidth=80
 pluscardwidht=80
@@ -43,7 +43,7 @@ with output_col:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
     st.write("then...")
     # ("Output1:")
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/noOutput.png", width=cardWidth)
+    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/EN-outputPhy-TurnOffLight.png", width=cardWidth)
     # ("Output2:")
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/noOutput.png", width=cardWidth)
     # ("Output3:")
