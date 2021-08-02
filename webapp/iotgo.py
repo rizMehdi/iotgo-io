@@ -1,13 +1,13 @@
-#this file was updated on Mon Aug  2 18:15:21 2021
+#this file was updated on Mon Aug  2 18:21:28 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide")
 urlis=""
 
-cardWidth=140
-pluscardwidht=140
-missionCardWidth=175
-vertiPaddingWidth=50
+cardWidth=70
+pluscardwidht=70
+missionCardWidth=65
+vertiPaddingWidth=25
 
 # st.markdown("""""")
 applogo, empty1, empty2, mission, persona, empty3, thing, empty4,empty5  = st.beta_columns(9)
