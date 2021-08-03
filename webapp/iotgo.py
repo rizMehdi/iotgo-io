@@ -54,9 +54,9 @@ with output_col:
 with code_col:
     # st.header("My code is:")
     components.iframe(urlis,width=900, height=1500, scrolling=True)
-
-with refreshbutton:
-    st.button("Refresh")
+   
 with editbutton:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=32)
     st.markdown("[Edit]("+urlis+")", unsafe_allow_html=True)
+    
+st.button("Refresh")
