@@ -21,7 +21,7 @@ with persona:
 with thing:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/EN-thing-art-7.png", width=cardWidth)
 
-input_col, plus_col, output_col,  code_col, emptycol , emptycol2 , emptycol3, emptycol4,emptycol5,emptycol56, emptycol561, emptycol561, emptycol6 = st.beta_columns(13)
+input_col, plus_col, output_col,  code_col, emptycol , emptycol2 , editbutton, emptycol4,emptycol5,emptycol56, emptycol6 = st.beta_columns(11)
 
 
 with input_col:    
@@ -57,6 +57,6 @@ with code_col:
 
 with emptycol5:
     st.button("Refresh")
-with emptycol6:
+with editbutton:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=32)
     st.markdown("[Edit]("+urlis+")", unsafe_allow_html=True)
