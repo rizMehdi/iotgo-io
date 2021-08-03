@@ -21,7 +21,7 @@ with persona:
 with thing:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/EN-thing-art-7.png", width=cardWidth)
 
-input_col, plus_col, output_col,  code_col,  emptycol , emptycol  , emptycol,emptycol5,refreshbutton, editbutton = st.beta_columns(11)
+input_col, plus_col, output_col,  code_col,  emptycol , emptycol  ,emptycol, emptycol,emptycol ,refreshbutton, editbutton = st.beta_columns(11)
 
 
 with input_col:    
