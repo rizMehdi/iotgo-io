@@ -20,6 +20,9 @@ with persona:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/EN-persona-7.png", width=cardWidth)
 with thing:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/EN-thing-art-7.png", width=cardWidth)
+with empty5:
+    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=32)
+    st.markdown("[Edit]("+urlis+")", unsafe_allow_html=True)
 
 input_col, plus_col, output_col,  code_col,  emptycol , emptycol  ,emptycol, emptycol,emptycol,emptycol, editbutton = st.beta_columns(11)
 
@@ -54,9 +57,6 @@ with output_col:
 with code_col:
     # st.header("My code is:")
     components.iframe(urlis,width=900, height=1500, scrolling=True)
-   
-with editbutton:
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=32)
-    st.markdown("[Edit]("+urlis+")", unsafe_allow_html=True)
+
     
 st.button("Refresh")
