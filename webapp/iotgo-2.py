@@ -1,31 +1,29 @@
-#this file was updated on Tue Aug  3 12:25:42 2021
+#this file was updated on Sun Aug 22 20:14:21 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide")
 urlis=""
 
-cardWidth=100
-pluscardwidht=100
-missionCardWidth=160
-vertiPaddingWidth=35
+cardWidth=140
+pluscardwidht=140
+missionCardWidth=175
+vertiPaddingWidth=50
 
 # st.markdown("""""")
-applogo, empty1, empty2, mission,empty3, persona, thing, empty4,edit  = st.beta_columns(9)
+applogo, empty1, empty2, mission, persona, empty3, thing, empty4,empty5  = st.beta_columns(9)
 
 with applogo:
-    st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo3.png",width=250)
+    st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo3.png",width=500)
 with mission:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/noMission.png", width=missionCardWidth)
 with persona:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/noPersona.png", width=cardWidth)
 with thing:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/noThing.png", width=cardWidth)
-with edit:
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60)
-    st.markdown("[Edit]("+urlis+")", unsafe_allow_html=True)
+
+input_col, plus_col, output_col,  code_col, emptycol , emptycol2 , emptycol3, emptycol4,emptycol5,emptycol6 = st.beta_columns(10)
 
 
-input_col, plus_col, output_col,  code_col, emptycol , emptycol , emptycol, emptycol,emptycol,emptycol,emptycol = st.beta_columns(11)
 with input_col:    
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
     st.write("when...")
@@ -37,7 +35,7 @@ with input_col:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/noInput.png", width=cardWidth)
 
 with plus_col:    
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth*2)
+    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/plus.png", width=pluscardwidht)
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/plus.png", width=pluscardwidht)
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/plus.png", width=pluscardwidht)    
@@ -55,8 +53,10 @@ with output_col:
 
 with code_col:
     # st.header("My code is:")
-    components.iframe(urlis,width=900, height=1500, scrolling=True)
+    components.iframe(urlis,width=1100, height=1500, scrolling=True)
 
-
-st.button("Refresh")
-
+with emptycol5:
+    st.button("Refresh (r)")
+with emptycol6:
+    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=32)
+    st.markdown("[Edit/Download]("+urlis+")", unsafe_allow_html=True)
