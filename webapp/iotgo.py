@@ -1,4 +1,4 @@
-#this file was updated on Sun Aug 22 23:11:32 2021
+#this file was updated on Sun Aug 22 23:11:50 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide")
@@ -30,7 +30,7 @@ with input_col:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
     st.write("if...")
     # ("Input1:")
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/EN-noInput.png", width=cardWidth)
+    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/EN-inputCloud-ForecastWindHigh.png", width=cardWidth)
     # ("Input2:")
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/EN-noInput.png", width=cardWidth)
     # ("Input3:")
@@ -56,6 +56,6 @@ with output_col:
 with code_col:
     # st.header("My code is:")
     #components.iframe(urlis,width=900, height=1500, scrolling=True)
-    st.header("Some cards are missing. Try again")
+
 
 st.button("Refresh")
