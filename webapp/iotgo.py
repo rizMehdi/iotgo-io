@@ -1,4 +1,4 @@
-#this file was updated on Sun Aug 22 21:03:44 2021
+#this file was updated on Sun Aug 22 21:03:46 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide")
@@ -30,7 +30,7 @@ with input_col:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
     st.write("if...")
     # ("Input1:")
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/EN-inputPhy-MovementPresent.png", width=cardWidth)
+    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/EN-noInput.png", width=cardWidth)
     # ("Input2:")
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/EN-noInput.png", width=cardWidth)
     # ("Input3:")
@@ -46,7 +46,7 @@ with output_col:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
     st.write("then...")
     # ("Output1:")
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/EN-ouputPhy-RotateMin.png", width=cardWidth)
+    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/EN-noOutput.png", width=cardWidth)
     # ("Output2:")
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/EN-noOutput.png", width=cardWidth)
     # ("Output3:")
