@@ -1,4 +1,4 @@
-#this file was updated on Sun Aug 22 20:15:24 2021
+#this file was updated on Sun Aug 22 20:15:31 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide")
