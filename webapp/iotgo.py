@@ -1,8 +1,8 @@
-#this file was updated on Sun Aug 22 21:50:57 2021
+#this file was updated on Sun Aug 22 21:51:04 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide")
-urlis="https://makecode.microbit.org/--docs?md=Not%20Enough%20cards%20to%20generate%20code"
+urlis="https://makecode.microbit.org/--docs?md=Not%20enough%20cards%20to%20generate%20code"
 
 cardWidth=100
 pluscardwidht=100
