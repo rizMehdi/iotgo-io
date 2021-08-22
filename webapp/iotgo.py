@@ -1,8 +1,8 @@
-#this file was updated on Sun Aug 22 22:42:57 2021
+#this file was updated on Sun Aug 22 22:43:01 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide")
-urlis="https://makecode.microbit.org/--docs?md=Some%20cards%20are%20missing.%20Try%20again"
+urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Amusic.setVolume%28127%29%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28input.compassHeading%28%29%20%3C%2045%29%7B%0A%20%20%20%20%20%20%20%20music.stopMelody%28MelodyStopOptions.All%29%0A%20%20%20%20%20%20%20%20basic.pause%28100%29%0A%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20music.startMelody%28music.builtInMelody%28Melodies.Birthday%29%2C%20MelodyOptions.Forever%29%0Abasic.pause%28100%29%0A%0A%0A%20%20%20%20%7D%0A%7D%29%0A%60%60%60%0A%0A"
 
 cardWidth=100
 pluscardwidht=100
