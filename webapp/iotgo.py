@@ -1,8 +1,8 @@
-#this file was updated on Sun Aug 22 20:42:54 2021
+#this file was updated on Sun Aug 22 20:43:49 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide")
-urlis="https://makecode.microbit.org/--docs?md=Not%20Enough%20cards%20to%20generate%20code"
+urlis=""
 
 cardWidth=100
 pluscardwidht=100
@@ -15,11 +15,11 @@ applogo, empty1, empty2, mission,empty3, persona, thing, empty4,edit  = st.beta_
 with applogo:
     st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo3.png",width=300)
 with mission:
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/EN-mission-1.png", width=missionCardWidth)
+    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/EN-noMission.png", width=missionCardWidth)
 with persona:
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/EN-persona-3.png", width=cardWidth)
+    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/EN-noPersona.png", width=cardWidth)
 with thing:
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/EN-thing-art-4.png", width=cardWidth)
+    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/EN-noThing.png", width=cardWidth)
 with edit:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60)
     st.markdown("[Edit]("+urlis+")", unsafe_allow_html=True)
