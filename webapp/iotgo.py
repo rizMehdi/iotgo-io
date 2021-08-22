@@ -1,8 +1,8 @@
-#this file was updated on Sun Aug 22 23:19:22 2021
+#this file was updated on Sun Aug 22 23:19:37 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide")
-urlis="https://makecode.microbit.org/--docs?md=%20%0A%0A%0A%0ASome%20cards%20are%20missing.%20Try%20again"
+urlis="https://makecode.microbit.org/--docs?md=Some%20cards%20are%20missing.%20Try%20again"
 
 cardWidth=100
 pluscardwidht=100
@@ -46,7 +46,7 @@ with output_col:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
     st.write("then...")
     # ("Output1:")
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/EN-noOutput.png", width=cardWidth)
+    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/EN-outputPhy-ShowSadIcon.png", width=cardWidth)
     # ("Output2:")
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/EN-noOutput.png", width=cardWidth)
     # ("Output3:")
