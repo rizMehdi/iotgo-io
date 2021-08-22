@@ -1,8 +1,8 @@
-#this file was updated on Sun Aug 22 23:21:21 2021
+#this file was updated on Sun Aug 22 23:21:25 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide")
-urlis="https://makecode.microbit.org/--docs?md=%20"
+urlis="https://makecode.microbit.org/--docs?md=%20Error%3A%20Some%20cards%20are%20missing.%20Try%20again"
 
 cardWidth=100
 pluscardwidht=100
