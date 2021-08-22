@@ -1,8 +1,8 @@
-#this file was updated on Sun Aug 22 22:58:54 2021
+#this file was updated on Sun Aug 22 23:06:07 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide")
-urlis="Some cards are missing. Try again"
+urlis=""
 
 cardWidth=100
 pluscardwidht=100
@@ -30,7 +30,7 @@ with input_col:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
     st.write("if...")
     # ("Input1:")
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/EN-inputPhy-GestureShake.png", width=cardWidth)
+    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/EN-noInput.png", width=cardWidth)
     # ("Input2:")
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/EN-noInput.png", width=cardWidth)
     # ("Input3:")
@@ -55,7 +55,7 @@ with output_col:
 
 with code_col:
     # st.header("My code is:")
-    components.iframe(urlis,width=900, height=1500, scrolling=True)
+    #components.iframe(urlis,width=900, height=1500, scrolling=True)
 
 
 st.button("Refresh")
