@@ -1,8 +1,8 @@
-#this file was updated on Tue Aug 24 21:09:56 2021
+#this file was updated on Tue Aug 24 21:10:10 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide")
-urlis=""
+urlis="https://makecode.microbit.org/--docs?md=%20"
 
 cardWidth=100
 pluscardwidht=100
@@ -30,7 +30,7 @@ with input_col:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
     st.write("se...")
     # ("Input1:")
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noInput.png", width=cardWidth)
+    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-inputPhy-SliderMaximum.png", width=cardWidth)
     # ("Input2:")
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noInput.png", width=cardWidth)
     # ("Input3:")
