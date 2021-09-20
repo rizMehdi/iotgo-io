@@ -1,8 +1,8 @@
-#this file was updated on Mon Sep 20 12:37:10 2021
+#this file was updated on Mon Sep 20 13:05:44 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide")
-urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Aradio.setGroup%28313%29%0Aradio.setTransmitSerialNumber%28true%29%0Aradio.sendValue%28%22b%23%22%2C%208903%29%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28input.compassHeading%28%29%20%3E%3D%20135%20%26%26%20input.compassHeading%28%29%20%3C%20225%29%7B%0A%20%20%20%20%20%20%20%20radio.sendString%28%22%23CiaoFromBari%22%29%0A%20%20%20%20%20%20%20%20basic.pause%28100%29%0A%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20basic.pause%28100%29%0A%0A%20%20%20%20%7D%0A%7D%29%0A%60%60%60%0A%0A"
+urlis=""
 
 cardWidth=100
 pluscardwidht=100
@@ -30,7 +30,7 @@ with input_col:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
     st.write("se...")
     # ("Input1:")
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-inputPhy-CompassSouth.png", width=cardWidth)
+    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noInput.png", width=cardWidth)
     # ("Input2:")
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noInput.png", width=cardWidth)
     # ("Input3:")
@@ -46,7 +46,7 @@ with output_col:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
     st.write("allora...")
     # ("Output1:")
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-outputCloud-TweetText.png", width=cardWidth)
+    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noOutput.png", width=cardWidth)
     # ("Output2:")
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noOutput.png", width=cardWidth)
     # ("Output3:")
