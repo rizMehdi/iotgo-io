@@ -1,8 +1,8 @@
-#this file was updated on Mon Sep 20 12:33:56 2021
+#this file was updated on Mon Sep 20 12:36:34 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide")
-urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Aservos.P1.setRange%280%2C180%29%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28input.acceleration%28Dimension.X%29%20%3E%3D%20511%29%7B%0A%20%20%20%20%20%20%20%20servos.P1.setAngle%28180%29%0A%20%20%20%20%20%20%20%20basic.pause%28100%29%0A%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20servos.P1.setAngle%280%29%0Abasic.pause%28100%29%0A%0A%0A%20%20%20%20%7D%0A%7D%29%0A%60%60%60%0A%0A%60%60%60package%0Aservo%0A%60%60%60"
+urlis=""
 
 cardWidth=100
 pluscardwidht=100
@@ -17,9 +17,9 @@ with applogo:
 with mission:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noMission.png", width=missionCardWidth)
 with persona:
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-persona-2.png", width=cardWidth)
+    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noPersona.png", width=cardWidth)
 with thing:
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-thing-art-0.png", width=cardWidth)
+    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noThing.png", width=cardWidth)
 with edit:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60)
     st.markdown("[Modifica]("+urlis+")", unsafe_allow_html=True)
@@ -30,7 +30,7 @@ with input_col:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
     st.write("se...")
     # ("Input1:")
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-inputPhy-AccelerationHigh.png", width=cardWidth)
+    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noInput.png", width=cardWidth)
     # ("Input2:")
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noInput.png", width=cardWidth)
     # ("Input3:")
@@ -46,9 +46,9 @@ with output_col:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
     st.write("allora...")
     # ("Output1:")
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-ouputPhy-RotateMax.png", width=cardWidth)
+    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noOutput.png", width=cardWidth)
     # ("Output2:")
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-outputCloud-TweetValue.png", width=cardWidth)
+    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noOutput.png", width=cardWidth)
     # ("Output3:")
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noOutput.png", width=cardWidth)
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
