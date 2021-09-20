@@ -1,8 +1,8 @@
-#this file was updated on Mon Sep 20 12:28:52 2021
+#this file was updated on Mon Sep 20 12:28:56 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide")
-urlis=""
+urlis="https://makecode.microbit.org/--docs?md=%20"
 
 cardWidth=100
 pluscardwidht=100
@@ -19,7 +19,7 @@ with mission:
 with persona:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noPersona.png", width=cardWidth)
 with thing:
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noThing.png", width=cardWidth)
+    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/ITblankcard.png", width=cardWidth)
 with edit:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60)
     st.markdown("[Modifica]("+urlis+")", unsafe_allow_html=True)
