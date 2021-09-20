@@ -1,8 +1,8 @@
-#this file was updated on Mon Sep 20 12:04:37 2021
+#this file was updated on Mon Sep 20 12:04:45 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide")
-urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Abasic.pause%281000%29%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28input.buttonIsPressed%28Button.A%29%29%7B%0A%20%20%20%20%20%20%20%20basic.showIcon%28IconNames.Happy%29%0A%20%20%20%20%20%20%20%20basic.pause%28100%29%0A%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20basic.clearScreen%28%29%0Abasic.pause%28100%29%0A%0A%0A%20%20%20%20%7D%0A%7D%29%0A%60%60%60%0A%0A"
+urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Abasic.pause%281000%29%0Aradio.setGroup%28313%29%0Aradio.onReceivedValue%28function%20%28name%2C%20value%29%20%7B%0A%20forecastName%20%3D%20name%0AforecastValue%20%3D%20value%0A%7D%29%0Alet%20forecastValue%20%3D%200%0Alet%20forecastName%20%3D%20%22none%22%20%0Aradio.setGroup%28313%29%0Aradio.setTransmitSerialNumber%28true%29%0Aradio.sendValue%28%22log4%22%2C%208791%29%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28input.buttonIsPressed%28Button.A%29%29%7B%0A%20%20%20%20%20%20%20%20basic.showIcon%28IconNames.Happy%29%0A%20%20%20%20%20%20%20%20basic.pause%28100%29%0A%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20basic.clearScreen%28%29%0Abasic.pause%28100%29%0A%0A%0A%20%20%20%20%7D%0A%20%20%20%20if%20%28forecastName%20%3D%3D%20%22precip%22%20%26%26%20forecastValue%20%3C%200.5%29%7B%0A%20%20%20%20%20%20%20%20radio.sendValue%28%22%26value%22%2CnoInput%29%0A%20%20%20%20%20%20%20%20basic.pause%28100%29%0A%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20radio.sendString%28%22get_precip%22%29%0Abasic.pause%282000%29%0A%0A%20%20%20%20%7D%0A%7D%29%0A%60%60%60%0A%0A"
 
 cardWidth=100
 pluscardwidht=100
