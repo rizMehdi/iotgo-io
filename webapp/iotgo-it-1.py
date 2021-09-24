@@ -1,8 +1,8 @@
-#this file was updated on Fri Sep 24 15:13:13 2021
+#this file was updated on Fri Sep 24 15:13:28 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide")
-urlis="https://makecode.microbit.org/--docs?md=%20"
+urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Aservos.P1.setRange%280%2C180%29%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28pins.digitalReadPin%28DigitalPin.P0%29%20%3E%3D%201%29%7B%0A%20%20%20%20%20%20%20%20servos.P1.setAngle%28180%29%0A%20%20%20%20%20%20%20%20basic.pause%281000%29%0A%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20servos.P1.setAngle%280%29%0Abasic.pause%28100%29%0A%0A%0A%20%20%20%20%7D%0A%7D%29%0A%60%60%60%0A%0A%60%60%60package%0Aservo%0A%60%60%60"
 
 cardWidth=100
 pluscardwidht=100
