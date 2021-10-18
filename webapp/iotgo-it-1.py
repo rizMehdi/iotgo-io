@@ -1,8 +1,8 @@
-#this file was updated on Mon Oct 18 10:09:40 2021
+#this file was updated on Mon Oct 18 10:09:41 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide")
-urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28input.isGesture%28Gesture.TiltLeft%29%20%7C%7C%20input.isGesture%28Gesture.TiltRight%29%29%7B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%0A%0A%20%20%20%20%7D%0A%7D%29%0A%60%60%60%0A%0A"
+urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28pins.digitalReadPin%28DigitalPin.P0%29%20%3D%3D%200%29%7B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%0A%0A%20%20%20%20%7D%0A%7D%29%0A%60%60%60%0A%0A"
 
 cardWidth=100
 pluscardwidht=100
