@@ -1,8 +1,8 @@
-#this file was updated on Mon Oct 18 09:20:59 2021
+#this file was updated on Mon Oct 18 09:22:08 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide")
-urlis="https://makecode.microbit.org/--docs?md=%20"
+urlis=""
 
 cardWidth=100
 pluscardwidht=100
@@ -19,7 +19,7 @@ with mission:
 with persona:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noPersona.png", width=cardWidth)
 with thing:
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-thing-art-5.png", width=cardWidth)
+    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noThing.png", width=cardWidth)
 with edit:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60)
     st.markdown("[Modifica]("+urlis+")", unsafe_allow_html=True)
@@ -30,7 +30,7 @@ with input_col:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
     st.write("se...")
     # ("Input1:")
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-inputPhy-CompassNorth.png", width=cardWidth)
+    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noInput.png", width=cardWidth)
     # ("Input2:")
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noInput.png", width=cardWidth)
     # ("Input3:")
@@ -46,7 +46,7 @@ with output_col:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
     st.write("allora...")
     # ("Output1:")
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-outputPhy-TurnRainbowLight.png", width=cardWidth)
+    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noOutput.png", width=cardWidth)
     # ("Output2:")
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noOutput.png", width=cardWidth)
     # ("Output3:")
