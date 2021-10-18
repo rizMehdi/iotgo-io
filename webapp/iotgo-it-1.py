@@ -1,8 +1,8 @@
-#this file was updated on Mon Oct 18 15:12:38 2021
+#this file was updated on Mon Oct 18 15:12:47 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide")
-urlis=""
+urlis="https://makecode.microbit.org/--docs?md=%20"
 
 cardWidth=100
 pluscardwidht=100
