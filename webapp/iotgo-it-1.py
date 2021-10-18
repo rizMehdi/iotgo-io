@@ -1,8 +1,8 @@
-#this file was updated on Mon Oct 18 10:10:20 2021
+#this file was updated on Mon Oct 18 10:10:24 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide")
-urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Abasic.pause%281000%29%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28%21input.buttonIsPressed%28Button.A%29%29%7B%0A%20%20%20%20%20%20%20%20pins.digitalWritePin%28DigitalPin.P1%2C0%29%0A%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20pins.digitalWritePin%28DigitalPin.P1%2C1%29%0Abasic.pause%28100%29%0A%0A%0A%20%20%20%20%7D%0A%7D%29%0A%60%60%60%0A%0A"
+urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28true%29%7B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%0A%0A%20%20%20%20%7D%0A%7D%29%0A%60%60%60%0A%0A"
 
 cardWidth=100
 pluscardwidht=100
@@ -15,7 +15,7 @@ applogo, empty1, empty2, mission,empty3, persona, thing, empty4,edit  = st.colum
 with applogo:
     st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo3.png",width=300)
 #with mission:
-#    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-mission-4.png", width=missionCardWidth)
+#    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noMission.png", width=missionCardWidth)
 #with persona:
 #    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noPersona.png", width=cardWidth)
 #with thing:
@@ -30,7 +30,7 @@ with input_col:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
     st.write("se...")
     # ("Input1:")
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-inputPhy-buttonNotpressed.png", width=cardWidth)
+    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noInput.png", width=cardWidth)
     # ("Input2:")
     #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noInput.png", width=cardWidth)
     # ("Input3:")
@@ -46,7 +46,7 @@ with output_col:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
     st.write("allora...")
     # ("Output1:")
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-outputPhy-TurnOffFan.png", width=cardWidth)
+    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noOutput.png", width=cardWidth)
     # ("Output2:")
     #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noOutput.png", width=cardWidth)
     # ("Output3:")
