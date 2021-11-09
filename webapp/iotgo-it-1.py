@@ -67,7 +67,7 @@ with output_col:
 #st.markdown(hide_full_screen, unsafe_allow_html=True) 
 
 #ROW-1---------------------------------------------------------------------------
-code,edit  = st.columns([10,1])
+code,e,edit  = st.columns([9,2,1])
 
 #applogo,edit  = st.beta_columns(3,5)
 
