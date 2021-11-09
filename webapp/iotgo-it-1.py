@@ -21,7 +21,7 @@ with edit:
     #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60)
     st.markdown("[Modifica]("+urlis+")", unsafe_allow_html=True)
 with null2:
-    components.iframe(urlis,width=900, height=1500, scrolling=True
+    components.iframe(urlis,width=900, height=1500, scrolling=True)
     
     
 input_col, plus_col, output_col,  code_col, emptycol , emptycol , emptycol, emptycol,emptycol,emptycol,emptycol = st.columns(11)
