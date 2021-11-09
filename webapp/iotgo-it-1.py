@@ -13,11 +13,11 @@ st.markdown(
     """
     <style>
     [data-testid="stSidebar"][aria-expanded="true"] > div:first-child {
-        width: 400px;
+        width: 450px;
     }
     [data-testid="stSidebar"][aria-expanded="false"] > div:first-child {
-        width: 400px;
-        margin-left: -400px;
+        width: 450px;
+        margin-left: -450px;
     }
     </style>
     """,
@@ -67,7 +67,7 @@ with output_col:
 #st.markdown(hide_full_screen, unsafe_allow_html=True) 
 
 #ROW-1---------------------------------------------------------------------------
-code,edit  = st.columns([8,1])
+code,edit  = st.columns([10,1])
 
 #applogo,edit  = st.beta_columns(3,5)
 
