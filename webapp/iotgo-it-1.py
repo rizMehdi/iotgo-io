@@ -25,7 +25,6 @@ st.markdown(
 <style type="text/css">
 
 iframe{
-position: absolute;
 top: 0;
 left: 0;
 width: 100%;
