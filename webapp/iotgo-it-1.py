@@ -110,11 +110,13 @@ with output_col:
 #with code:
 st.subheader("")
 components.iframe(urlis, height=1000, scrolling=True)    
-st.markdown("[Modifica questa codice]("+urlis+")", unsafe_allow_html=True)
 
-#with edit:
+edit,e  = st.columns([3,1])
+#st.markdown("[Modifica questa codice]("+urlis+")", unsafe_allow_html=True)
+
+with edit:
     #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60)
-    #st.markdown("[Modifica]("+urlis+")", unsafe_allow_html=True)
+    st.markdown("[Modifica questa codice]("+urlis+")", unsafe_allow_html=True)
     
 #ROW-2--------------------------------------------------------------------------- 
 
