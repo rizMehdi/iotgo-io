@@ -13,11 +13,11 @@ st.markdown(
     """
     <style>
     [data-testid="stSidebar"][aria-expanded="true"] > div:first-child {
-        width: 300px;
+        width: 350px;
     }
     [data-testid="stSidebar"][aria-expanded="false"] > div:first-child {
-        width: 300px;
-        margin-left: -300px;
+        width: 350px;
+        margin-left: -350px;
     }
     </style>
     """,
@@ -27,7 +27,7 @@ st.markdown(
 
 
 
-input_col, plus_col, output_col = st.sidebar.columns([1,1,1])
+input_col, plus_col, output_col,spacing = st.sidebar.columns([1,1,1,1])
 
 with input_col:    
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
