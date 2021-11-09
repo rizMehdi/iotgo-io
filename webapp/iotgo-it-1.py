@@ -32,6 +32,8 @@ def _alt_width_():
     height: 1200px;
     max-width: 1200px;
     min-width: 900px;
+    position: relative;
+    padding-bottom: 56.25%;
     }
     
     </style>
