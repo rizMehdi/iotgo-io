@@ -20,8 +20,6 @@ applogo, null1, null2, null3, null4, null5, null6,null7,edit  = st.columns(9)
 with edit:
     #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60)
     st.markdown("[Modifica]("+urlis+")", unsafe_allow_html=True)
-with null2:
-    components.iframe(urlis,width=900, height=1500, scrolling=True)
     
     
 input_col, plus_col, output_col,  code_col, emptycol , emptycol , emptycol, emptycol,emptycol,emptycol,emptycol = st.columns(11)
@@ -53,8 +51,8 @@ with output_col:
     #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noOutput.png", width=cardWidth)
     #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
 
-#with code_col:
+with code_col:
     # st.header("Il mio codice è:")
-    #components.iframe(urlis,width=900, height=1500, scrolling=True)
+    components.iframe(urlis,width=900, height=1500, scrolling=True)
 
 st.button("Refresh")
