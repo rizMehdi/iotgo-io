@@ -23,7 +23,7 @@ vertiPaddingWidth=35
 #st.markdown(hide_full_screen, unsafe_allow_html=True) 
 
 #ROW-1---------------------------------------------------------------------------
-applogo, null1, null2, null3, null4, null5, null6,null7,n8,n9edit  = st.columns(11)
+applogo, null1,edit  = st.columns([4,6,1])
 
 #applogo,edit  = st.beta_columns(3,5)
 
