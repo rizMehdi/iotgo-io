@@ -15,7 +15,7 @@ vertiPaddingWidth=35
 # st.markdown("""""")
 #applogo, null1, null2, null3, null4, null5, null6,null7,edit  = st.columns()
 
-applogo,edit  = st.columns(3,5)
+applogo,edit  = st.beta_columns(3,5)
 
 with applogo:
     st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo3.png",width=200)
