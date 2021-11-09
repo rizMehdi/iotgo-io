@@ -13,9 +13,9 @@ vertiPaddingWidth=35
 
 
 # st.markdown("""""")
-#applogo, null1, null2, null3, null4, null5, null6,null7,edit  = st.columns()
+applogo, null1, null2, null3, null4, null5, null6,null7,edit  = st.columns(9)
 
-applogo,edit  = st.beta_columns(3,5)
+#applogo,edit  = st.beta_columns(3,5)
 
 with applogo:
     st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo3.png",width=200)
@@ -24,7 +24,7 @@ with edit:
     st.markdown("[Modifica]("+urlis+")", unsafe_allow_html=True)
     
     
-input_col, plus_col, output_col,  code_col = st.columns(1,1,1,4,1)
+input_col, plus_col, output_col, code_col, emp1,emp2, emp3,emp4 ,emp5  = st.columns(9)
 
 with input_col:    
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
