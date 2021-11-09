@@ -18,8 +18,27 @@ def _max_width_(prcnt_width:int = 75):
                 """, 
                 unsafe_allow_html=True,
     )
+
     
- 
+st.markdown(
+    """
+<style type="text/css">
+
+iframe {
+width: 100%;
+height: 150px;
+max-width: 600px;
+min-width: 500px;
+}
+
+</style>
+
+    """,
+    unsafe_allow_html=True,
+)
+
+
+
 st.markdown(
     """
     <style>
