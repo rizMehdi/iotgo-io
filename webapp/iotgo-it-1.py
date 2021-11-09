@@ -13,7 +13,7 @@ vertiPaddingWidth=35
 applogo, null1, null2, null3, null4, null5, null6,null7,edit  = st.columns(9)
 
 with applogo:
-    st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo3.png",width=300)
+    st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo3.png",width=100)
 with edit:
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60)
     st.markdown("[Modifica]("+urlis+")", unsafe_allow_html=True)
