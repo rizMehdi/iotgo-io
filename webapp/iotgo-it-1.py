@@ -17,7 +17,7 @@ st.markdown(
     }
     [data-testid="stSidebar"][aria-expanded="false"] > div:first-child {
         width: 410px;
-        margin-left: -400px;
+        margin-left: -380px;
     }
     </style>
     """,
@@ -52,7 +52,9 @@ with output_col:
     # ("Output2:")
     #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-outputPhy-TurnRainbowLight.png", width=cardWidth) 
 
-
+with empty:
+    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60)
+    
 #st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo3.png",width=200)
 
 
