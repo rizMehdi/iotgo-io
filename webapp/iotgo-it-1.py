@@ -19,27 +19,29 @@ def _max_width_(prcnt_width:int = 75):
                 unsafe_allow_html=True,
     )
 
+
+def _alt_width_():    
+    st.markdown(
+        """
+    <style type="text/css">
+
+    iframe{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1200px;
+    max-width: 1200px;
+    min-width: 900px;
+    }
     
-st.markdown(
-    """
-<style type="text/css">
-
-iframe{
-top: 0;
-left: 0;
-width: 100%;
-height: 1200px;
-max-width: 1200px;
-min-width: 900px;
-
-}
-
-</style>
-
-    """,
-    unsafe_allow_html=True,
+    </style>
+    
+      """,
+      unsafe_allow_html=True,
+    )
 )
 
+_alt_width_()
 
 
 st.markdown(
@@ -57,7 +59,6 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-_max_width_(100)
 
 st.sidebar.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo-hor.png",width=380)
 
