@@ -28,7 +28,10 @@ iframe{
 top: 0;
 left: 0;
 width: 100%;
-height: 100%;
+height: 1200px;
+max-width: 1200px;
+min-width: 900px;
+
 }
 
 </style>
