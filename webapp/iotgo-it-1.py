@@ -27,7 +27,7 @@ st.markdown(
 
 
 
-st.sidebar.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo-hor.png",width=400)
+st.sidebar.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo-hor.png",width=380)
 
 input_col, plus_col, output_col, empty= st.sidebar.columns([1,1,1,1])
 
