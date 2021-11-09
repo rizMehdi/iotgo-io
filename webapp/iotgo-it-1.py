@@ -13,11 +13,11 @@ st.markdown(
     """
     <style>
     [data-testid="stSidebar"][aria-expanded="true"] > div:first-child {
-        width: 350px;
+        width: 400px;
     }
     [data-testid="stSidebar"][aria-expanded="false"] > div:first-child {
-        width: 350px;
-        margin-left: -350px;
+        width: 400px;
+        margin-left: -400px;
     }
     </style>
     """,
@@ -26,6 +26,7 @@ st.markdown(
 
 
 
+st.sidebar.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo-hor.png",width=400)
 
 input_col, plus_col, output_col,spacing = st.sidebar.columns([1,1,1,1])
 
@@ -66,18 +67,17 @@ with output_col:
 #st.markdown(hide_full_screen, unsafe_allow_html=True) 
 
 #ROW-1---------------------------------------------------------------------------
-applogo, null1,edit  = st.columns([4,6,1])
+code,edit  = st.columns([8,1])
 
 #applogo,edit  = st.beta_columns(3,5)
 
-with applogo:
-    st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo-hor.png",width=350)
+with code:
+    components.iframe(urlis,width=900, height=1000, scrolling=True)
 with edit:
     #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60)
     st.markdown("[Modifica]("+urlis+")", unsafe_allow_html=True)
     
 #ROW-2--------------------------------------------------------------------------- 
-components.iframe(urlis,width=900, height=1000, scrolling=True)
 
 
  
