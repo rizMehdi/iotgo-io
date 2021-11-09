@@ -27,7 +27,7 @@ def _alt_width_():
 
     iframe{
     top: 0;
-    left: -50;
+    left: 50;
     width: 100%;
     max-width: 1200px;
     min-width: 900px;
