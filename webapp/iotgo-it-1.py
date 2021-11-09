@@ -32,7 +32,7 @@ input_col, plus_col, output_col, empty= st.sidebar.columns([1,1,1,1])
 
 with input_col:    
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
-    st.write("se...")
+    st.write(" se...")
     # ("Input1:")
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-inputPhy-MovementPresent.png", width=cardWidth)
     # ("Input2:")
@@ -46,7 +46,7 @@ with plus_col:
 
 with output_col:    
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
-    st.write("allora...")
+    st.write(" allora...")
     # ("Output1:")
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-outputPhy-PlayHappyMusic.png", width=cardWidth)
     # ("Output2:")
