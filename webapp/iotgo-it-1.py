@@ -34,7 +34,9 @@ with edit:
     st.markdown("[Modifica]("+urlis+")", unsafe_allow_html=True)
     
 #ROW-2---------------------------------------------------------------------------
-input_col, plus_col, output_col,emp0, code_col, emp1,emp2, emp3,emp4 ,emp5 ,emp6  = st.columns(11)
+#input_col, plus_col, output_col,emp0, code_col, emp1,emp2, emp3,emp4 ,emp5 ,emp6  = st.columns(11)
+
+input_col, plus_col, output_col,emp0, code_col = st.columns([1,1,1,1,7])
 
 with input_col:    
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
@@ -66,7 +68,7 @@ with output_col:
 with code_col:
     # st.header("Il mio codice è:")
     #components.iframe(urlis, scrolling=True)
-    components.iframe(urlis,width=5000, height=1000, scrolling=True)
+    components.iframe(urlis,width=1000, height=1000, scrolling=True)
 
 
  
