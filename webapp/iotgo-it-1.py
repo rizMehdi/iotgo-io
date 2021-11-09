@@ -10,7 +10,7 @@ missionCardWidth=160
 vertiPaddingWidth=35
 
 # st.markdown("""""")
-applogo, null1, null2, ,null3, null4, null5, null6,null7,edit  = st.columns(9)
+applogo, null1, null2, null3, null4, null5, null6,null7,edit  = st.columns(9)
 
 with applogo:
     st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo3.png",width=300)
