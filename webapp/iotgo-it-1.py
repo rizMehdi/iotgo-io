@@ -68,7 +68,7 @@ with output_col:
 with code_col:
     # st.header("Il mio codice è:")
     #components.iframe(urlis, scrolling=True)
-    components.iframe(urlis,width=1000, height=1000, scrolling=True)
+    components.iframe(urlis,width=100%, height=1000, scrolling=True)
 
 
  
