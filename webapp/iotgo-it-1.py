@@ -23,15 +23,15 @@ vertiPaddingWidth=35
 #st.markdown(hide_full_screen, unsafe_allow_html=True) 
 
 #ROW-1---------------------------------------------------------------------------
-applogo, null1, null2, null3, null4, null5, null6,null7,edit  = st.columns(9)
+applogo, null1, null2, null3, null4, null5, null6,null7,n8,n9edit  = st.columns(11)
 
 #applogo,edit  = st.beta_columns(3,5)
 
 with applogo:
     st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo-hor.png",width=350)
-#with edit:
+with edit:
     #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60)
-    #st.markdown("[Modifica]("+urlis+")", unsafe_allow_html=True)
+    st.markdown("[Modifica]("+urlis+")", unsafe_allow_html=True)
     
 #ROW-2---------------------------------------------------------------------------
 input_col, plus_col, output_col,emp0, code_col, emp1,emp2, emp3,emp4 ,emp5 ,emp6  = st.columns(11)
@@ -67,8 +67,8 @@ with code_col:
     # st.header("Il mio codice è:")
     #components.iframe(urlis, scrolling=True)
     components.iframe(urlis,width=1200, height=1000, scrolling=True)
-with emp6:
-    st.markdown("[Modifica]("+urlis+")", unsafe_allow_html=True)
+
+
  
 #ROW-3---------------------------------------------------------------------------
 st.button("Refresh")
