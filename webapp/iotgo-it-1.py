@@ -13,6 +13,16 @@ vertiPaddingWidth=35
 
 
 # st.markdown("""""")
+
+hide_full_screen = '''
+<style>
+.element-container:nth-child(3) .overlayBtn {visibility: hidden;}
+.element-container:nth-child(12) .overlayBtn {visibility: hidden;}
+</style>
+'''
+st.markdown(hide_full_screen, unsafe_allow_html=True) 
+
+
 applogo, null1, null2, null3, null4, null5, null6,null7,edit  = st.columns(9)
 
 #applogo,edit  = st.beta_columns(3,5)
