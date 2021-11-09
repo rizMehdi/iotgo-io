@@ -39,7 +39,6 @@ def _alt_width_():
       """,
       unsafe_allow_html=True,
     )
-)
 
 _alt_width_()
 
