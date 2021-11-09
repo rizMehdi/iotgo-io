@@ -9,20 +9,22 @@ pluscardwidht=100
 missionCardWidth=160
 vertiPaddingWidth=35
 
-st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo3.png",width=200)
+#st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo3.png",width=200)
 
 
 # st.markdown("""""")
-applogo, null1, null2, null3, null4, null5, null6,null7,edit  = st.columns(9)
+#applogo, null1, null2, null3, null4, null5, null6,null7,edit  = st.columns()
 
-#with applogo:
-    #st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo3.png",width=200)
+applogo,edit  = st.columns(3,5)
+
+with applogo:
+    st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo3.png",width=200)
 with edit:
     #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60)
     st.markdown("[Modifica]("+urlis+")", unsafe_allow_html=True)
     
     
-input_col, plus_col, output_col,  code_col, emptycol , emptycol , emptycol, emptycol,emptycol,emptycol,emptycol = st.columns(11)
+input_col, plus_col, output_col,  code_col = st.columns(1,1,1,4,1)
 
 with input_col:    
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
