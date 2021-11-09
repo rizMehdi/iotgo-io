@@ -67,12 +67,12 @@ with output_col:
 #st.markdown(hide_full_screen, unsafe_allow_html=True) 
 
 #ROW-1---------------------------------------------------------------------------
-code,e,edit  = st.columns([9,2,1])
+#code,e,edit  = st.columns([9,2,1])
 
 #applogo,edit  = st.beta_columns(3,5)
 
 with code:
-    components.iframe(urlis,width=900, height=1000, scrolling=True)
+    components.iframe(urlis,width=800, height=1000, scrolling=True)
 #with edit:
     #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60)
     #st.markdown("[Modifica]("+urlis+")", unsafe_allow_html=True)
