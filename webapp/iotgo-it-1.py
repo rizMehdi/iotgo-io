@@ -28,7 +28,7 @@ st.markdown(
 
 st.sidebar.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo-hor.png",width=400)
 
-input_col, plus_col, output_col,spacing = st.sidebar.columns([1,1,1,1])
+input_col, plus_col, output_col = st.sidebar.columns([1,1,1])
 
 with input_col:    
     st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
