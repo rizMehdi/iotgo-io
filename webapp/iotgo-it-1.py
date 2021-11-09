@@ -74,7 +74,7 @@ with output_col:
 #applogo,edit  = st.beta_columns(3,5)
 
 #with code:
-components.iframe(urlis,width=700, height=1000, scrolling=True)
+components.iframe(urlis, scrolling=True)
 #with edit:
     #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60)
     #st.markdown("[Modifica]("+urlis+")", unsafe_allow_html=True)
