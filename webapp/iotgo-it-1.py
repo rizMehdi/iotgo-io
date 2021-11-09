@@ -9,53 +9,46 @@ pluscardwidht=130
 missionCardWidth=160
 vertiPaddingWidth=35
 
-st.markdown(
-    """
-    <style>
-    [data-testid="stSidebar"][aria-expanded="true"] > div:first-child {
-        width: 400px;
+
+html = """
+  <style>
+    .reportview-container {
+      flex-direction: row-reverse;
     }
-    [data-testid="stSidebar"][aria-expanded="false"] > div:first-child {
-        width: 400px;
-        margin-left: -400px;
+
+    header > .toolbar {
+      flex-direction: row-reverse;
+      left: 1rem;
+      right: auto;
     }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
 
+    .sidebar .sidebar-collapse-control,
+    .sidebar.--collapsed .sidebar-collapse-control {
+      left: auto;
+      right: 0.5rem;
+    }
 
+    .sidebar .sidebar-content {
+      transition: margin-right .3s, box-shadow .3s;
+    }
 
-st.sidebar.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo-hor.png",width=400)
+    .sidebar.--collapsed .sidebar-content {
+      margin-left: auto;
+      margin-right: -21rem;
+    }
 
-input_col, plus_col, output_col, empty= st.sidebar.columns([1,1,1,1])
+    @media (max-width: 991.98px) {
+      .sidebar .sidebar-content {
+        margin-left: auto;
+      }
+    }
+  </style>
+"""
+st.markdown(html, unsafe_allow_html=True)
 
-with input_col:    
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
-    st.write(" se...")
-    # ("Input1:")
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-inputPhy-MovementPresent.png", width=cardWidth)
-    # ("Input2:")
-    #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-inputPhy-LightlevelLow.png", width=cardWidth)
+st.title("New Sidebar")
+st.sidebar.text("I'm here now.")
 
-
-with plus_col:    
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth*2)
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/plus.png", width=pluscardwidht)
-    #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/plus.png", width=pluscardwidht) 
-
-with output_col:    
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
-    st.write(" allora...")
-    # ("Output1:")
-    st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-outputPhy-PlayHappyMusic.png", width=cardWidth)
-    # ("Output2:")
-    #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-outputPhy-TurnRainbowLight.png", width=cardWidth) 
-
-#with empty:
-   # st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60) 
-    
-#st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo3.png",width=200)
 
 
 # st.markdown("""""")
