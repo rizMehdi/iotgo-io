@@ -76,6 +76,7 @@ with output_col:
 #applogo,edit  = st.beta_columns(3,5)
 
 #with code:
+st.subheader("")
 components.iframe(urlis, height=1000, scrolling=True)    
 st.markdown("[Modifica questa codice]("+urlis+")", unsafe_allow_html=True)
 
