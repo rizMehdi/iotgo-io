@@ -65,6 +65,7 @@ with output_col:
 
 with code_col:
     # st.header("Il mio codice è:")
-    components.iframe(urlis,width=900, height=1500, scrolling=True)
+    components.iframe(urlis, scrolling=True)
+    #components.iframe(urlis,width=900, height=1500, scrolling=True)
 
 st.button("Refresh")
