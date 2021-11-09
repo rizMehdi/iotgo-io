@@ -29,9 +29,9 @@ applogo, null1,edit  = st.columns([4,6,1])
 
 with applogo:
     st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo-hor.png",width=350)
-#with edit:
+with edit:
     #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60)
-    #st.markdown("[Modifica]("+urlis+")", unsafe_allow_html=True)
+    st.markdown("[Modifica]("+urlis+")", unsafe_allow_html=True)
     
 #ROW-2---------------------------------------------------------------------------
 input_col, plus_col, output_col,emp0, code_col, emp1,emp2, emp3,emp4 ,emp5 ,emp6  = st.columns(11)
@@ -66,7 +66,7 @@ with output_col:
 with code_col:
     # st.header("Il mio codice è:")
     #components.iframe(urlis, scrolling=True)
-    components.iframe(urlis,width=900, height=1000, scrolling=True)
+    components.iframe(urlis,width=1200, height=1000, scrolling=True)
 
 
  
