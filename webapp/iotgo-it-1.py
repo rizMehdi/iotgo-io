@@ -111,7 +111,7 @@ with output_col:
 st.subheader("")
 components.iframe(urlis, height=1000, scrolling=True)    
 
-edit,e  = st.columns([3,1])
+e,edit  = st.columns([3,1])
 #st.markdown("[Modifica questa codice]("+urlis+")", unsafe_allow_html=True)
 
 with edit:
