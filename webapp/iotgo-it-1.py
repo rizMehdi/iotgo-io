@@ -13,11 +13,11 @@ st.markdown(
     """
     <style>
     [data-testid="stSidebar"][aria-expanded="true"] > div:first-child {
-        width: 450px;
+        width: 430px;
     }
     [data-testid="stSidebar"][aria-expanded="false"] > div:first-child {
-        width: 450px;
-        margin-left: -450px;
+        width: 430px;
+        margin-left: 430px;
     }
     </style>
     """,
@@ -73,9 +73,9 @@ code,edit  = st.columns([10,1])
 
 with code:
     components.iframe(urlis,width=900, height=1000, scrolling=True)
-with edit:
+#with edit:
     #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60)
-    st.markdown("[Modifica]("+urlis+")", unsafe_allow_html=True)
+    #st.markdown("[Modifica]("+urlis+")", unsafe_allow_html=True)
     
 #ROW-2--------------------------------------------------------------------------- 
 
