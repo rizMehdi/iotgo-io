@@ -12,7 +12,7 @@ page = PAGES[selection]
 page.app()
 
 
-def tabs(default_tabs = [], default_active_tab=0):
+def tabs(default_tabs = [], default_active_tab=0):#this hack overwrites radio buttons.
         if not default_tabs:
             return None
         active_tab = st.radio("", default_tabs, index=default_active_tab, key='tabs')
@@ -42,4 +42,4 @@ def tabs(default_tabs = [], default_active_tab=0):
         return active_tab
 
 #active_tab = tabs(["app1", "app2"])
-st.write(active_tab)
+#st.write(active_tab)
