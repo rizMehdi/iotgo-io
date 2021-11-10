@@ -41,5 +41,5 @@ def tabs(default_tabs = [], default_active_tab=0):
         """,unsafe_allow_html=True)        
         return active_tab
 
-active_tab = tabs(["app1", "app2"])
+#active_tab = tabs(["app1", "app2"])
 st.write(active_tab)
