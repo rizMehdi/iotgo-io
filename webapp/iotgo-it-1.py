@@ -1,8 +1,8 @@
-                #this file was updated on Wed Nov 10 09:30:03 2021
+                #this file was updated on Wed Nov 10 09:45:50 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide",initial_sidebar_state="expanded")
-urlis="https://makecode.microbit.org/--docs?md=%20"
+urlis=""
 
 cardWidth=130
 pluscardwidht=130
@@ -47,7 +47,7 @@ with input_col:
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
 	st.write(" se...")
 	# ("Input1:")
-	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-inputPhy-NoiseHigh.png", width=cardWidth) 
+	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noInput.png", width=cardWidth) 
 with plus_col:    
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth*2)
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/plus.png", width=pluscardwidht) 
@@ -55,7 +55,7 @@ with output_col:
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
 	st.write(" allora...")
 	# ("Output1:")
-	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-outputPhy-ShowHappyIcon.png", width=cardWidth)
+	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noOutput.png", width=cardWidth)
 
 
 st.subheader("")
