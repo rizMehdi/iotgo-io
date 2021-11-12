@@ -57,7 +57,7 @@ with output_col:
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-outputPhy-TurnOnLight.png", width=cardWidth)
 
 
-emp,jscode  = st.columns([1])
+jscode  = st.columns(1)
 with jscode:
 	st.subheader("")
 	st.code('''basic.pause(1000)
