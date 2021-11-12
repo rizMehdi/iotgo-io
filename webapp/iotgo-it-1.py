@@ -56,7 +56,7 @@ with output_col:
 	# ("Output1:")
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-outputPhy-PlayHappyMusic.png", width=cardWidth)
 
-jscode,em  = st.columns([3,1])
+jscode,em  = st.columns([1,1])
 with jscode:
 	st.subheader("")
 	st.code('''music.setVolume(255)
