@@ -56,33 +56,27 @@ with output_col:
 	# ("Output1:")
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-outputPhy-PlayHappyMusic.png", width=cardWidth)
 
+jscode,em  = st.columns([3,1])
+with jscode:
+	st.subheader("")
+	st.code('''music.setVolume(255)
+	basic.forever(function () {
+    	if (input.soundLevel() < 128){
+     	   music.startMelody(music.builtInMelody(Melodies.Birthday), MelodyOptions.Forever)
+ 	   basic.pause(1000)
+  	  } else {
+        	music.stopMelody(MelodyStopOptions.All)
+	basic.pause(1000)
+    	}
+	})''',language="javascript")
 
-st.subheader("")
-st.markdown(
-        """
-        <style> .font{
-        font-size:50px;}
-        </style>
-        """,
-        unsafe_allow_html=True,
-        )
-st.code('''music.setVolume(255)
-basic.forever(function () {
-    if (input.soundLevel() < 128){
-        music.startMelody(music.builtInMelody(Melodies.Birthday), MelodyOptions.Forever)
- basic.pause(1000)
-    } else {
-        music.stopMelody(MelodyStopOptions.All)
-basic.pause(1000)
-    }
-})''',language="javascript")
+e,edit  = st.columns([1,1])
+with edit:
+        #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60)
+        st.markdown("[Modifica questa codice]("+urlis+")", unsafe_allow_html=True)
 
 st.subheader("")
 components.iframe(urlis, height=1000, scrolling=True)    
 
-e,edit  = st.columns([3,1])
-with edit:
-        #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60)
-        st.markdown("[Modifica questa codice]("+urlis+")", unsafe_allow_html=True)
 
 #st.button("Refresh")
