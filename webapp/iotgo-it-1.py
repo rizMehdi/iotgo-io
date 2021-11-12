@@ -57,25 +57,19 @@ with output_col:
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-outputPhy-TurnOnLight.png", width=cardWidth)
 
 
-st.subheader("")
-st.markdown(
-        """
-        <style> .font{
-        font-size:50px;}
-        </style>
-        """,
-        unsafe_allow_html=True,
-        )
-st.code('''basic.pause(1000)
-basic.forever(function () {
-    if (input.acceleration(Dimension.X) < 511){
-        pins.digitalWritePin(DigitalPin.P1,1)
-basic.pause(1000)
-    } else {
-        pins.digitalWritePin(DigitalPin.P1,0)
-basic.pause(1000)
-    }
-})''',language="javascript")
+emp,jscode  = st.columns([3,1])
+with jscode:
+	st.subheader("")
+	st.code('''basic.pause(1000)
+	basic.forever(function () {
+	    if (input.acceleration(Dimension.X) < 511){
+	        pins.digitalWritePin(DigitalPin.P1,1)
+		basic.pause(1000)
+	    } else {
+	        pins.digitalWritePin(DigitalPin.P1,0)
+		basic.pause(1000)
+    	}
+	})''',language="javascript")
 
 st.subheader("")
 components.iframe(urlis, height=1000, scrolling=True)    
