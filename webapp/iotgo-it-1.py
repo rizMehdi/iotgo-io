@@ -71,12 +71,13 @@ with jscode:
     	}
 	})''',language="javascript")
 
-st.subheader("")
-components.iframe(urlis, height=1000, scrolling=True)    
-
-e,edit  = st.columns([3,1])
+e,edit  = st.columns([1,1])
 with edit:
         #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60)
         st.markdown("[Modifica questa codice]("+urlis+")", unsafe_allow_html=True)
+
+st.subheader("")
+components.iframe(urlis, height=1000, scrolling=True)    
+
 
 #st.button("Refresh")
