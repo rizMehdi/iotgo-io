@@ -1,4 +1,4 @@
-                #this file was updated on Fri Nov 12 05:21:03 2021
+                #this file was updated on Fri Nov 12 05:22:03 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide",initial_sidebar_state="expanded")
@@ -49,7 +49,7 @@ st.sidebar.markdown(
 
 
 st.subheader("")
-st.code('''''',language=javascript)
+st.code('''''',language="javascript")
 st.subheader("")
 components.iframe(urlis, height=1000, scrolling=True)    
 
