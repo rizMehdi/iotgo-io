@@ -1,8 +1,8 @@
-                #this file was updated on Fri Nov 12 05:51:37 2021
+                #this file was updated on Fri Nov 12 12:04:21 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide",initial_sidebar_state="expanded")
-urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Abasic.pause%281000%29%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28input.acceleration%28Dimension.X%29%20%3C%20511%29%7B%0A%20%20%20%20%20%20%20%20pins.digitalWritePin%28DigitalPin.P1%2C1%29%0Abasic.pause%281000%29%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20pins.digitalWritePin%28DigitalPin.P1%2C0%29%0Abasic.pause%281000%29%0A%20%20%20%20%7D%0A%7D%29%0A%60%60%60%0A%0A"
+urlis=""
 cardWidth=130
 pluscardwidht=130
 missionCardWidth=160
@@ -41,43 +41,30 @@ st.markdown(
 
 
 st.sidebar.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo-hor.png",width=380)
-input_col, plus_col, output_col, empty= st.sidebar.columns([1,1,1,1])
-with input_col:    
-	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
-	st.write(" se...")
-	# ("Input1:")
-	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-inputPhy-AccelerationLow.png", width=cardWidth) 
-with plus_col:    
-	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth*2)
-	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/plus.png", width=pluscardwidht) 
-with output_col:    
-	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
-	st.write(" allora...")
-	# ("Output1:")
-	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-outputPhy-TurnOnLight.png", width=cardWidth)
+st.sidebar.markdown(
+    """
+    Scansiona una carta codice per iniziare, quindi scansiona le carte di input e output // Scan a code card to start and then scan input and output cards. 
+    """
+    )
 
 
-jscode,em  = st.columns([3,1])
-with jscode:
-	st.subheader("")
-	st.code('''basic.pause(1000)
-	basic.forever(function () {
-	    if (input.acceleration(Dimension.X) < 511){
-	        pins.digitalWritePin(DigitalPin.P1,1)
-		basic.pause(1000)
-	    } else {
-	        pins.digitalWritePin(DigitalPin.P1,0)
-		basic.pause(1000)
-    	}
-	})''',language="javascript")
-
-e,edit  = st.columns([1,1])
-with edit:
-        #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60)
-        st.markdown("[Modifica questa codice]("+urlis+")", unsafe_allow_html=True)
+st.subheader("")
+st.markdown(
+        """
+        <style> .font{
+        font-size:50px;}
+        </style>
+        """,
+        unsafe_allow_html=True,
+        )
+st.code('''''',language="javascript")
 
 st.subheader("")
 components.iframe(urlis, height=1000, scrolling=True)    
 
+e,edit  = st.columns([3,1])
+with edit:
+        #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60)
+        st.markdown("[Modifica questa codice]("+urlis+")", unsafe_allow_html=True)
 
 #st.button("Refresh")
