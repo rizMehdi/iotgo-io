@@ -56,10 +56,9 @@ with output_col:
 	# ("Output1:")
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-outputPhy-PlayHappyMusic.png", width=cardWidth)
 
-jscode,em  = st.columns([1,1])
-with jscode:
-	st.subheader("")
-	st.code('''music.setVolume(255)
+
+st.subheader("")
+st.code('''music.setVolume(255)
 	basic.forever(function () {
     	if (input.soundLevel() < 128){
      	   music.startMelody(music.builtInMelody(Melodies.Birthday), MelodyOptions.Forever)
