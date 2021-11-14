@@ -1,8 +1,8 @@
-                #this file was updated on Sun Nov 14 20:32:46 2021
+                #this file was updated on Sun Nov 14 20:32:47 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide",initial_sidebar_state="expanded")
-urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Abasic.pause%281000%29%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28input.isGesture%28Gesture.TiltLeft%29%20%7C%7C%20input.isGesture%28Gesture.TiltRight%29%29%7B%0A%20%20%20%20%20%20%20%20pins.digitalWritePin%28DigitalPin.P1%2C0%29%0Abasic.pause%281000%29%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20pins.digitalWritePin%28DigitalPin.P1%2C1%29%0Abasic.pause%281000%29%0A%20%20%20%20%7D%0A%20%20%20%20if%20%28pins.digitalReadPin%28DigitalPin.P0%29%20%3E%3D%201%29%7B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%7D%0A%7D%29%0A%60%60%60%0A%0A"
+urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Abasic.pause%281000%29%0Aradio.setGroup%281%29%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28input.isGesture%28Gesture.TiltLeft%29%20%7C%7C%20input.isGesture%28Gesture.TiltRight%29%29%7B%0A%20%20%20%20%20%20%20%20pins.digitalWritePin%28DigitalPin.P1%2C0%29%0Abasic.pause%281000%29%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20pins.digitalWritePin%28DigitalPin.P1%2C1%29%0Abasic.pause%281000%29%0A%20%20%20%20%7D%0A%20%20%20%20if%20%28pins.digitalReadPin%28DigitalPin.P0%29%20%3E%3D%201%29%7B%0A%20%20%20%20%20%20%20%20radio.sendValue%28%22noInput%22%2CnoInput%29%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%0Abasic.pause%281000%29%0A%20%20%20%20%7D%0A%7D%29%0A%60%60%60%0A%0A"
 cardWidth=130
 pluscardwidht=130
 missionCardWidth=160
@@ -72,6 +72,7 @@ st.markdown(
         unsafe_allow_html=True,
         )
 st.code('''basic.pause(1000)
+radio.setGroup(1)
 basic.forever(function () {
     if (input.isGesture(Gesture.TiltLeft) || input.isGesture(Gesture.TiltRight)){
         pins.digitalWritePin(DigitalPin.P1,0)
@@ -81,9 +82,10 @@ basic.pause(1000)
 basic.pause(1000)
     }
     if (pins.digitalReadPin(DigitalPin.P0) >= 1){
-
+        radio.sendValue("noInput",noInput)
     } else {
 
+basic.pause(1000)
     }
 })''',language="javascript")
 
