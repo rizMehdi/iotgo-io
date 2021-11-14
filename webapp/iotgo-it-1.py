@@ -41,7 +41,7 @@ st.markdown(
 
 
 st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo-hor.png",width=380)
-input_col, plus_col, output_col, empty= st.columns([1,1,1,1])
+input_col, plus_col, output_col, code_col= st.columns([1,1,1,4])
 with input_col:    
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
 	st.write(" se...")
@@ -61,10 +61,11 @@ with output_col:
 	# ("Output2:")
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-sendData.png", width=cardWidth) 
 
-st.subheader("")
-st.subheader("")
-st.subheader("")
-st.markdown(
+with code_col:
+	st.subheader("")
+	st.subheader("")
+	st.subheader("")
+	st.markdown(
         """
         <style> .font{
         font-size:50px;}
@@ -72,30 +73,30 @@ st.markdown(
         """,
         unsafe_allow_html=True,
         )
-st.code('''radio.setGroup(1)
-let recieved = 0
-music.setVolume(255)
-radio.setGroup(1)
-basic.forever(function () {
-    if (recieved == 1){
-        music.stopMelody(MelodyStopOptions.All)
-	basic.pause(1000)
-    } else {
-        music.startMelody(music.builtInMelody(Melodies.Birthday), MelodyOptions.Forever)
-	basic.pause(1000)
-    }
-    if (pins.digitalReadPin(DigitalPin.P2) >= 1){
-        radio.sendValue("movementPresent",1)
-    } else {
-        basic.pause(1000)
-    }
-})
-radio.onReceivedValue(function (name, value) {
-	if (name == "replace_me" && value == 1) {
-		recieved = 1
-	}
-})
-''',language="javascript")
+	st.code('''radio.setGroup(1)
+	let recieved = 0
+	music.setVolume(255)
+	radio.setGroup(1)
+	basic.forever(function () {
+	    if (recieved == 1){
+	        music.stopMelody(MelodyStopOptions.All)
+		basic.pause(1000)
+	    } else {
+	        music.startMelody(music.builtInMelody(Melodies.Birthday), MelodyOptions.Forever)
+		basic.pause(1000)
+	    }
+	    if (pins.digitalReadPin(DigitalPin.P2) >= 1){
+ 	       radio.sendValue("movementPresent",1)
+ 	   } else {
+ 	       basic.pause(1000)
+ 	   }
+	})
+	radio.onReceivedValue(function (name, value) {
+		if (name == "replace_me" && value == 1) {
+			recieved = 1
+		}
+	})
+	''',language="javascript")
 
 
 e,edit  = st.columns([1,1])
