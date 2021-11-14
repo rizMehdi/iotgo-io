@@ -64,7 +64,6 @@ with output_col:
 with code_col:
 	st.subheader("")
 	st.subheader("")
-	st.subheader("")
 	st.markdown(
         """
         <style> .font{
