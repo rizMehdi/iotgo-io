@@ -1,8 +1,8 @@
-                #this file was updated on Sun Nov 14 21:49:48 2021
+                #this file was updated on Sun Nov 14 21:49:49 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide",initial_sidebar_state="expanded")
-urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Aradio.setGroup%281%29%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28input.lightLevel%28%29%20%3C%20127%29%7B%0A%20%20%20%20%20%20%20%20radio.sendValue%28%22lightlevelLow%22%2C1%29%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20basic.pause%281000%29%0A%20%20%20%20%7D%0A%7D%29%0A%60%60%60%0A%0A"
+urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Aradio.setGroup%281%29%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28input.buttonIsPressed%28Button.A%29%29%7B%0A%20%20%20%20%20%20%20%20radio.sendValue%28%22buttonPress%22%2C1%29%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20basic.pause%281000%29%0A%20%20%20%20%7D%0A%7D%29%0A%60%60%60%0A%0A"
 cardWidth=130
 pluscardwidht=130
 missionCardWidth=160
@@ -68,8 +68,8 @@ st.markdown(
         )
 st.code('''radio.setGroup(1)
 basic.forever(function () {
-    if (input.lightLevel() < 127){
-        radio.sendValue("lightlevelLow",1)
+    if (input.buttonIsPressed(Button.A)){
+        radio.sendValue("buttonPress",1)
     } else {
         basic.pause(1000)
     }
