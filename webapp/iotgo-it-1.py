@@ -1,4 +1,4 @@
-                #this file was updated on Sun Nov 14 22:06:06 2021
+                #this file was updated on Sun Nov 14 22:06:08 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide",initial_sidebar_state="expanded")
@@ -48,7 +48,7 @@ with input_col:
 	# ("Input1:")
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-inputPhy-GestureShake.png", width=cardWidth)
 	# ("Input2:")
-	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-recieveData.png", width=cardWidth)
+	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-inputPhy-SliderMinimum.png", width=cardWidth)
 with plus_col:    
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth*2)
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/plus.png", width=pluscardwidht)
