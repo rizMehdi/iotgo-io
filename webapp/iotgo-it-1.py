@@ -1,8 +1,8 @@
-                #this file was updated on Sun Nov 14 22:06:34 2021
+                #this file was updated on Sun Nov 14 22:06:35 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide",initial_sidebar_state="expanded")
-urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Aradio.setGroup%281%29%0Alet%20strip%20%3D%20neopixel.create%28DigitalPin.P1%2C7%2CNeoPixelMode.RGB%29%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28input.isGesture%28Gesture.Shake%29%29%7B%0A%20%20%20%20%20%20%20%20radio.sendValue%28%22sliderLow%22%2C1%29%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20basic.pause%281000%29%0A%20%20%20%20%7D%0A%20%20%20%20if%20%28pins.analogReadPin%28AnalogPin.P0%29%20%3C%3D%20100%29%7B%0A%20%20%20%20%20%20%20%20strip.showColor%28neopixel.colors%28NeoPixelColors.Black%29%29%0A%09basic.pause%281000%29%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20strip.showRainbow%281%2C%20360%29%0A%09basic.pause%281000%29%0A%20%20%20%20%7D%0A%7D%29%0A%60%60%60%0A%0A%60%60%60package%0Aneopixel%3Dgithub%3Amicrosoft%2Fpxt-neopixel%0A%0A%60%60%60"
+urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Aradio.setGroup%281%29%0Aradio.setGroup%281%29%0Alet%20recieved%20%3D%200%0Alet%20strip%20%3D%20neopixel.create%28DigitalPin.P1%2C7%2CNeoPixelMode.RGB%29%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28input.isGesture%28Gesture.Shake%29%29%7B%0A%20%20%20%20%20%20%20%20radio.sendValue%28%22recieveData%22%2C1%29%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20basic.pause%281000%29%0A%20%20%20%20%7D%0A%20%20%20%20if%20%28recieved%20%3D%3D%201%29%7B%0A%20%20%20%20%20%20%20%20strip.showColor%28neopixel.colors%28NeoPixelColors.Black%29%29%0A%09basic.pause%281000%29%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20strip.showRainbow%281%2C%20360%29%0A%09basic.pause%281000%29%0A%20%20%20%20%7D%0A%7D%29%0Aradio.onReceivedValue%28function%20%28name%2C%20value%29%20%7B%0A%09if%20%28name%20%3D%3D%20%22replace_me%22%20%26%26%20value%20%3D%3D%201%29%20%7B%0A%09%09recieved%20%3D%201%0A%09%7D%0A%7D%29%0A%0A%60%60%60%0A%0A%60%60%60package%0Aneopixel%3Dgithub%3Amicrosoft%2Fpxt-neopixel%0A%0A%60%60%60"
 cardWidth=130
 pluscardwidht=130
 missionCardWidth=160
@@ -72,21 +72,29 @@ st.markdown(
         unsafe_allow_html=True,
         )
 st.code('''radio.setGroup(1)
+radio.setGroup(1)
+let recieved = 0
 let strip = neopixel.create(DigitalPin.P1,7,NeoPixelMode.RGB)
 basic.forever(function () {
     if (input.isGesture(Gesture.Shake)){
-        radio.sendValue("sliderLow",1)
+        radio.sendValue("recieveData",1)
     } else {
         basic.pause(1000)
     }
-    if (pins.analogReadPin(AnalogPin.P0) <= 100){
+    if (recieved == 1){
         strip.showColor(neopixel.colors(NeoPixelColors.Black))
 	basic.pause(1000)
     } else {
         strip.showRainbow(1, 360)
 	basic.pause(1000)
     }
-})''',language="javascript")
+})
+radio.onReceivedValue(function (name, value) {
+	if (name == "replace_me" && value == 1) {
+		recieved = 1
+	}
+})
+''',language="javascript")
 
 
 e,edit  = st.columns([1,1])
