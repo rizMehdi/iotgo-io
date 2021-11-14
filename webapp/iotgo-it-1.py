@@ -1,8 +1,8 @@
-                #this file was updated on Sun Nov 14 20:22:08 2021
+                #this file was updated on Sun Nov 14 20:22:20 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide",initial_sidebar_state="expanded")
-urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Amusic.setVolume%28255%29%0Aradio.setGroup%281%29%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28pins.digitalReadPin%28DigitalPin.P0%29%20%3D%3D%200%29%7B%0A%20%20%20%20%20%20%20%20music.stopMelody%28MelodyStopOptions.All%29%0A%20basic.pause%281000%29%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20music.startMelody%28music.builtInMelody%28Melodies.Birthday%29%2C%20MelodyOptions.Forever%29%0Abasic.pause%281000%29%0A%20%20%20%20%7D%0A%20%20%20%20if%20%28input.isGesture%28Gesture.TiltLeft%29%20%7C%7C%20input.isGesture%28Gesture.TiltRight%29%29%7B%0A%20%20%20%20%20%20%20%20radio.sendValue%28%22noInput%22%2CnoInput%29%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%0Abasic.pause%281000%29%0A%20%20%20%20%7D%0A%7D%29%0A%60%60%60%0A%0A"
+urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Amusic.setVolume%28255%29%0Abasic.pause%281000%29%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28pins.digitalReadPin%28DigitalPin.P0%29%20%3D%3D%200%29%7B%0A%20%20%20%20%20%20%20%20music.stopMelody%28MelodyStopOptions.All%29%0A%20basic.pause%281000%29%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20music.startMelody%28music.builtInMelody%28Melodies.Birthday%29%2C%20MelodyOptions.Forever%29%0Abasic.pause%281000%29%0A%20%20%20%20%7D%0A%20%20%20%20if%20%28true%29%7B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%7D%0A%7D%29%0A%60%60%60%0A%0A"
 cardWidth=130
 pluscardwidht=130
 missionCardWidth=160
@@ -48,7 +48,7 @@ with input_col:
 	# ("Input1:")
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-inputPhy-MovementNotPresent.png", width=cardWidth)
 	# ("Input2:")
-	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-inputPhy-GestureTilt.png", width=cardWidth)
+	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noInput.png", width=cardWidth)
 with plus_col:    
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth*2)
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/plus.png", width=pluscardwidht)
@@ -59,7 +59,7 @@ with output_col:
 	# ("Output1:")
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-outputPhy-TurnOffMusic.png", width=cardWidth)
 	# ("Output2:")
-	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/ITsendData.png", width=cardWidth) 
+	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noOutput.png", width=cardWidth) 
 
 
 st.subheader("")
@@ -72,7 +72,7 @@ st.markdown(
         unsafe_allow_html=True,
         )
 st.code('''music.setVolume(255)
-radio.setGroup(1)
+basic.pause(1000)
 basic.forever(function () {
     if (pins.digitalReadPin(DigitalPin.P0) == 0){
         music.stopMelody(MelodyStopOptions.All)
@@ -81,11 +81,10 @@ basic.forever(function () {
         music.startMelody(music.builtInMelody(Melodies.Birthday), MelodyOptions.Forever)
 basic.pause(1000)
     }
-    if (input.isGesture(Gesture.TiltLeft) || input.isGesture(Gesture.TiltRight)){
-        radio.sendValue("noInput",noInput)
+    if (true){
+
     } else {
 
-basic.pause(1000)
     }
 })''',language="javascript")
 
