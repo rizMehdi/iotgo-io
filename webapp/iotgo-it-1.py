@@ -1,8 +1,8 @@
-                #this file was updated on Sun Nov 14 21:34:30 2021
+                #this file was updated on Sun Nov 14 21:34:31 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide",initial_sidebar_state="expanded")
-urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Abasic.pause%281000%29%0Alet%20strip%20%3D%20neopixel.create%28DigitalPin.P1%2C7%2CNeoPixelMode.RGB%29%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28true%29%7B%0A%20%20%20%20%20%20%20%20strip.showRainbow%281%2C%20360%29%0A%09basic.pause%281000%29%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20strip.showColor%28neopixel.colors%28NeoPixelColors.Black%29%29%0A%09basic.pause%281000%29%0A%20%20%20%20%7D%0A%7D%29%0A%60%60%60%0A%0A%60%60%60package%0Aneopixel%3Dgithub%3Amicrosoft%2Fpxt-neopixel%0A%0A%60%60%60"
+urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Abasic.pause%281000%29%0Aradio.setGroup%281%29%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28true%29%7B%0A%20%20%20%20%20%20%20%20%09%23%23%09radio.sendValue%28%22inputName%22%2CinputValue%29%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20basic.pause%281000%29%0A%20%20%20%20%7D%0A%7D%29%0A%60%60%60%0A%0A"
 cardWidth=130
 pluscardwidht=130
 missionCardWidth=160
@@ -67,14 +67,12 @@ st.markdown(
         unsafe_allow_html=True,
         )
 st.code('''basic.pause(1000)
-let strip = neopixel.create(DigitalPin.P1,7,NeoPixelMode.RGB)
+radio.setGroup(1)
 basic.forever(function () {
     if (true){
-        strip.showRainbow(1, 360)
-	basic.pause(1000)
+        	##	radio.sendValue("inputName",inputValue)
     } else {
-        strip.showColor(neopixel.colors(NeoPixelColors.Black))
-	basic.pause(1000)
+        basic.pause(1000)
     }
 })''',language="javascript")
 
