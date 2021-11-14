@@ -1,8 +1,8 @@
-                #this file was updated on Sun Nov 14 21:08:16 2021
+                #this file was updated on Sun Nov 14 21:08:17 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide",initial_sidebar_state="expanded")
-urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Aradio.setGroup%281%29%0Alet%20recieved%20%3D%200%0Aradio.setGroup%281%29%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28recieved%20%3D%3D%201%29%7B%0A%20%20%20%20%20%20%20%20radio.sendValue%28%22noInput%22%2CnoInput%29%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20basic.pause%281000%29%0A%20%20%20%20%7D%0A%7D%29%0Aradio.onReceivedValue%28function%20%28name%2C%20value%29%20%7B%0A%09if%20%28name%20%3D%3D%20%22pulsante%22%20%26%26%20value%20%3D%3D%201%29%20%7B%0A%09%09recieved%20%3D%201%0A%09%7D%0A%7D%29%0A%0A%60%60%60%0A%0A"
+urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Aradio.setGroup%281%29%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28input.lightLevel%28%29%20%3C%20127%29%7B%0A%20%20%20%20%20%20%20%20radio.sendValue%28%22noInput%22%2CnoInput%29%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20basic.pause%281000%29%0A%20%20%20%20%7D%0A%7D%29%0A%60%60%60%0A%0A"
 cardWidth=130
 pluscardwidht=130
 missionCardWidth=160
@@ -67,21 +67,13 @@ st.markdown(
         unsafe_allow_html=True,
         )
 st.code('''radio.setGroup(1)
-let recieved = 0
-radio.setGroup(1)
 basic.forever(function () {
-    if (recieved == 1){
+    if (input.lightLevel() < 127){
         radio.sendValue("noInput",noInput)
     } else {
         basic.pause(1000)
     }
-})
-radio.onReceivedValue(function (name, value) {
-	if (name == "pulsante" && value == 1) {
-		recieved = 1
-	}
-})
-''',language="javascript")
+})''',language="javascript")
 
 e,edit  = st.columns([1,1])
 with edit:
