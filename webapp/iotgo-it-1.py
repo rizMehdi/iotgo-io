@@ -1,8 +1,8 @@
-                #this file was updated on Sun Nov 14 20:22:51 2021
+                #this file was updated on Sun Nov 14 20:22:52 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide",initial_sidebar_state="expanded")
-urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Amusic.setVolume%28255%29%0Aradio.setGroup%281%29%0Alet%20recieved%20%3D%200%0Abasic.pause%281000%29%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28pins.digitalReadPin%28DigitalPin.P0%29%20%3D%3D%200%29%7B%0A%20%20%20%20%20%20%20%20music.stopMelody%28MelodyStopOptions.All%29%0A%20basic.pause%281000%29%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20music.startMelody%28music.builtInMelody%28Melodies.Birthday%29%2C%20MelodyOptions.Forever%29%0Abasic.pause%281000%29%0A%20%20%20%20%7D%0A%20%20%20%20if%20%28recieved%20%3D%3D%201%29%7B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%7D%0A%7D%29radio.onReceivedValue%28function%20%28name%2C%20value%29%20%7B%20%20%20%20%20%20%20%20if%20%28name%20%3D%3D%20%22pulsante%22%20%26%26%20value%20%3D%3D%201%29%20%7B%20%20%20%20%20%20%20%20%20%20%20%20recieved%20%3D%201%20%20%20%20%20%20%20%20%7D%20%20%20%20%7D%29%0A%0A%60%60%60%0A%0A"
+urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Amusic.setVolume%28255%29%0Aradio.setGroup%281%29%0Alet%20recieved%20%3D%200%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28pins.digitalReadPin%28DigitalPin.P0%29%20%3D%3D%200%29%7B%0A%20%20%20%20%20%20%20%20music.stopMelody%28MelodyStopOptions.All%29%0A%20basic.pause%281000%29%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20music.startMelody%28music.builtInMelody%28Melodies.Birthday%29%2C%20MelodyOptions.Forever%29%0Abasic.pause%281000%29%0A%20%20%20%20%7D%0A%20%20%20%20if%20%28recieved%20%3D%3D%201%29%7B%0A%20%20%20%20%20%20%20%20music.stopMelody%28MelodyStopOptions.All%29%0A%20basic.pause%281000%29%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20music.startMelody%28music.builtInMelody%28Melodies.Birthday%29%2C%20MelodyOptions.Forever%29%0Abasic.pause%281000%29%0A%20%20%20%20%7D%0A%7D%29radio.onReceivedValue%28function%20%28name%2C%20value%29%20%7B%20%20%20%20%20%20%20%20if%20%28name%20%3D%3D%20%22pulsante%22%20%26%26%20value%20%3D%3D%201%29%20%7B%20%20%20%20%20%20%20%20%20%20%20%20recieved%20%3D%201%20%20%20%20%20%20%20%20%7D%20%20%20%20%7D%29%0A%0A%60%60%60%0A%0A"
 cardWidth=130
 pluscardwidht=130
 missionCardWidth=160
@@ -74,7 +74,6 @@ st.markdown(
 st.code('''music.setVolume(255)
 radio.setGroup(1)
 let recieved = 0
-basic.pause(1000)
 basic.forever(function () {
     if (pins.digitalReadPin(DigitalPin.P0) == 0){
         music.stopMelody(MelodyStopOptions.All)
@@ -84,9 +83,11 @@ basic.forever(function () {
 basic.pause(1000)
     }
     if (recieved == 1){
-
+        music.stopMelody(MelodyStopOptions.All)
+ basic.pause(1000)
     } else {
-
+        music.startMelody(music.builtInMelody(Melodies.Birthday), MelodyOptions.Forever)
+basic.pause(1000)
     }
 })radio.onReceivedValue(function (name, value) {        if (name == "pulsante" && value == 1) {            recieved = 1        }    })
 ''',language="javascript")
