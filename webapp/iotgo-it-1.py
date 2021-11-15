@@ -1,8 +1,8 @@
-                #this file was updated on Mon Nov 15 08:57:36 2021
+                #this file was updated on Mon Nov 15 08:57:37 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide",initial_sidebar_state="expanded")
-urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Abasic.pause%281000%29%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28true%29%7B%0A%20%20%20%20%20%20%20%20basic.showIcon%28IconNames.Sad%29%0A%09basic.pause%281000%29%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20basic.clearScreen%28%29%0A%09basic.pause%281000%29%0A%20%20%20%20%7D%0A%7D%29%0A%60%60%60%0A%0A"
+urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Abasic.pause%281000%29%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28input.compassHeading%28%29%20%3E%3D%20225%20%26%26%20input.compassHeading%28%29%20%3C%20315%29%7B%0A%20%20%20%20%20%20%20%20basic.showIcon%28IconNames.Sad%29%0A%09basic.pause%281000%29%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20basic.clearScreen%28%29%0A%09basic.pause%281000%29%0A%20%20%20%20%7D%0A%7D%29%0A%60%60%60%0A%0A"
 cardWidth=130
 pluscardwidht=130
 missionCardWidth=160
@@ -69,7 +69,7 @@ st.markdown(
         )
 st.code('''basic.pause(1000)
 basic.forever(function () {
-    if (true){
+    if (input.compassHeading() >= 225 && input.compassHeading() < 315){
         basic.showIcon(IconNames.Sad)
 	basic.pause(1000)
     } else {
