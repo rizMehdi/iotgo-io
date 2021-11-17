@@ -657,7 +657,7 @@ def genURL (*args):#input_name, output_name):#here i am collecting chunks of cod
             #print(eachItem)
             if True:#eachItem != "noInput" and eachItem != "noOutput": 
                 if eachItem in on_start:
-                    if eachItem=="sendData":
+                    if eachItem=="sendData" or eachItem=="recieveData":
                         on_start_code.append(on_start[eachItem].replace("1",groupnum)+ '\n')
                     else:
                         on_start_code.append(on_start[eachItem]+ '\n')
