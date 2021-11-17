@@ -1,8 +1,8 @@
-                #this file was updated on Wed Nov 17 09:07:38 2021
+                #this file was updated on Wed Nov 17 09:42:27 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide",initial_sidebar_state="expanded")
-urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Abasic.pause%281000%29%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28input.lightLevel%28%29%20%3E%3D%20127%29%7B%0A%20%20%20%20%20%20%20%20pins.digitalWritePin%28DigitalPin.P1%2C0%29%0A%09basic.pause%281000%29%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20pins.digitalWritePin%28DigitalPin.P1%2C1%29%0A%09basic.pause%281000%29%0A%20%20%20%20%7D%0A%7D%29%0A%60%60%60%0A%0A"
+urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Abasic.pause%281000%29%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28true%29%7B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%7D%0A%7D%29%0A%60%60%60%0A%0A"
 cardWidth=130
 pluscardwidht=130
 missionCardWidth=160
@@ -46,7 +46,7 @@ with input_col:
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
 	st.write(" se...")
 	# ("Input1:")
-	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-inputPhy-LightlevelHigh.png", width=cardWidth) 
+	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noInput.png", width=cardWidth) 
 with plus_col:    
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth*2)
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/plus.png", width=pluscardwidht) 
@@ -54,7 +54,7 @@ with output_col:
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
 	st.write(" allora...")
 	# ("Output1:")
-	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-outputPhy-TurnOffLight.png", width=cardWidth)
+	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-noOutput.png", width=cardWidth)
 
 st.subheader("")
 st.subheader("")
@@ -69,12 +69,10 @@ st.markdown(
         )
 st.code('''basic.pause(1000)
 basic.forever(function () {
-    if (input.lightLevel() >= 127){
-        pins.digitalWritePin(DigitalPin.P1,0)
-	basic.pause(1000)
+    if (true){
+
     } else {
-        pins.digitalWritePin(DigitalPin.P1,1)
-	basic.pause(1000)
+
     }
 })''',language="javascript")
 
