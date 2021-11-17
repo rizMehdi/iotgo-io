@@ -39,6 +39,11 @@ st.markdown(
         unsafe_allow_html=True,
 )
 
+
+input_name= ["noInput"  ,"noInput"  ,"noInput"]
+output_name=["noOutput" ,"noOutput" ,"noOutput"]
+
+
 input1 = st.sidebar.selectbox(
 	'your first input and output are:',
 	("buttonNotPress","buttonPress","accelLow" , "accelHigh"  , "compassE"  , 
@@ -72,15 +77,168 @@ output2 = st.sidebar.selectbox(
 st.sidebar.write('You selected:', input1,output1,input2,output2)
 
 
+
+
+
+input_name[0]= input1 
+input_name[1]= input2 
+output_name[0]=output1
+output_name[1]=output2
+
+
+
+langPrefix=['EN','IT','DE','UR']
+lang=1
+
+
+baseURL="https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/"
+
+
+grabURL =    {
+    "pictoral":     "-thing-art-1.png",
+    "sculpture":    "-thing-art-2.png",
+    "decor":        "-thing-art-3.png",    
+    "model":        "-thing-art-4.png",
+    "ceramic":      "-thing-art-5.png",
+    "textile":      "-thing-art-6.png" ,   
+    "jewellery":    "-thing-art-7.png",
+    "book":         "-thing-art-8.png",
+    "informative":  "-thing-art-9.png",    
+    "thing_blank":        "-thing-art-0.png",
+    
+    "engagePeople":     "-mission-1.png",
+    "makePeopleUnderstand":"-mission-2.png",
+    "inspirePeople":    "-mission-3.png",    
+    "addUtility":       "-mission-4.png",
+    "addDimension":     "-mission-5.png",
+    "connectEmotionally":"-mission-6.png",    
+    "connectMemories":  "-mission-7.png",
+    "getToKnowPeople":  "-mission-8.png",
+    "mission_blank":    "-mission-0.png",  
+    "91":               "-mission-91.png",    
+    "92":               "-mission-92.png",
+    "93":               "-mission-93.png",
+    "94":               "-mission-94.png",    
+
+    "myself":           "-persona-1.png",
+    "elderly":          "-persona-2.png",
+    "teenager":         "-persona-3.png",
+    "child":            "-persona-4.png",
+    "minority":         "-persona-5.png",
+    "physciallyChallenged":"-persona-6.png",
+    "immigrant":        "-persona-7.png",
+    "pet":              "-persona-8.png",
+    "anyone":           "-persona-9.png",
+    "persona_blank":            "-persona-0.png",
+    "new_user":         "-control-1.png",
+    "new_idea":         "-control-2.png",
+  	
+    "noMission"     :   "-noMission.png",  
+    "noThing"       :   "-noThing.png",  
+    "noPersona"     :   "-noPersona.png",  
+    "noInput"       :   "-noInput.png",  
+    "noOutput"      :   "-noOutput.png",
+    "none"          :   "",
+    "blankCard"     :   "blankcard.png",
+    "blank"     :   "blankcard.png",
+
+    "codeCard"      :   "-codecard.png",
+    "playerCard"    :   "-playercard.png",#not used in app
+
+    
+    "buttonNotPress":   "-inputPhy-buttonNotpressed.png",
+    "buttonPress":      "-inputPhy-buttonPress.png",
+    "accelLow":         "-inputPhy-AccelerationLow.png",
+    "accelHigh" :       "-inputPhy-AccelerationHigh.png",
+    "compassN" :        "-inputPhy-CompassNorth.png",
+    "compassE" :        "-inputPhy-CompassEast.png",
+    "compassS" :        "-inputPhy-CompassSouth.png",
+    "compassW" :        "-inputPhy-CompassWest.png",
+    "gestureShake":     "-inputPhy-GestureShake.png",
+    "gestureTilt" :     "-inputPhy-GestureTilt.png",
+    "movementNotPresent":"-inputPhy-MovementNotPresent.png",
+    "movementPresent" : "-inputPhy-MovementPresent.png",
+    "noiseLow"  :       "-inputPhy-NoiseLow.png",
+    "noiseHigh"	:       "-inputPhy-NoiseHigh.png",
+    "touchYes" 	:       "-inputPhy-LogoTouched.png",
+    "touchNo"	:       "-inputPhy-LogoNotTouched.png",
+    "sliderLow":        "-inputPhy-SliderMinimum.png",
+    "sliderMid":        "-inputPhy-SliderMaximum.png",#not used. 
+    "sliderHigh":       "-inputPhy-SliderMaximum.png",
+    "tempLow"  :        "-inputPhy-TemperatureLow.png",
+    "tempHigh" :        "-inputPhy-TemperatureHigh.png",
+    "lightlevelLow" :   "-inputPhy-LightlevelLow.png",
+    "lightlevelHigh":   "-inputPhy-LightlevelHigh.png",
+    
+        
+    "forecastTempHigh" :    "-inputCloud-ForecastTempreatureHigh.png",
+    "forecastTempLow" :     "-inputCloud-ForecastTempreatureLow.png",
+    "forecastHumidityHigh" :"-inputCloud-ForecastHumidityHigh.png",
+    "forecastHumidityLow" : "-inputCloud-ForecastHumidityLow.png",
+    "forecastWindHigh" :    "-inputCloud-ForecastWindHigh.png",
+    "forecastWindLow" :     "-inputCloud-ForecastWindLow.png",
+    "forecastprecipHigh" :  "-inputCloud-ForecastPercipitationHigh.png",
+    "forecastprecipLow" :   "-inputCloud-ForecastPercipitationLow.png",
+    "todayStartOfMonth" :   "-inputCloud-TodayMonthStart.png",
+    "todayWeekday" :        "-inputCloud-TodayWeekday.png",
+    "todayWeekend":         "-inputCloud-TodayWeekend.png",
+    "todaySummerMonth":     "-inputCloud-TodaySummerMonth.png",
+    "todayNewYear":         "-inputCloud-TodayNewYearDay.png",
+    "timeForSchool" :       "-inputCloud-TimeForSchool.png",     
+    
+    
+    "iconHappy":    "-outputPhy-ShowHappyIcon.png",
+    "iconSad":      "-outputPhy-ShowSadIcon.png",
+     "iconNone":    "-outputPhy-StopShowIcon.png",
+    "lightOn":      "-outputPhy-TurnOnLight.png",
+    "lightOff":     "-outputPhy-TurnOffLight.png",
+    "musicHappy":   "-outputPhy-PlayHappyMusic.png",
+    "musicSad" :    "-outputPhy-PlaySadMusic.png",
+    "musicNone" :   "-outputPhy-TurnOffMusic.png", 
+    "displayText" : "-outputPhy-ShowText.png",  
+    "displayInput": "-outputPhy-ShowInputValue.png",
+    "displayNone" : "-outputPhy-StopShowText.png", 
+    "showStripRainbow" :"-outputPhy-TurnRainbowLight.png",
+    "showStripBlack" :"-outputPhy-TurnOffRainbowLight.png",
+    "fanOn" :       "-outputPhy-TurnOnFan.png",	 
+    "fanOff"  :     "-outputPhy-TurnOffFan.png",
+    "rotateMin":    "-outputPhy-RotateMin.png", 
+    "rotateMid":    "-outputPhy-RotateMax.png",#not used. 
+    "rotateMax":    "-outputPhy-RotateMax.png",
+    
+    "tweetText"  :  "-outputCloud-TweetText.png", 
+    "tweetInput" :  "-outputCloud-TweetValue.png",   
+    "logInput"   :  "-outputCloud-LogValue.png", #fixed
+
+    "sendData":"-sendData.png",
+    "recieveData":"-recieveData.png",
+    
+
+    
+}
+
+
+
+
+input0path=  baseURL+langPrefix[lang]+grabURL[ input_name[0]]
+output0path= baseURL+langPrefix[lang]+grabURL[output_name[0]]
+input1path=  baseURL+langPrefix[lang]+grabURL[ input_name[1]]
+output1path= baseURL+langPrefix[lang]+grabURL[output_name[1]]
+#input2path=  baseURL+langPrefix[lang]+grabURL[ input_name[2]]
+#output2path= baseURL+langPrefix[lang]+grabURL[output_name[2]]
+    
+ 
+
+
 st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo-hor.png",width=380)
 input_col, plus_col, output_col, pad, code_col= st.columns([1,1,1,1,6])
 with input_col:    
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
 	st.write(" se...")
 	# ("Input1:")
-	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-recieveData.png", width=cardWidth)
+	st.image(input0path, width=cardWidth)
 	# ("Input2:")
-	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-inputPhy-MovementPresent.png", width=cardWidth)
+	st.image(input1path, width=cardWidth)
 with plus_col:    
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth*2)
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/plus.png", width=pluscardwidht)
@@ -89,9 +247,9 @@ with output_col:
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
 	st.write(" allora...")
 	# ("Output1:")
-	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-outputPhy-TurnOffMusic.png", width=cardWidth)
+	st.image(output0path, width=cardWidth)
 	# ("Output2:")
-	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/IT-sendData.png", width=cardWidth) 
+	st.image(output1path, width=cardWidth) 
 
 with code_col:
 	st.subheader("")
