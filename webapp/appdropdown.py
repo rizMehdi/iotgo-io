@@ -65,9 +65,9 @@ output1 = st.sidebar.selectbox(
 st.sidebar.markdown("""livello 2: 
 ---""")
 
-p2ptype = st.sidebar.radio(
+p2ptype = st.sidebar.selectbox(
 	'sono...', 
-	('invio dati', 'ricevo dati' ))
+	('--', 'invio dati', 'ricevo dati' ))
 if p2ptype=='invio dati':
 	input2 = st.sidebar.selectbox(
 	'seleziona una altra carta input', 
@@ -77,7 +77,7 @@ if p2ptype=='invio dati':
          "sliderHigh"  , "tempLow"  ,"tempHigh"  ,"lightlevelLow","lightlevelHigh",
         "touchYes" ,"touchNo"  ))
 	output2= "sendData"
-else: #'ricevo dati'
+elif  p2ptype=='ricevo dati': #'ricevo dati'
 	output2 = st.sidebar.selectbox(
 	'seleziona una altra carta ouput',
 	("noOutput","iconHappy","iconSad","iconNone","lightOn","lightOff","lightOff",
@@ -85,8 +85,9 @@ else: #'ricevo dati'
          "displayNone"  ,"showStripRainbow"  ,"showStripBlack","fanOn"  ,
          "fanOff"  , "rotateMax"   ))	
 	input2="recieveData"
-
-
+else:
+	input2="noInput"
+	output2="noOutput"
 
 
 #st.sidebar.write('You selected:', input1,output1,input2,output2)
