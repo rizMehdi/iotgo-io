@@ -76,7 +76,7 @@ output2 = st.sidebar.selectbox(
          "fanOff"  , "rotateMax"  , "noOutput", "sendData",))	
 
 
-st.sidebar.write('You selected:', input1,output1,input2,output2)
+#st.sidebar.write('You selected:', input1,output1,input2,output2)
 
 
 
