@@ -6,7 +6,7 @@ cardWidth=130
 pluscardwidht=130
 missionCardWidth=160
 vertiPaddingWidth=35
-
+codetitle=""
 
 st.markdown(
         """
