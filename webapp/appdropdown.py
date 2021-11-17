@@ -95,11 +95,59 @@ else:
 
 
 
+it2en_in= {
+    "Il pulsante premuto":"buttonPress",
+    'Il pulsante non è premuto':"buttonNotPress",
+    'L\'accelerazione è basso':"accelLow" , 
+    'L\'accelerazione è alta':"accelHigh"  , 
+    'La bussola punta ad Est':"compassE"  , 
+    'La bussola punta ad Ovest':"compassW"  , 
+    'La bussola punta a Nord':"compassN"  , 
+    'La bussola punta a Sud':"compassS"  , 
+    'Il gesto è scuotere':"gestureShake"  , 
+    'Il gesto è inclinare':"gestureTilt"  , 
+    'C\'è movimento nei dintorni':"movementPresent"  , 
+    'Non c\'è movimento nei dintorni':"movementNotPresent"  , 
+    'Il rumore è basso':"noiseLow"  , 
+    'Il rumore è alto':"noiseHigh"  ,
+    'Il cursore è al minimo':"sliderLow"  , 
+    'Il cursore è al massimo':"sliderHigh"  , 
+    'La temperatura è bassa':"tempLow"  , 
+    'La temperatura è alta':"tempHigh"  ,
+    'L\'intensità di luce è bassa':"lightlevelLow",
+    'L\'intensità di luce è alta':"lightlevelHigh",
+    'Il logo è toccato':"touchYes" ,#v2  
+    'Il logo non è toccato':"touchNo"  , #v2    
+    'no Input':"noInput",#<<<<<<<------- new card. 
+    }
+    
+it2en_out= {
+    'Mostra un\'icona felice':"iconHappy",
+    'Mostra un\'icona triste':"iconSad",
+    'Smette di mostrare un\'icona':"iconNone",
+  	'Accende una luce':"lightOn",
+ 	'Spegne una luce':"lightOff", 
+  	'Suona una melodia triste':"musicSad" , 
+  	'Suona una melodia allegra':"musicHappy"  , 
+	'Smette di suonare':"musicNone"  , 
+	'Mostra del testo':"displayText"  , 
+	'Mostra un numero':"displayInput"  , 
+	'Smette di mostrare testi o numeri':"displayNone"  , 
+	'Attiva un\'animazione luminosa':"showStripRainbow"  , 
+	'Spegne un\'animazione luminosa':"showStripBlack", 
+	'Accende un ventilatore':"fanOn"  , 
+	'Spegne un ventilatore':"fanOff"  ,
+	'Fa ruotare il motore':"rotateMin"  ,   
+	'no Output':"noOutput",#<<<<<<<------- new  card. 
 
-input_name[0]= input1 
-input_name[1]= input2 
-output_name[0]=output1
-output_name[1]=output2
+
+    }
+
+
+input_name[0]= it2en_in(input1)
+input_name[1]= it2en_in(input2)
+output_name[0]=it2en_out(output1)
+output_name[1]=it2en_out(output2)
 
 
 
@@ -232,6 +280,11 @@ grabURL =    {
 
     
 }
+
+
+
+
+
 
 
 
