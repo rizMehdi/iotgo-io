@@ -51,7 +51,7 @@ st.sidebar.markdown("""livello 1:
 input1 = st.sidebar.selectbox(
 	'seleziona le tue carte di input e output',
         (
-         'L\'accelerazione è alta ',
+         'L\'accelerazione è alta',
 	 'Il pulsante premuto',
          'Il pulsante non è premuto',
          'L\'accelerazione è basso',
