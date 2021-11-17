@@ -11,7 +11,7 @@ missionCardWidth=160
 vertiPaddingWidth=35
 codetitle=""
 codesubtitle=""
-groupnum="9"
+groupnum="0"
 st.markdown(
         """
         <style type="text/css">
