@@ -70,7 +70,7 @@ p2ptype = st.sidebar.radio(
 	('invio dati', 'ricevo dati' ))
 if p2ptype=='invio dati':
 	input2 = st.sidebar.selectbox(
-	'invio-dati e\' tua carta output, seleziona una carta input', 
+	'seleziona una altra carta input', 
 	("noInput","buttonNotPress","buttonPress","accelLow" , "accelHigh"  , "compassE"  , 
          "compassW"  , "compassN"  , "compassS"  , "gestureShake"  , "gestureTilt"  ,
          "movementPresent"  ,"movementNotPresent"  , "noiseLow"  , "noiseHigh"  ,"sliderLow"  ,
@@ -79,7 +79,7 @@ if p2ptype=='invio dati':
 	output2= "sendData"
 else: #'ricevo dati'
 	output2 = st.sidebar.selectbox(
-	'recezione-dati e\' tua carta input, seleziona una carta ouput',
+	'seleziona una altra carta ouput',
 	("noOutput","iconHappy","iconSad","iconNone","lightOn","lightOff","lightOff",
          "musicHappy" ,"musicSad"  ,"musicNone"  ,"displayText"  ,"displayInput"  ,
          "displayNone"  ,"showStripRainbow"  ,"showStripBlack","fanOn"  ,
