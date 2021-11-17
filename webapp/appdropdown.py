@@ -47,7 +47,7 @@ output_name=["noOutput" ,"noOutput" ,"noOutput"]
 
 
 input1 = st.sidebar.selectbox(
-	'your first input and output are:',
+	'le tue prime carte input e output:',
 	("buttonNotPress","buttonPress","accelLow" , "accelHigh"  , "compassE"  , 
          "compassW"  , "compassN"  , "compassS"  , "gestureShake"  , "gestureTilt"  ,
          "movementPresent"  ,"movementNotPresent"  , "noiseLow"  , "noiseHigh"  ,"sliderLow"  ,
@@ -61,10 +61,11 @@ output1 = st.sidebar.selectbox(
          "displayNone"  ,"showStripRainbow"  ,"showStripBlack","fanOn"  ,
          "fanOff"  , "rotateMax"  , "noOutput",))
 
-st.sidebar.markdown("""---""")
+st.sidebar.markdown("""livello 2: 
+---""")
 
 input2 = st.sidebar.selectbox(
-	'your second input and output are:', 
+	'le tue altre carte input e output:', 
 	("noInput","recieveData", "buttonNotPress","buttonPress","accelLow" , "accelHigh"  , "compassE"  , 
          "compassW"  , "compassN"  , "compassS"  , "gestureShake"  , "gestureTilt"  ,
          "movementPresent"  ,"movementNotPresent"  , "noiseLow"  , "noiseHigh"  ,"sliderLow"  ,
