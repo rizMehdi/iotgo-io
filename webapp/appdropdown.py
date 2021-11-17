@@ -1,6 +1,9 @@
                 #this file was updated on Sun Nov 14 22:15:20 2021
 import streamlit as st
 import streamlit.components.v1 as components
+import urllib.parse
+import time
+import textwrap
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide",initial_sidebar_state="expanded")
 cardWidth=130
 pluscardwidht=130
