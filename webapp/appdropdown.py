@@ -11,7 +11,7 @@ missionCardWidth=160
 vertiPaddingWidth=35
 codetitle=""
 codesubtitle=""
-groupnum="5"
+groupnum=1
 st.markdown(
         """
         <style type="text/css">
@@ -658,7 +658,7 @@ def genURL (*args):#input_name, output_name):#here i am collecting chunks of cod
             if True:#eachItem != "noInput" and eachItem != "noOutput": 
                 if eachItem in on_start:
                     if eachItem=="sendData":
-                        on_start_code.replace("1",groupnum).append(on_start[eachItem]+ '\n')
+                        on_start_code.append(on_start[eachItem].replace("1",groupnum)+ '\n')
                     else:
                         on_start_code.append(on_start[eachItem]+ '\n')
                 if eachItem in on_end:
