@@ -41,7 +41,7 @@ st.markdown(
         unsafe_allow_html=True,
 )
 
-
+gamelevel=1
 input_name= ["noInput"  ,"noInput"  ,"noInput"]
 output_name=["noOutput" ,"noOutput" ,"noOutput"]
 
