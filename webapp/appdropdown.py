@@ -640,8 +640,8 @@ with edit:
 #        st.markdown("[Modifica...]("+urlis+")", unsafe_allow_html=True)
 
 
-st.subheader("")
-components.iframe(urlis, height=1000, scrolling=True)    
+#st.subheader("")
+#components.iframe(urlis, height=1000, scrolling=True)    
 
 
 
