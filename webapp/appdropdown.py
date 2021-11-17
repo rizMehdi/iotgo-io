@@ -42,8 +42,8 @@ st.markdown(
 )
 
 gamelevel=1
-input_name= ["noInput"  ,"noInput"  ,"noInput"]
-output_name=["noOutput" ,"noOutput" ,"noOutput"]
+input_name= ["no Input"  ,"no Input"  ,"no Input"]
+output_name=["no Output" ,"no Output" ,"no Output"]
 
 st.sidebar.markdown("""livello 1: 
 ---""")
@@ -131,7 +131,7 @@ if p2ptype=='invio dati':
 ##         "movementPresent"  ,"movementNotPresent"  , "noiseLow"  , "noiseHigh"  ,"sliderLow"  ,
 ##         "sliderHigh"  , "tempLow"  ,"tempHigh"  ,"lightlevelLow","lightlevelHigh",
 ##        "touchYes" ,"touchNo"  ))
-	output2= "sendData"
+	output2= 'invio dati' 
 elif  p2ptype=='ricevo dati': #'ricevo dati'
 	output2 = st.sidebar.selectbox(
 	'seleziona una altra carta ouput',
@@ -143,10 +143,10 @@ elif  p2ptype=='ricevo dati': #'ricevo dati'
 ##         "musicHappy" ,"musicSad"  ,"musicNone"  ,"displayText"  ,"displayInput"  ,
 ##         "displayNone"  ,"showStripRainbow"  ,"showStripBlack","fanOn"  ,
 ##         "fanOff"  , "rotateMax"   ))	
-	input2="recieveData"
+	input2='recezione dati'
 else:
-	input2="noInput"
-	output2="noOutput"
+	input2="no Input"
+	output2="no Output"
 
 
 #st.sidebar.write('You selected:', input1,output1,input2,output2)
