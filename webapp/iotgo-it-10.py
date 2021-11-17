@@ -11,7 +11,7 @@ missionCardWidth=160
 vertiPaddingWidth=35
 codetitle=""
 codesubtitle=""
-groupnum="2"
+groupnum="10"
 st.markdown(
         """
         <style type="text/css">
@@ -51,6 +51,8 @@ st.sidebar.markdown("""livello 1:
 input1 = st.sidebar.selectbox(
 	'seleziona le tue carte di input e output',
         (
+         'Il rumore è alto',
+         'Il rumore è basso' ,
          'L\'accelerazione è alta',
 	 'Il pulsante premuto',
          'Il pulsante non è premuto',
@@ -63,8 +65,6 @@ input1 = st.sidebar.selectbox(
          'Il gesto è inclinare' ,
          'C\'è movimento nei dintorni' ,
          'Non c\'è movimento nei dintorni',
-         'Il rumore è basso' ,
-         'Il rumore è alto',
          'Il cursore è al minimo' ,
          'Il cursore è al massimo',
          'La temperatura è bassa',
@@ -85,6 +85,9 @@ input1 = st.sidebar.selectbox(
 output1 = st.sidebar.selectbox(
 	'   &   ',
 	(
+	'Mostra del testo'  , 
+	'Mostra un numero'  , 
+	'Smette di mostrare testi o numeri'  , 
 	 'Suona una melodia allegra'  , 
 	'Accende un ventilatore'  , 
   	'no Output', 
@@ -95,9 +98,7 @@ output1 = st.sidebar.selectbox(
  	'Spegne una luce' , 
   	'Suona una melodia triste'  , 
 	'Smette di suonare'   , 
-	'Mostra del testo'  , 
-	'Mostra un numero'  , 
-	'Smette di mostrare testi o numeri'  , 
+
 	'Attiva un\'animazione luminosa'  , 
 	'Spegne un\'animazione luminosa' , 
 	'Spegne un ventilatore'  ,
