@@ -30,11 +30,11 @@ st.markdown(
         """
         <style>
         [data-testid="stSidebar"][aria-expanded="true"] > div:first-child {
-                width: 300px;
+                width: 200px;
         }
         [data-testid="stSidebar"][aria-expanded="false"] > div:first-child {
-                width: 300px;
-                margin-left: -300px;
+                width: 200px;
+                margin-left: -200px;
         }
         </style>
         """,
@@ -71,7 +71,7 @@ input1 = st.sidebar.selectbox(
          'L\'intensità di luce è alta',
          'Il logo è toccato',
          'Il logo non è toccato',
-         'no Input'  
+         'no Input'  , 
                  ))
 
 ##	("buttonNotPress","buttonPress","accelLow" , "accelHigh"  , "compassE"  , 
@@ -177,7 +177,8 @@ it2en_in= {
     'L\'intensità di luce è alta':"lightlevelHigh",
     'Il logo è toccato':"touchYes" ,#v2  
     'Il logo non è toccato':"touchNo"  , #v2    
-    'no Input':"noInput",  
+    'no Input':"noInput",
+    'recezione dati' :"recieveData",
     }
     
 it2en_out= {
@@ -197,8 +198,8 @@ it2en_out= {
 	'Accende un ventilatore':"fanOn"  , 
 	'Spegne un ventilatore':"fanOff"  ,
 	'Fa ruotare il motore':"rotateMin"  ,   
-	'no Output':"noOutput",#<<<<<<<------- new  card. 
-
+	'no Output':"noOutput",#<<<<<<<------- new  card.
+        'invio dati' :"sendData",
 
     }
 
