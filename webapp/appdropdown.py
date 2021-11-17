@@ -43,14 +43,14 @@ input1 = st.sidebar.selectbox(
 	'your first input and output are:',
 	('Email', 'Home phone', 'Mobile phone'))
 output1 = st.sidebar.selectbox(
-	'',
+	'&',
 	('Email', 'Home phone', 'Mobile phone'))
 st.sidebar.subheader("")
 input2 = st.sidebar.selectbox(
 	'your second input and output are:',
 	('Email', 'Home phone', 'Mobile phone'))
 output2 = st.sidebar.selectbox(
-	' ',
+	'& ',
 	('Email', 'Home phone', 'Mobile phone'))
 
 
