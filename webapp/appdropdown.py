@@ -2,7 +2,6 @@
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide",initial_sidebar_state="expanded")
-urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Aradio.setGroup%281%29%0Alet%20recieved%20%3D%200%0Amusic.setVolume%28255%29%0Aradio.setGroup%281%29%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28recieved%20%3D%3D%201%29%7B%0A%20%20%20%20%20%20%20%20music.stopMelody%28MelodyStopOptions.All%29%0A%09basic.pause%281000%29%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20music.startMelody%28music.builtInMelody%28Melodies.Birthday%29%2C%20MelodyOptions.Forever%29%0A%09basic.pause%281000%29%0A%20%20%20%20%7D%0A%20%20%20%20if%20%28pins.digitalReadPin%28DigitalPin.P2%29%20%3E%3D%201%29%7B%0A%20%20%20%20%20%20%20%20radio.sendValue%28%22movementPresent%22%2C1%29%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20basic.pause%281000%29%0A%20%20%20%20%7D%0A%7D%29%0Aradio.onReceivedValue%28function%20%28name%2C%20value%29%20%7B%0A%09if%20%28name%20%3D%3D%20%22replace_me%22%20%26%26%20value%20%3D%3D%201%29%20%7B%0A%09%09recieved%20%3D%201%0A%09%7D%0A%7D%29%0A%0A%60%60%60%0A%0A"
 cardWidth=130
 pluscardwidht=130
 missionCardWidth=160
@@ -232,6 +231,365 @@ output1path= baseURL+langPrefix[lang]+grabURL[output_name[1]]
  
 
 
+urlis=""
+jscodeis=""
+
+
+#defining a dictionary for any additional extension/package needed for each output: %60%60%60package%0Aservo%0A%60%60%60  wrong="%60%60%%0Aservo%0A%60%60%60"
+package_suffix = {
+	"rotateMin"         : "%60%60%60package%0Aservo%0A%60%60%60", 
+	"rotateMid"         : "%60%60%60package%0Aservo%0A%60%60%60",
+	"rotateMax"         : "%60%60%60package%0Aservo%0A%60%60%60",
+	"showStripRainbow"  : "%60%60%60package%0Aneopixel%3Dgithub%3Amicrosoft%2Fpxt-neopixel%0A%0A%60%60%60", 
+	"showStripBlack"    : "%60%60%60package%0Aneopixel%3Dgithub%3Amicrosoft%2Fpxt-neopixel%0A%0A%60%60%60", 
+} #only where needed
+
+ 
+
+on_end = {
+  	"recieveData":   '\nradio.onReceivedValue(function (name, value) {\n\tif (name == "replace_me" && value == 1) {\n\t\trecieved = 1\n\t}\n})',
+        }
+
+
+#defining a dictionary for startup-code for each output:
+on_start = {
+  	"fanOn":   "basic.pause(1000)",
+  	"lightOn": "basic.pause(1000)", 
+  	"fanOff":   "basic.pause(1000)",
+  	"lightOff": "basic.pause(1000)", 
+  	"iconHappy":  "basic.pause(1000)", 
+  	"iconSad":  "basic.pause(1000)", 
+  	"iconNone":  "basic.pause(1000)", 
+	"musicHappy": "music.setVolume(255)", 
+	"musicSad":  "music.setVolume(255)",  
+	"musicNone":  "music.setVolume(255)",   	
+# 	"speakText": "",
+# 	"speakInput": "",
+# 	"speakNone": "",
+  	"showStripRainbow": "let strip = neopixel.create(DigitalPin.P1,7,NeoPixelMode.RGB)", 
+  	"showStripBlack": "let strip = neopixel.create(DigitalPin.P1,7,NeoPixelMode.RGB)", 
+	"rotateMin":"servos.P1.setRange(0,180)", 
+	"rotateMid":"servos.P1.setRange(0,180)", 
+	"rotateMax":"servos.P1.setRange(0,180)", 
+	"tweetText" : "radio.setGroup(313)\nradio.setTransmitSerialNumber(true)\nradio.sendValue(\"b#\", 8903)", 
+	"tweetInput": "radio.setGroup(313)\nradio.setTransmitSerialNumber(true)\nradio.sendValue(\"b#\", 8903)", 
+	"logInput"  : "radio.setGroup(313)\nradio.setTransmitSerialNumber(true)\nradio.sendValue(\"log4\", 8791)",  
+	"forecastTempHigh":     "radio.setGroup(313)\nradio.onReceivedValue(function (name, value) {\n forecastName = name\nforecastValue = value\n})\nlet forecastValue = 0\nlet forecastName = \"none\" ",
+	"forecastTempLow":      "radio.setGroup(313)\nradio.onReceivedValue(function (name, value) {\n forecastName = name\nforecastValue = value\n})\nlet forecastValue = 0\nlet forecastName = \"none\" ",
+	"forecastHumidityHigh": "radio.setGroup(313)\nradio.onReceivedValue(function (name, value) {\n forecastName = name\nforecastValue = value\n})\nlet forecastValue = 0\nlet forecastName = \"none\" ",
+	"forecastHumidityLow":  "radio.setGroup(313)\nradio.onReceivedValue(function (name, value) {\n forecastName = name\nforecastValue = value\n})\nlet forecastValue = 0\nlet forecastName = \"none\" ",
+	"forecastWindHigh":     "radio.setGroup(313)\nradio.onReceivedValue(function (name, value) {\n forecastName = name\nforecastValue = value\n})\nlet forecastValue = 0\nlet forecastName = \"none\" ",
+	"forecastWindLow":      "radio.setGroup(313)\nradio.onReceivedValue(function (name, value) {\n forecastName = name\nforecastValue = value\n})\nlet forecastValue = 0\nlet forecastName = \"none\" ",
+	"forecastprecipHigh":   "radio.setGroup(313)\nradio.onReceivedValue(function (name, value) {\n forecastName = name\nforecastValue = value\n})\nlet forecastValue = 0\nlet forecastName = \"none\" ",
+	"forecastprecipLow":    "radio.setGroup(313)\nradio.onReceivedValue(function (name, value) {\n forecastName = name\nforecastValue = value\n})\nlet forecastValue = 0\nlet forecastName = \"none\" ",
+	"todayStartOfMonth":    "radio.setGroup(313)\nradio.onReceivedValue(function (name, value) {\n forecastName = name\nforecastValue = value\n})\nlet forecastValue = 0\nlet forecastName = \"none\" ",
+	"todayWeekday":         "radio.setGroup(313)\nradio.onReceivedValue(function (name, value) {\n forecastName = name\nforecastValue = value\n})\nlet forecastValue = 0\nlet forecastName = \"none\" ",
+	"todayWeekend":         "radio.setGroup(313)\nradio.onReceivedValue(function (name, value) {\n forecastName = name\nforecastValue = value\n})\nlet forecastValue = 0\nlet forecastName = \"none\" ",
+	"todaySummerMonth":     "radio.setGroup(313)\nradio.onReceivedValue(function (name, value) {\n forecastName = name\nforecastValue = value\n})\nlet forecastValue = 0\nlet forecastName = \"none\" ",
+	"todayNewYear":         "radio.setGroup(313)\nradio.onReceivedValue(function (name, value) {\n forecastName = name\nforecastValue = value\n})\nlet forecastValue = 0\nlet forecastName = \"none\" ",
+	"timeForSchool":         "radio.setGroup(313)\nradio.onReceivedValue(function (name, value) {\n forecastName = name\nforecastValue = value\n})\nlet forecastValue = 0\nlet forecastName = \"none\" ",
+#	"timeSunrise":"radio.setGroup(313)\nradio.onReceivedValue(function (name, value) {\n forecastName = name\nforecastValue = value\n})\nlet forecastValue = 0\nlet forecastName = \"none\" ",
+# 	"timeSunset": "radio.setGroup(313)\nradio.onReceivedValue(function (name, value) {\n forecastName = name\nforecastValue = value\n})\nlet forecastValue = 0\nlet forecastName = \"none\" ",
+# 	"compassN" :"input.calibrateCompass()" , 
+# 	"compassE" :"input.calibrateCompass()" , 
+#   "compassS" :"input.calibrateCompass()" , 
+#   "compassW" :"input.calibrateCompass()" ,
+        "noInput": "basic.pause(1000)",#<<<<<<-----new added 17oct
+        "noOutput": "basic.pause(1000)",#<<<<<<-----new added 17oct
+        "sendData":"radio.setGroup(1)",# todo: set group automatically
+        "recieveData":"radio.setGroup(1)\nlet recieved = 0",# todo: set group automatically, new added 11Nov
+}
+ 
+
+input_code = {
+  	"buttonNotPress":"!input.buttonIsPressed(Button.A)",
+ 	"buttonPress":"input.buttonIsPressed(Button.A)",
+  	"accelLow":"input.acceleration(Dimension.X) < 511" , 
+  	"accelHigh":"input.acceleration(Dimension.X) >= 511"  , 
+	"compassN" :"input.compassHeading() < 45" , 
+	"compassE" :"input.compassHeading() >= 45 && input.compassHeading() < 135" , 
+  	"compassS" :"input.compassHeading() >= 135 && input.compassHeading() < 225" , 
+  	"compassW" :"input.compassHeading() >= 225 && input.compassHeading() < 315" , 
+	"gestureShake":"input.isGesture(Gesture.Shake)"  , 
+	"gestureTilt"  :"input.isGesture(Gesture.TiltLeft) || input.isGesture(Gesture.TiltRight)", 
+	"movementNotPresent":"pins.digitalReadPin(DigitalPin.P2) == 0"  ,
+	"movementPresent" :"pins.digitalReadPin(DigitalPin.P2) >= 1" , # >= 1000" ,
+	"noiseLow"  :"input.soundLevel() < 128" , #v2
+	"noiseHigh"	:"input.soundLevel() >= 128"  , #v2
+ 	"touchYes" 	:"input.logoIsPressed()" ,  #v2
+ 	"touchNo"	:"!input.logoIsPressed()"  , #v2
+	"sliderLow":"pins.analogReadPin(AnalogPin.P2) <= 100"  , 
+ 	"sliderMid":"pins.analogReadPin(AnalogPin.P2) > 500 && pins.analogReadPin(AnalogPin.P2) <= 700",
+	"sliderHigh":"pins.analogReadPin(AnalogPin.P2) >= 1000"  , 
+	"tempLow"  :"input.temperature() < 28", 
+	"tempHigh" :"input.temperature() >= 28" ,
+	"lightlevelLow" :"input.lightLevel() < 127", 
+	"lightlevelHigh":"input.lightLevel() >= 127",
+	"forecastTempHigh" 		:"forecastName == \"temp\" && forecastValue >= 28",
+	"forecastTempLow" 		:"forecastName == \"temp\" && forecastValue < 28",
+# 	"forecastCloudsHigh" 		:"forecastName == \"clouds\" && forecastValue >= 28 ",
+# 	"forecastCloudsLow" 		:"forecastName == \"clouds\" && forecastValue < 28",
+	"forecastHumidityHigh"	:"forecastName == \"humid\" && forecastValue >= 0.5",
+	"forecastHumidityLow" 	:"forecastName == \"humid\" && forecastValue < 0.5",
+	"forecastWindHigh" 		:"forecastName == \"wind\" && forecastValue >= 0.5",
+	"forecastWindLow" 		:"forecastName == \"wind\" && forecastValue < 0.5",
+	"forecastprecipHigh" 	:"forecastName == \"precip\" && forecastValue >= 0.5",
+	"forecastprecipLow" 	:"forecastName == \"precip\" && forecastValue < 0.5",	
+ 	"todayStartOfMonth" 	:"forecastName == \"date\" && forecastValue == 1",
+	"todayWeekday" 			:"forecastName == \"day\" && forecastValue <= 5",#1,2,3,4,5
+	"todayWeekend" 			:"forecastName == \"day\" && forecastValue >= 6",#6,7
+	"todaySummerMonth" 		:"forecastName == \"month\" && (forecastValue >= 6 && forecastValue <= 8)",#6,7,8
+	"todayNewYear" 			:"forecastName == \"year\" && forecastValue == 2022",
+	"timeForSchool" 		:"forecastName == \"time\" && forecastValue >= 0745",
+# 	"timeSunrise" 			:"forecastName == \"sunrise\" && forecastValue == 28",
+# 	"timeSunset" 			:"forecastName == \"sunset\" && forecastValue == 28",
+        "noInput":"true",#<<<<<<-----new added 17oct
+        "recieveData":"recieved == 1", 
+} 
+
+
+
+
+#only for tweeting, logging paired physical sensorValues:
+input_sensorValue = {
+  	"buttonNotPress":"input.buttonIsPressed(Button.A)",
+ 	"buttonPress":"input.buttonIsPressed(Button.A)",
+  	"accelLow":"input.acceleration(Dimension.X)" , 
+  	"accelHigh":"input.acceleration(Dimension.X)"  , 
+	"compassN" :"input.compassHeading()" , 
+	"compassE" :"input.compassHeading()" , 
+  	"compassS" :"input.compassHeading()" , 
+  	"compassW" :"input.compassHeading()" , 
+	"gestureShake":"input.isGesture(Gesture.Shake)"  , 
+	"gestureTilt"  :"input.isGesture(Gesture.TiltLeft) || input.isGesture(Gesture.TiltRight)", 
+	"movementNotPresent":"pins.digitalReadPin(DigitalPin.P0)"  ,
+	"movementPresent" :"pins.digitalReadPin(DigitalPin.P0)" , 
+	"noiseLow"  :"input.soundLevel()" , #v2
+	"noiseHigh"	:"input.soundLevel()"  , #v2
+ 	"touchYes" 	:"input.logoIsPressed()" ,  #v2
+ 	"touchNo"	:"input.logoIsPressed()"  , #v2
+	"sliderLow":"pins.analogReadPin(AnalogPin.P0)"  , 
+ 	"sliderMid":"pins.analogReadPin(AnalogPin.P0)",
+	"sliderHigh":"pins.analogReadPin(AnalogPin.P0)"  , 
+	"tempLow"  :"input.temperature()", 
+	"tempHigh" :"input.temperature()" ,
+	"lightlevelLow" :"input.lightLevel()", 
+	"lightlevelHigh":"input.lightLevel()",
+	"forecastTempHigh" :"forecastValue",
+	"forecastTempLow" :"forecastValue",
+	"forecastHumidityHigh" :"forecastValue",
+	"forecastHumidityLow" :"forecastValue",
+	"forecastWindHigh" :"forecastValue",
+	"forecastWindLow" :"forecastValue",
+	"forecastprecipHigh" :"forecastValue",
+	"forecastprecipLow" :"forecastValue",
+	"todayStartOfMonth" :"forecastValue",
+	"todayWeekday" :"forecastValue",
+	"todayWeekend" :"forecastValue",
+	"todaySummerMonth" :"forecastValue",
+	"todayNewYear" :"forecastValue",
+	"timeForSchool" :"forecastValue",#should this be a value converted to str
+	"none" :"none",
+	"noInput" :"noInput",
+	"noOutput" :"noOutput",
+	"sendData" :"sendData",
+	"recieveData" :"recieveData",
+        
+# 	"timeSunrise"  :"forecastValue",
+# 	"timeSunset" :"forecastValue",
+}
+
+
+output_code = {
+ 	"iconHappy":"basic.showIcon(IconNames.Happy)\n\tbasic.pause(1000)",
+    "iconSad":  "basic.showIcon(IconNames.Sad)\n\tbasic.pause(1000)",
+    "iconNone":  "basic.clearScreen()\n\tbasic.pause(1000)",
+  	"lightOn": "pins.digitalWritePin(DigitalPin.P1,1)\n\tbasic.pause(1000)",
+ 	"lightOff": "pins.digitalWritePin(DigitalPin.P1,0)\n\tbasic.pause(1000)",
+  	"musicHappy" : "music.startMelody(music.builtInMelody(Melodies.Birthday), MelodyOptions.Forever)\n\tbasic.pause(1000)", 
+  	"musicSad" : "music.startMelody(music.builtInMelody(Melodies.Funeral), MelodyOptions.Forever)\n\tbasic.pause(1000)", 
+  	"musicNone" : "music.stopMelody(MelodyStopOptions.All)\n\tbasic.pause(1000)" , 
+#   "speakText"  : "", 
+#   "speakInput" : "" , 
+#   "speakNone" : "" , 
+	"displayText" : "basic.showString(\"Ciao \")\n\tbasic.pause(1000)" , 
+	"displayInput": "basic.showString(\"string2send\")\n\tbasic.pause(1000)"  , 
+	#"displayInput": "basic.showString(\""+input_name[gamelevel]+"\")\n\tbasic.pause(1000)"  , 
+ 	"displayNone" :"basic.clearScreen()\n\tbasic.pause(1000)" , 
+	"showStripRainbow" : "strip.showRainbow(1, 360)\n\tbasic.pause(1000)", 
+	"showStripBlack" : "strip.showColor(neopixel.colors(NeoPixelColors.Black))\n\tbasic.pause(1000)", 
+	"fanOn" :  	"pins.digitalWritePin(DigitalPin.P1,1)\n\tbasic.pause(1000)", 
+	"fanOff"  : "pins.digitalWritePin(DigitalPin.P1,0)\n\tbasic.pause(1000)", 
+ 	"rotateMin" :"servos.P1.setAngle(0)\n\tbasic.pause(1000)" ,    
+ 	"rotateMid" :"servos.P1.setAngle(90)\n\tbasic.pause(1000)" ,  #card not used 
+ 	"rotateMax" :"servos.P1.setAngle(180)\n\tbasic.pause(1000)" ,    
+	"tweetText"  : "radio.sendString(\"#Ciao\")\n\tbasic.pause(1000)" , 
+	"tweetInput" : "radio.sendString(\"#nameValue\")\n\tbasic.pause(1000)" , #add input name and value directly???use variable
+#	"tweetInput" : "radio.sendString(\"#"+input_name[gamelevel]+"\")\n\tbasic.pause(1000)" , #add input name and value directly???use variable
+ 	"logInput"   : "radio.sendValue(\"&value\", 0)",  #add input name and value directly??? use variable
+#	"logInput"   : "radio.sendValue(\"&value\","+input_sensorValue[input_name[gamelevel]]+")\n\tbasic.pause(1000)",  #add input name and value directly???use variable
+        "noOutput":"",#<<<<<<-----new added 17oct
+        "sendData": "radio.sendValue(\"inputName\",inputValue)",# #<<<<<<-----new added 11nov
+#       "sendData": "radio.sendValue(\""+input_name[gamelevel]+"\","+input_sensorValue[input_name[gamelevel]]+")",# #<<<<<<-----new added 11nov
+}# 
+#confirm displayInput, tweetInput, logInput
+
+
+#defining a dictionary for inverse code for each output: 
+output_else_code={
+ 	"iconHappy":"basic.clearScreen()\n\tbasic.pause(1000)",
+    "iconSad":  "basic.clearScreen()\n\tbasic.pause(1000)",
+    "iconNone":  "basic.showIcon(IconNames.Happy)\n\tbasic.pause(1000)",
+  	"lightOn": "pins.digitalWritePin(DigitalPin.P1,0)\n\tbasic.pause(1000)",
+ 	"lightOff": "pins.digitalWritePin(DigitalPin.P1,1)\n\tbasic.pause(1000)",
+  	"musicHappy": "music.stopMelody(MelodyStopOptions.All)\n\tbasic.pause(1000)",  
+  	"musicSad" 	: "music.stopMelody(MelodyStopOptions.All)\n\tbasic.pause(1000)", 
+  	"musicNone" :  "music.startMelody(music.builtInMelody(Melodies.Birthday), MelodyOptions.Forever)\n\tbasic.pause(1000)", 
+#   "speakText"  : "", 
+#   "speakInput" : "" , 
+#   "speakNone" : "" , 
+	"displayText" : "basic.clearScreen()\n\tbasic.pause(1000)" , 
+	"displayInput": "basic.clearScreen()\n\tbasic.pause(1000)"  , 
+ 	"displayNone" : "basic.showString(\"hello\")\n\tbasic.pause(1000)" , 
+#  	"displayNone" : "basic.showString(\""+input_name+"\")\n\tbasic.pause(100)" , 
+	"showStripRainbow":  "strip.showColor(neopixel.colors(NeoPixelColors.Black))\n\tbasic.pause(1000)", 
+	"showStripBlack" :"strip.showRainbow(1, 360)\n\tbasic.pause(1000)",  
+	"fanOn" :  	"pins.digitalWritePin(DigitalPin.P1,0)\n\tbasic.pause(1000)", 
+	"fanOff"  : "pins.digitalWritePin(DigitalPin.P1,1)\n\tbasic.pause(1000)", 
+ 	"rotateMin" :"servos.P1.setAngle(180)\n\tbasic.pause(1000)",#card not used 
+ 	"rotateMid" :"servos.P1.setAngle(0)\n\tbasic.pause(1000)" , #card not used 
+ 	"rotateMax" :"servos.P1.setAngle(0)\n\tbasic.pause(1000)" , #card not used    
+	"tweetText"  : "basic.pause(1000)" , #not needed for cloud cards, can else statement remains empty??
+	"tweetInput" : "basic.pause(1000)" , #not needed for cloud cards, can else statement remains empty??
+	"logInput"   : "basic.pause(1000)",  #not needed for cloud cards, can else statement remains empty??
+	"forecastTempHigh" 		:"radio.sendString(\"get_temp\")\n\tbasic.pause(2000)",
+	"forecastTempLow" 		:"radio.sendString(\"get_temp\")\n\tbasic.pause(2000)",
+	"forecastHumidityHigh"	:"radio.sendString(\"get_humid\")\n\tbasic.pause(2000)",
+	"forecastHumidityLow" 	:"radio.sendString(\"get_humid\")\n\tbasic.pause(2000)",
+	"forecastWindHigh" 		:"radio.sendString(\"get_wind\")\n\tbasic.pause(2000)",
+	"forecastWindLow" 		:"radio.sendString(\"get_wind\")\n\tbasic.pause(2000)",
+	"forecastprecipHigh" 	:"radio.sendString(\"get_precip\")\n\tbasic.pause(2000)",
+	"forecastprecipLow" 	:"radio.sendString(\"get_precip\")\n\tbasic.pause(2000)",
+	"todayStartOfMonth" 	:"radio.sendString(\"get_date\")\n\tbasic.pause(2000)",
+	"todayWeekday" 			:"radio.sendString(\"get_day\")\n\tbasic.pause(2000)",
+	"todayWeekend" 			:"radio.sendString(\"get_day\")\n\tbasic.pause(2000)",
+	"todaySummerMonth" 		:"radio.sendString(\"get_month\")\n\tbasic.pause(2000)",
+	"todayNewYear" 			:"radio.sendString(\"get_year\")\n\tbasic.pause(2000)",
+	"timeForSchool" 		:"radio.sendString(\"get_time\")\n\tbasic.pause(2000)",
+        "noOutput":"",#<<<<<<-----new added 17oct
+        "sendData":"basic.pause(1000)",# #<<<<<<-----new added 11nov
+}
+
+
+
+
+
+
+def genURL (*args):#input_name, output_name):#here i am collecting chunks of code, encoding them, and concatenating them into a URL:
+     #----------on-start-code---------
+    on_start_code=[]
+    on_end_code=[]
+    jscode=""
+    for eachIOpair in args:
+        #print(eachIOpair)
+        for eachItem in eachIOpair:
+            #print(eachItem)
+            if True:#eachItem != "noInput" and eachItem != "noOutput": 
+                if eachItem in on_start:
+                    on_start_code.append(on_start[eachItem]+ '\n')
+                if eachItem in on_end:
+                    on_end_code.append(on_end[eachItem]+ '\n')
+    #print("onstart:",on_start_code)
+    on_start_code_noDup= list( dict.fromkeys(on_start_code) )
+    on_end_code_noDup= list( dict.fromkeys(on_end_code) )
+    #print("onstart_noDup:",on_start_code_noDup)    
+    for eachline in on_start_code_noDup:
+        jscode= jscode + eachline
+    jscode= jscode + 'basic.forever(function () {' + '\n'
+    #-----------if-else-code---------
+    if_body_code=""
+    if freeplaymode==True or alwaysfreeplaymode==True:
+        for eachIOpair in args: #in,out
+            if True:#eachIOpair[0] != "noInput" and eachIOpair[1] != "noOuput":
+                if eachIOpair[1] in output_code:
+                    if eachIOpair[1]=="sendData":
+                        if_body_code=output_code[eachIOpair[1]].replace("inputName",input_name[gamelevel]).replace("inputValue","1")
+                       #if_body_code=output_code[eachIOpair[1]].replace("inputName",input_name[gamelevel]).replace("inputValue",input_sensorValue[input_name[gamelevel]])
+                    else:
+                        if_body_code=output_code[eachIOpair[1]]
+                if eachIOpair[1] in output_else_code:
+                    else_code = output_else_code[eachIOpair[1]]+ '\n'
+                else:
+                    else_code="basic.pause(100)"
+                if eachIOpair[0] in output_else_code:#special cases for forecast: get_temp
+                        else_code = output_else_code[eachIOpair[0]]+ '\n'
+
+
+                jscode= jscode  \
+                    + '    ' + 'if (' + input_code[eachIOpair[0]]+'){\n'  \
+                    + '    ' + '    ' + if_body_code +'\n'  \
+                    + '    ' + '} else {\n' \
+                    + '    ' + '    ' + else_code \
+                    + '    ' + '}\n'
+
+    else:
+
+        for eachIOpair in args: #in,out
+            if eachIOpair[0] != "noInput" and eachIOpair[1] != "noOutput":
+                if eachIOpair[1] in output_else_code:
+                    else_code = output_else_code[eachIOpair[1]]+ '\n'
+                else:
+                    else_code="basic.pause(100)"
+                if eachIOpair[0] in output_else_code:#special cases for forecast: get_temp
+                        else_code = output_else_code[eachIOpair[0]]+ '\n'
+
+                jscode= jscode  \
+                    + '    ' + 'if (' + input_code[eachIOpair[0]]+'){\n'  \
+                    + '    ' + '    ' + output_code[eachIOpair[1]]+'\n'  \
+                    + '    ' + ' } else {\n' \
+                    + '    ' + '    ' + else_code +'\n' \
+                    + '    ' + '}\n'
+##+ '    ' + '    ' + 'basic.pause(1000)' +'\n' \
+
+
+
+                
+    #-----------closing forever loop---------
+    jscode=jscode+'})'
+    #-----------on_end_code---------
+    for eachline in on_end_code_noDup:
+        jscode= jscode + eachline 
+    #print(jscode)
+    
+    #------enclose jscode in URL:---    
+    url='https://makecode.microbit.org/--docs?md='+codetitle+codesubtitle+'%0A%0A%60%60%60%20blocks%0A'
+    for eachline in jscode:
+        url=url+urllib.parse.quote(eachline) 
+    url=url+'%0A%60%60%60%0A%0A'
+    #-----------add-extensions-code---------
+    on_end_code=[]
+    for eachIOpair in args:
+        for eachItem in eachIOpair: 
+            if True:#eachItem != "noInput" and eachItem != "noOutput":
+                if eachItem in package_suffix:
+                    on_end_code.append(package_suffix[eachItem])
+                #url=url+package_suffix[eachItem]
+    #print(on_end_code)
+    on_end_code_noDup= list( dict.fromkeys(on_end_code) )
+    #print(on_end_code_noDup)
+    for eachline in on_end_code_noDup:
+        url=url+eachline
+    return url, jscode
+
+
+
+
+urlis,jscodeis=genURL([input_name[0],output_name[0]],[input_name[1],output_name[1]])
+
+
+
+
+
 st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo-hor.png",width=380)
 input_col, plus_col, output_col, pad, code_col= st.columns([1,1,1,1,6])
 with input_col:    
@@ -264,30 +622,7 @@ with code_col:
         """,
         unsafe_allow_html=True,
         )
-	st.code('''radio.setGroup(1)
-	let recieved = 0
-	music.setVolume(255)
-	radio.setGroup(1)
-	basic.forever(function () {
-	    if (recieved == 1){
-	        music.stopMelody(MelodyStopOptions.All)
-		basic.pause(1000)
-	    } else {
-	        music.startMelody(music.builtInMelody(Melodies.Birthday), MelodyOptions.Forever)
-		basic.pause(1000)
-	    }
-	    if (pins.digitalReadPin(DigitalPin.P2) >= 1){
- 	       radio.sendValue("movementPresent",1)
- 	   } else {
- 	       basic.pause(1000)
- 	   }
-	})
-	radio.onReceivedValue(function (name, value) {
-		if (name == "replace_me" && value == 1) {
-			recieved = 1
-		}
-	})
-	''',language="javascript")
+	st.code(jscode,language="javascript")
 
 
 e,edit  = st.columns([1,1])
