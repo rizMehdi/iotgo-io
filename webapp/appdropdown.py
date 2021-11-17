@@ -152,10 +152,11 @@ if p2ptype=='invio dati':
 elif  p2ptype=='ricevo dati': #'ricevo dati'
 	output2 = st.sidebar.selectbox(
 	'seleziona una altra carta ouput',
-	(
-    'Mostra un\'icona felice' ,
-    'Mostra un\'icona triste' ,
-    'Smette di mostrare un\'icona' ,
+	( 
+	'no Output', 
+	'Mostra un\'icona felice' ,
+    	'Mostra un\'icona triste' ,
+    	'Smette di mostrare un\'icona' ,
   	'Accende una luce' ,
  	'Spegne una luce' , 
   	'Suona una melodia triste'  , 
@@ -168,8 +169,7 @@ elif  p2ptype=='ricevo dati': #'ricevo dati'
 	'Spegne un\'animazione luminosa' , 
 	'Accende un ventilatore'  , 
 	'Spegne un ventilatore'  ,
-	'Fa ruotare il motore' ,   
-	'no Output', 
+	'Fa ruotare il motore' 
          ))	
 ##	("noOutput","iconHappy","iconSad","iconNone","lightOn","lightOff","lightOff",
 ##         "musicHappy" ,"musicSad"  ,"musicNone"  ,"displayText"  ,"displayInput"  ,
