@@ -41,17 +41,35 @@ st.markdown(
 
 input1 = st.sidebar.selectbox(
 	'your first input and output are:',
-	('Email', 'Home phone', 'Mobile phone'))
+	("buttonNotPress","buttonPress","accelLow" , "accelHigh"  , "compassE"  , 
+         "compassW"  , "compassN"  , "compassS"  , "gestureShake"  , "gestureTilt"  ,
+         "movementPresent"  ,"movementNotPresent"  , "noiseLow"  , "noiseHigh"  ,"sliderLow"  ,
+         "sliderHigh"  , "tempLow"  ,"tempHigh"  ,"lightlevelLow","lightlevelHigh",
+        "touchYes" ,"touchNo"  ,"noInput"))
+
 output1 = st.sidebar.selectbox(
 	'&',
-	('Email', 'Home phone', 'Mobile phone'))
+	("iconHappy","iconSad","iconNone","lightOn","lightOff","lightOff",
+         "musicHappy" ,"musicSad"  ,"musicNone"  ,"displayText"  ,"displayInput"  ,
+         "displayNone"  ,"showStripRainbow"  ,"showStripBlack","fanOn"  ,
+         "fanOff"  , "rotateMax"  , "noOutput",))
 st.sidebar.subheader("")
 input2 = st.sidebar.selectbox(
-	'your second input and output are:',
-	('Email', 'Home phone', 'Mobile phone'))
+	'your second input and output are:', 
+	("buttonNotPress","buttonPress","accelLow" , "accelHigh"  , "compassE"  , 
+         "compassW"  , "compassN"  , "compassS"  , "gestureShake"  , "gestureTilt"  ,
+         "movementPresent"  ,"movementNotPresent"  , "noiseLow"  , "noiseHigh"  ,"sliderLow"  ,
+         "sliderHigh"  , "tempLow"  ,"tempHigh"  ,"lightlevelLow","lightlevelHigh",
+        "touchYes" ,"touchNo"  ,"noInput","recieveData"))
 output2 = st.sidebar.selectbox(
 	'& ',
-	('Email', 'Home phone', 'Mobile phone'))
+	("iconHappy","iconSad","iconNone","lightOn","lightOff","lightOff",
+         "musicHappy" ,"musicSad"  ,"musicNone"  ,"displayText"  ,"displayInput"  ,
+         "displayNone"  ,"showStripRainbow"  ,"showStripBlack","fanOn"  ,
+         "fanOff"  , "rotateMax"  , "noOutput", "sendData",))	("iconHappy","iconSad","iconNone","lightOn","lightOff","lightOff",
+         "musicHappy" ,"musicSad"  ,"musicNone"  ,"displayText"  ,"displayInput"  ,
+         "displayNone"  ,"showStripRainbow"  ,"showStripBlack","fanOn"  ,
+         "fanOff"  , "rotateMax"  , "noOutput", "sendData",))
 
 
 st.sidebar.write('You selected:', input1,output1,input2,output2)
