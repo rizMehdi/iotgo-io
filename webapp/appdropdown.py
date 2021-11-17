@@ -58,7 +58,9 @@ output1 = st.sidebar.selectbox(
          "musicHappy" ,"musicSad"  ,"musicNone"  ,"displayText"  ,"displayInput"  ,
          "displayNone"  ,"showStripRainbow"  ,"showStripBlack","fanOn"  ,
          "fanOff"  , "rotateMax"  , "noOutput",))
-st.sidebar.subheader("")
+
+st.sidebar.markdown("""---""")
+
 input2 = st.sidebar.selectbox(
 	'your second input and output are:', 
 	("buttonNotPress","buttonPress","accelLow" , "accelHigh"  , "compassE"  , 
