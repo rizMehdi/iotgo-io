@@ -484,7 +484,8 @@ output_else_code={
 
 
 
-
+freeplaymode==True
+alwaysfreeplaymode==True
 def genURL (*args):#input_name, output_name):#here i am collecting chunks of code, encoding them, and concatenating them into a URL:
      #----------on-start-code---------
     on_start_code=[]
