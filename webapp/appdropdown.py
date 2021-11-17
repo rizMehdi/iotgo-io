@@ -82,10 +82,26 @@ input1 = st.sidebar.selectbox(
 
 output1 = st.sidebar.selectbox(
 	'&',
-	("iconHappy","iconSad","iconNone","lightOn","lightOff","lightOff",
-         "musicHappy" ,"musicSad"  ,"musicNone"  ,"displayText"  ,"displayInput"  ,
-         "displayNone"  ,"showStripRainbow"  ,"showStripBlack","fanOn"  ,
-         "fanOff"  , "rotateMax"  , "noOutput",))
+	(
+	'no Output', 
+        'Mostra un\'icona felice' ,
+        'Mostra un\'icona triste' ,
+        'Smette di mostrare un\'icona' ,
+  	'Accende una luce' ,
+ 	'Spegne una luce' , 
+  	'Suona una melodia triste'  , 
+  	'Suona una melodia allegra'  , 
+	'Smette di suonare'   , 
+	'Mostra del testo'  , 
+	'Mostra un numero'  , 
+	'Smette di mostrare testi o numeri'  , 
+	'Attiva un\'animazione luminosa'  , 
+	'Spegne un\'animazione luminosa' , 
+	'Accende un ventilatore'  , 
+	'Spegne un ventilatore'  ,
+	'Fa ruotare il motore' 
+         ))	
+        
 
 ##	("iconHappy","iconSad","iconNone","lightOn","lightOff","lightOff",
 ##         "musicHappy" ,"musicSad"  ,"musicNone"  ,"displayText"  ,"displayInput"  ,
@@ -135,10 +151,25 @@ if p2ptype=='invio dati':
 elif  p2ptype=='ricevo dati': #'ricevo dati'
 	output2 = st.sidebar.selectbox(
 	'seleziona una altra carta ouput',
-	("noOutput","iconHappy","iconSad","iconNone","lightOn","lightOff","lightOff",
-         "musicHappy" ,"musicSad"  ,"musicNone"  ,"displayText"  ,"displayInput"  ,
-         "displayNone"  ,"showStripRainbow"  ,"showStripBlack","fanOn"  ,
-         "fanOff"  , "rotateMax"   ))	
+	(
+    'Mostra un\'icona felice' ,
+    'Mostra un\'icona triste' ,
+    'Smette di mostrare un\'icona' ,
+  	'Accende una luce' ,
+ 	'Spegne una luce' , 
+  	'Suona una melodia triste'  , 
+  	'Suona una melodia allegra'  , 
+	'Smette di suonare'   , 
+	'Mostra del testo'  , 
+	'Mostra un numero'  , 
+	'Smette di mostrare testi o numeri'  , 
+	'Attiva un\'animazione luminosa'  , 
+	'Spegne un\'animazione luminosa' , 
+	'Accende un ventilatore'  , 
+	'Spegne un ventilatore'  ,
+	'Fa ruotare il motore' ,   
+	'no Output', 
+         ))	
 ##	("noOutput","iconHappy","iconSad","iconNone","lightOn","lightOff","lightOff",
 ##         "musicHappy" ,"musicSad"  ,"musicNone"  ,"displayText"  ,"displayInput"  ,
 ##         "displayNone"  ,"showStripRainbow"  ,"showStripBlack","fanOn"  ,
