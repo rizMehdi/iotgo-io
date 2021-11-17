@@ -54,7 +54,7 @@ output2 = st.sidebar.selectbox(
 	('Email', 'Home phone', 'Mobile phone'))
 
 
-st.sidebar.write('You selected:', option)
+st.sidebar.write('You selected:', input1,output1,input2,output2)
 
 
 st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo-hor.png",width=380)
