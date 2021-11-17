@@ -39,6 +39,11 @@ st.markdown(
         unsafe_allow_html=True,
 )
 
+option = st.sidebar.selectbox(
+	'How would you like to be contacted?',
+	('Email', 'Home phone', 'Mobile phone'))
+st.sidebar.write('You selected:', option)
+
 
 st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo-hor.png",width=380)
 input_col, plus_col, output_col, pad, code_col= st.columns([1,1,1,1,6])
