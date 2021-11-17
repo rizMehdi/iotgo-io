@@ -30,11 +30,11 @@ st.markdown(
         """
         <style>
         [data-testid="stSidebar"][aria-expanded="true"] > div:first-child {
-                width: 200px;
+                width: 400px;
         }
         [data-testid="stSidebar"][aria-expanded="false"] > div:first-child {
-                width: 200px;
-                margin-left: -200px;
+                width: 400px;
+                margin-left: -400px;
         }
         </style>
         """,
