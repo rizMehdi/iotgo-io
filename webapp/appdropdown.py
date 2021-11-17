@@ -40,17 +40,17 @@ st.markdown(
 )
 
 input1 = st.sidebar.selectbox(
-	'your first input is:',
+	'your first input and output are:',
 	('Email', 'Home phone', 'Mobile phone'))
 output1 = st.sidebar.selectbox(
-	'your first output is:',
+	'',
 	('Email', 'Home phone', 'Mobile phone'))
 st.sidebar.subheader("")
 input2 = st.sidebar.selectbox(
-	'your second input is:',
+	'your second input and output are:',
 	('Email', 'Home phone', 'Mobile phone'))
 output2 = st.sidebar.selectbox(
-	'your second output is:',
+	'',
 	('Email', 'Home phone', 'Mobile phone'))
 
 
