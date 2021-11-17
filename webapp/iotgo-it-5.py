@@ -1,8 +1,8 @@
-                #this file was updated on Wed Nov 17 09:40:23 2021
+                #this file was updated on Wed Nov 17 09:40:25 2021
 import streamlit as st
 import streamlit.components.v1 as components
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide",initial_sidebar_state="expanded")
-urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28input.buttonIsPressed%28Button.A%29%29%7B%0A%20%20%20%20%20%20%20%20basic.showString%28%22Ciao%20%22%29%0A%09basic.pause%281000%29%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20basic.clearScreen%28%29%0A%09basic.pause%281000%29%0A%20%20%20%20%7D%0A%7D%29%0A%60%60%60%0A%0A"
+urlis="https://makecode.microbit.org/--docs?md=%0A%0A%60%60%60%20blocks%0Aservos.P1.setRange%280%2C180%29%0Abasic.forever%28function%20%28%29%20%7B%0A%20%20%20%20if%20%28input.buttonIsPressed%28Button.A%29%29%7B%0A%20%20%20%20%20%20%20%20servos.P1.setAngle%28180%29%0A%09basic.pause%281000%29%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20servos.P1.setAngle%280%29%0A%09basic.pause%281000%29%0A%20%20%20%20%7D%0A%7D%29%0A%60%60%60%0A%0A%60%60%60package%0Aservo%0A%60%60%60"
 cardWidth=130
 pluscardwidht=130
 missionCardWidth=160
@@ -67,12 +67,13 @@ st.markdown(
         """,
         unsafe_allow_html=True,
         )
-st.code('''basic.forever(function () {
+st.code('''servos.P1.setRange(0,180)
+basic.forever(function () {
     if (input.buttonIsPressed(Button.A)){
-        basic.showString("Ciao ")
+        servos.P1.setAngle(180)
 	basic.pause(1000)
     } else {
-        basic.clearScreen()
+        servos.P1.setAngle(0)
 	basic.pause(1000)
     }
 })''',language="javascript")
