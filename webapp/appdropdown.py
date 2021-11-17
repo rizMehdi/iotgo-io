@@ -63,17 +63,17 @@ st.sidebar.markdown("""---""")
 
 input2 = st.sidebar.selectbox(
 	'your second input and output are:', 
-	("buttonNotPress","buttonPress","accelLow" , "accelHigh"  , "compassE"  , 
+	("noInput","recieveData", "buttonNotPress","buttonPress","accelLow" , "accelHigh"  , "compassE"  , 
          "compassW"  , "compassN"  , "compassS"  , "gestureShake"  , "gestureTilt"  ,
          "movementPresent"  ,"movementNotPresent"  , "noiseLow"  , "noiseHigh"  ,"sliderLow"  ,
          "sliderHigh"  , "tempLow"  ,"tempHigh"  ,"lightlevelLow","lightlevelHigh",
-        "touchYes" ,"touchNo"  ,"noInput","recieveData"))
+        "touchYes" ,"touchNo"  ))
 output2 = st.sidebar.selectbox(
 	'& ',
-	("iconHappy","iconSad","iconNone","lightOn","lightOff","lightOff",
+	("noOutput", "sendData","iconHappy","iconSad","iconNone","lightOn","lightOff","lightOff",
          "musicHappy" ,"musicSad"  ,"musicNone"  ,"displayText"  ,"displayInput"  ,
          "displayNone"  ,"showStripRainbow"  ,"showStripBlack","fanOn"  ,
-         "fanOff"  , "rotateMax"  , "noOutput", "sendData",))	
+         "fanOff"  , "rotateMax"   ))	
 
 
 #st.sidebar.write('You selected:', input1,output1,input2,output2)
