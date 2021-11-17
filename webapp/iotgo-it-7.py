@@ -11,7 +11,7 @@ missionCardWidth=160
 vertiPaddingWidth=35
 codetitle=""
 codesubtitle=""
-groupnum="8"
+groupnum="7"
 st.markdown(
         """
         <style type="text/css">
@@ -51,7 +51,10 @@ st.sidebar.markdown("""livello 1:
 input1 = st.sidebar.selectbox(
 	'seleziona le tue carte di input e output',
         (
-         'Il cursore è al massimo',
+         
+         'Il logo è toccato',
+         'Il logo non è toccato',
+	'Il cursore è al massimo',
          'Il cursore è al minimo' ,
 	 'L\'accelerazione è alta',
 	 'Il pulsante premuto',
@@ -71,8 +74,6 @@ input1 = st.sidebar.selectbox(
          'La temperatura è alta',
          'L\'intensità di luce è bassa',
          'L\'intensità di luce è alta',
-         'Il logo è toccato',
-         'Il logo non è toccato',
          'no Input'  , 
                  ))
 
@@ -85,7 +86,8 @@ input1 = st.sidebar.selectbox(
 output1 = st.sidebar.selectbox(
 	'   &   ',
 	(
-	
+	'Attiva un\'animazione luminosa'  , 
+	'Spegne un\'animazione luminosa' , 
   	'Accende una luce' ,
  	'Spegne una luce' , 
 	'Suona una melodia allegra'  , 
@@ -99,8 +101,6 @@ output1 = st.sidebar.selectbox(
 	'Mostra del testo'  , 
 	'Mostra un numero'  , 
 	'Smette di mostrare testi o numeri'  , 
-	'Attiva un\'animazione luminosa'  , 
-	'Spegne un\'animazione luminosa' , 
 	'Spegne un ventilatore'  ,
 	'Fa ruotare il motore' 
          ))	
