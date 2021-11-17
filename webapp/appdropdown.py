@@ -235,7 +235,7 @@ output1path= baseURL+langPrefix[lang]+grabURL[output_name[1]]
 
 
 urlis=""
-jscodeis=""
+jscode=""
 
 
 #defining a dictionary for any additional extension/package needed for each output: %60%60%60package%0Aservo%0A%60%60%60  wrong="%60%60%%0Aservo%0A%60%60%60"
@@ -588,7 +588,7 @@ def genURL (*args):#input_name, output_name):#here i am collecting chunks of cod
 
 
 
-urlis,jscodeis=genURL([input_name[0],output_name[0]],[input_name[1],output_name[1]])
+urlis,jscode=genURL([input_name[0],output_name[0]],[input_name[1],output_name[1]])
 
 
 
