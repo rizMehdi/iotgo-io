@@ -45,9 +45,10 @@ st.markdown(
 input_name= ["noInput"  ,"noInput"  ,"noInput"]
 output_name=["noOutput" ,"noOutput" ,"noOutput"]
 
-
+st.sidebar.markdown("""livello 1: 
+---""")
 input1 = st.sidebar.selectbox(
-	'le tue prime carte input e output:',
+	'seleziona le tue carte di input e output',
 	("buttonNotPress","buttonPress","accelLow" , "accelHigh"  , "compassE"  , 
          "compassW"  , "compassN"  , "compassS"  , "gestureShake"  , "gestureTilt"  ,
          "movementPresent"  ,"movementNotPresent"  , "noiseLow"  , "noiseHigh"  ,"sliderLow"  ,
@@ -64,19 +65,28 @@ output1 = st.sidebar.selectbox(
 st.sidebar.markdown("""livello 2: 
 ---""")
 
-input2 = st.sidebar.selectbox(
-	'le tue altre carte input e output:', 
-	("noInput","recieveData", "buttonNotPress","buttonPress","accelLow" , "accelHigh"  , "compassE"  , 
+p2ptype = st.sidebar.radio(
+	'sono...', 
+	('invio dati', 'ricevo dati' ))
+if p2ptype=='invio dati':
+	input2 = st.sidebar.selectbox(
+	'seleziona le tue carte di input e output:', 
+	("noInput","buttonNotPress","buttonPress","accelLow" , "accelHigh"  , "compassE"  , 
          "compassW"  , "compassN"  , "compassS"  , "gestureShake"  , "gestureTilt"  ,
          "movementPresent"  ,"movementNotPresent"  , "noiseLow"  , "noiseHigh"  ,"sliderLow"  ,
          "sliderHigh"  , "tempLow"  ,"tempHigh"  ,"lightlevelLow","lightlevelHigh",
         "touchYes" ,"touchNo"  ))
-output2 = st.sidebar.selectbox(
+	output2= "sendData"
+else: #'ricevo dati'
+	output2 = st.sidebar.selectbox(
 	'& ',
-	("noOutput", "sendData","iconHappy","iconSad","iconNone","lightOn","lightOff","lightOff",
+	("noOutput","iconHappy","iconSad","iconNone","lightOn","lightOff","lightOff",
          "musicHappy" ,"musicSad"  ,"musicNone"  ,"displayText"  ,"displayInput"  ,
          "displayNone"  ,"showStripRainbow"  ,"showStripBlack","fanOn"  ,
          "fanOff"  , "rotateMax"   ))	
+	input2="recieveData"
+
+
 
 
 #st.sidebar.write('You selected:', input1,output1,input2,output2)
