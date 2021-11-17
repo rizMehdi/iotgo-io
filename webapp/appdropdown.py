@@ -69,7 +69,7 @@ output2 = st.sidebar.selectbox(
          "fanOff"  , "rotateMax"  , "noOutput", "sendData",))	("iconHappy","iconSad","iconNone","lightOn","lightOff","lightOff",
          "musicHappy" ,"musicSad"  ,"musicNone"  ,"displayText"  ,"displayInput"  ,
          "displayNone"  ,"showStripRainbow"  ,"showStripBlack","fanOn"  ,
-         "fanOff"  , "rotateMax"  , "noOutput", "sendData",))
+         "fanOff"  , "rotateMax"  , "noOutput", "sendData"))
 
 
 st.sidebar.write('You selected:', input1,output1,input2,output2)
