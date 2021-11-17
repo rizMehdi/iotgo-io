@@ -11,6 +11,7 @@ missionCardWidth=160
 vertiPaddingWidth=35
 codetitle=""
 codesubtitle=""
+groupnum=1
 st.markdown(
         """
         <style type="text/css">
@@ -81,7 +82,7 @@ input1 = st.sidebar.selectbox(
 ##        "touchYes" ,"touchNo"  ,"noInput"))
 
 output1 = st.sidebar.selectbox(
-	'&',
+	'   &   ',
 	(
 	'no Output', 
         'Mostra un\'icona felice' ,
@@ -656,7 +657,10 @@ def genURL (*args):#input_name, output_name):#here i am collecting chunks of cod
             #print(eachItem)
             if True:#eachItem != "noInput" and eachItem != "noOutput": 
                 if eachItem in on_start:
-                    on_start_code.append(on_start[eachItem]+ '\n')
+                    if eachItem=="sendData":
+                        on_start_code.replace("1",groupnum).append(on_start[eachItem]+ '\n')
+                    else:
+                        on_start_code.append(on_start[eachItem]+ '\n')
                 if eachItem in on_end:
                     on_end_code.append(on_end[eachItem]+ '\n')
     #print("onstart:",on_start_code)
