@@ -49,11 +49,36 @@ st.sidebar.markdown("""livello 1:
 ---""")
 input1 = st.sidebar.selectbox(
 	'seleziona le tue carte di input e output',
-	("buttonNotPress","buttonPress","accelLow" , "accelHigh"  , "compassE"  , 
-         "compassW"  , "compassN"  , "compassS"  , "gestureShake"  , "gestureTilt"  ,
-         "movementPresent"  ,"movementNotPresent"  , "noiseLow"  , "noiseHigh"  ,"sliderLow"  ,
-         "sliderHigh"  , "tempLow"  ,"tempHigh"  ,"lightlevelLow","lightlevelHigh",
-        "touchYes" ,"touchNo"  ,"noInput"))
+        ('Il pulsante premuto',
+         'Il pulsante non è premuto',
+         'L\'accelerazione è basso',
+         'L\'accelerazione è alta ',
+         'La bussola punta ad Est'  ,
+         'La bussola punta ad Ovest'  ,
+         'La bussola punta a Nord',
+         'La bussola punta a Sud'  ,
+         'Il gesto è scuotere' ,
+         'Il gesto è inclinare' ,
+         'C\'è movimento nei dintorni' ,
+         'Non c\'è movimento nei dintorni',
+         'Il rumore è basso' ,
+         'Il rumore è alto',
+         'Il cursore è al minimo' ,
+         'Il cursore è al massimo',
+         'La temperatura è bassa',
+         'La temperatura è alta',
+         'L\'intensità di luce è bassa',
+         'L\'intensità di luce è alta',
+         'Il logo è toccato',
+         'Il logo non è toccato',
+         'no Input'  
+                 ))
+
+##	("buttonNotPress","buttonPress","accelLow" , "accelHigh"  , "compassE"  , 
+##         "compassW"  , "compassN"  , "compassS"  , "gestureShake"  , "gestureTilt"  ,
+##         "movementPresent"  ,"movementNotPresent"  , "noiseLow"  , "noiseHigh"  ,"sliderLow"  ,
+##         "sliderHigh"  , "tempLow"  ,"tempHigh"  ,"lightlevelLow","lightlevelHigh",
+##        "touchYes" ,"touchNo"  ,"noInput"))
 
 output1 = st.sidebar.selectbox(
 	'&',
@@ -61,6 +86,11 @@ output1 = st.sidebar.selectbox(
          "musicHappy" ,"musicSad"  ,"musicNone"  ,"displayText"  ,"displayInput"  ,
          "displayNone"  ,"showStripRainbow"  ,"showStripBlack","fanOn"  ,
          "fanOff"  , "rotateMax"  , "noOutput",))
+
+##	("iconHappy","iconSad","iconNone","lightOn","lightOff","lightOff",
+##         "musicHappy" ,"musicSad"  ,"musicNone"  ,"displayText"  ,"displayInput"  ,
+##         "displayNone"  ,"showStripRainbow"  ,"showStripBlack","fanOn"  ,
+##         "fanOff"  , "rotateMax"  , "noOutput",))
 
 st.sidebar.markdown("""livello 2: 
 ---""")
@@ -71,11 +101,36 @@ p2ptype = st.sidebar.selectbox(
 if p2ptype=='invio dati':
 	input2 = st.sidebar.selectbox(
 	'seleziona una altra carta input', 
-	("noInput","buttonNotPress","buttonPress","accelLow" , "accelHigh"  , "compassE"  , 
-         "compassW"  , "compassN"  , "compassS"  , "gestureShake"  , "gestureTilt"  ,
-         "movementPresent"  ,"movementNotPresent"  , "noiseLow"  , "noiseHigh"  ,"sliderLow"  ,
-         "sliderHigh"  , "tempLow"  ,"tempHigh"  ,"lightlevelLow","lightlevelHigh",
-        "touchYes" ,"touchNo"  ))
+        ('no Input',
+         'Il pulsante premuto',
+         'Il pulsante non è premuto',
+         'L\'accelerazione è basso',
+         'L\'accelerazione è alta ',
+         'La bussola punta ad Est'  ,
+         'La bussola punta ad Ovest'  ,
+         'La bussola punta a Nord',
+         'La bussola punta a Sud'  ,
+         'Il gesto è scuotere' ,
+         'Il gesto è inclinare' ,
+         'C\'è movimento nei dintorni' ,
+         'Non c\'è movimento nei dintorni',
+         'Il rumore è basso' ,
+         'Il rumore è alto',
+         'Il cursore è al minimo' ,
+         'Il cursore è al massimo',
+         'La temperatura è bassa',
+         'La temperatura è alta',
+         'L\'intensità di luce è bassa',
+         'L\'intensità di luce è alta',
+         'Il logo è toccato',
+         'Il logo non è toccato'
+  
+                 ))
+##	("noInput","buttonNotPress","buttonPress","accelLow" , "accelHigh"  , "compassE"  , 
+##         "compassW"  , "compassN"  , "compassS"  , "gestureShake"  , "gestureTilt"  ,
+##         "movementPresent"  ,"movementNotPresent"  , "noiseLow"  , "noiseHigh"  ,"sliderLow"  ,
+##         "sliderHigh"  , "tempLow"  ,"tempHigh"  ,"lightlevelLow","lightlevelHigh",
+##        "touchYes" ,"touchNo"  ))
 	output2= "sendData"
 elif  p2ptype=='ricevo dati': #'ricevo dati'
 	output2 = st.sidebar.selectbox(
@@ -84,6 +139,10 @@ elif  p2ptype=='ricevo dati': #'ricevo dati'
          "musicHappy" ,"musicSad"  ,"musicNone"  ,"displayText"  ,"displayInput"  ,
          "displayNone"  ,"showStripRainbow"  ,"showStripBlack","fanOn"  ,
          "fanOff"  , "rotateMax"   ))	
+##	("noOutput","iconHappy","iconSad","iconNone","lightOn","lightOff","lightOff",
+##         "musicHappy" ,"musicSad"  ,"musicNone"  ,"displayText"  ,"displayInput"  ,
+##         "displayNone"  ,"showStripRainbow"  ,"showStripBlack","fanOn"  ,
+##         "fanOff"  , "rotateMax"   ))	
 	input2="recieveData"
 else:
 	input2="noInput"
@@ -118,7 +177,7 @@ it2en_in= {
     'L\'intensità di luce è alta':"lightlevelHigh",
     'Il logo è toccato':"touchYes" ,#v2  
     'Il logo non è toccato':"touchNo"  , #v2    
-    'no Input':"noInput",#<<<<<<<------- new card. 
+    'no Input':"noInput",  
     }
     
 it2en_out= {
