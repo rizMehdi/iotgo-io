@@ -7,7 +7,7 @@ pluscardwidht=130
 missionCardWidth=160
 vertiPaddingWidth=35
 codetitle=""
-
+codesubtitle=""
 st.markdown(
         """
         <style type="text/css">
