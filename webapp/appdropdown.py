@@ -39,9 +39,21 @@ st.markdown(
         unsafe_allow_html=True,
 )
 
-option = st.sidebar.selectbox(
-	'How would you like to be contacted?',
+input1 = st.sidebar.selectbox(
+	'your first input is:',
 	('Email', 'Home phone', 'Mobile phone'))
+output1 = st.sidebar.selectbox(
+	'your first output is:',
+	('Email', 'Home phone', 'Mobile phone'))
+st.sidebar.subheader("")
+input2 = st.sidebar.selectbox(
+	'your second input is:',
+	('Email', 'Home phone', 'Mobile phone'))
+output2 = st.sidebar.selectbox(
+	'your second output is:',
+	('Email', 'Home phone', 'Mobile phone'))
+
+
 st.sidebar.write('You selected:', option)
 
 
