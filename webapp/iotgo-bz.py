@@ -168,9 +168,7 @@ it2en_out= {
 
 
 input_name[0]= it2en_in[input1]
-input_name[1]= it2en_in[input2]
 output_name[0]=it2en_out[output1]
-output_name[1]=it2en_out[output2]
 
 
 
