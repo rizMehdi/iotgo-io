@@ -312,8 +312,6 @@ grabURL =    {
 
 input0path=  baseURL+langPrefix[lang]+grabURL[ input_name[0]]
 output0path= baseURL+langPrefix[lang]+grabURL[output_name[0]]
-input1path=  baseURL+langPrefix[lang]+grabURL[ input_name[1]]
-output1path= baseURL+langPrefix[lang]+grabURL[output_name[1]]
 #input2path=  baseURL+langPrefix[lang]+grabURL[ input_name[2]]
 #output2path= baseURL+langPrefix[lang]+grabURL[output_name[2]]
     
