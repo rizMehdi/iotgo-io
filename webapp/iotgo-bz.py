@@ -42,12 +42,11 @@ st.markdown(
         unsafe_allow_html=True,
 )
 
-gamelevel=1
+gamelevel=0
 input_name= ["no Input"  ,"no Input"  ,"no Input"]
 output_name=["no Output" ,"no Output" ,"no Output"]
 
-st.sidebar.markdown("""livello 1: 
----""")
+
 input1 = st.sidebar.selectbox(
 	'seleziona le tue carte di input e output',
         ('Il pulsante premuto',
@@ -110,76 +109,7 @@ output1 = st.sidebar.selectbox(
 ##         "displayNone"  ,"showStripRainbow"  ,"showStripBlack","fanOn"  ,
 ##         "fanOff"  , "rotateMax"  , "noOutput",))
 
-st.sidebar.markdown("""livello 2: 
----""")
 
-p2ptype = st.sidebar.selectbox(
-	'sono...', 
-	('--', 'invio dati', 'ricevo dati' ))
-if p2ptype=='invio dati':
-	input2 = st.sidebar.selectbox(
-	'seleziona una altra carta input', 
-        ('no Input',
-         'Il pulsante premuto',
-         'Il pulsante non è premuto',
-         'L\'accelerazione è basso',
-         'L\'accelerazione è alta ',
-         'La bussola punta ad Est'  ,
-         'La bussola punta ad Ovest'  ,
-         'La bussola punta a Nord',
-         'La bussola punta a Sud'  ,
-         'Il gesto è scuotere' ,
-         'Il gesto è inclinare' ,
-         'C\'è movimento nei dintorni' ,
-         'Non c\'è movimento nei dintorni',
-         'Il rumore è basso' ,
-         'Il rumore è alto',
-         'Il cursore è al minimo' ,
-         'Il cursore è al massimo',
-         'La temperatura è bassa',
-         'La temperatura è alta',
-         'L\'intensità di luce è bassa',
-         'L\'intensità di luce è alta',
-         'Il logo è toccato',
-         'Il logo non è toccato'
-  
-                 ))
-##	("noInput","buttonNotPress","buttonPress","accelLow" , "accelHigh"  , "compassE"  , 
-##         "compassW"  , "compassN"  , "compassS"  , "gestureShake"  , "gestureTilt"  ,
-##         "movementPresent"  ,"movementNotPresent"  , "noiseLow"  , "noiseHigh"  ,"sliderLow"  ,
-##         "sliderHigh"  , "tempLow"  ,"tempHigh"  ,"lightlevelLow","lightlevelHigh",
-##        "touchYes" ,"touchNo"  ))
-	output2= 'invio dati' 
-elif  p2ptype=='ricevo dati': #'ricevo dati'
-	output2 = st.sidebar.selectbox(
-	'seleziona una altra carta ouput',
-	(
-    'Mostra un\'icona felice' ,
-    'Mostra un\'icona triste' ,
-    'Smette di mostrare un\'icona' ,
-  	'Accende una luce' ,
- 	'Spegne una luce' , 
-  	'Suona una melodia triste'  , 
-  	'Suona una melodia allegra'  , 
-	'Smette di suonare'   , 
-	'Mostra del testo'  , 
-	'Mostra un numero'  , 
-	'Smette di mostrare testi o numeri'  , 
-	'Attiva un\'animazione luminosa'  , 
-	'Spegne un\'animazione luminosa' , 
-	'Accende un ventilatore'  , 
-	'Spegne un ventilatore'  ,
-	'Fa ruotare il motore' ,   
-	'no Output', 
-         ))	
-##	("noOutput","iconHappy","iconSad","iconNone","lightOn","lightOff","lightOff",
-##         "musicHappy" ,"musicSad"  ,"musicNone"  ,"displayText"  ,"displayInput"  ,
-##         "displayNone"  ,"showStripRainbow"  ,"showStripBlack","fanOn"  ,
-##         "fanOff"  , "rotateMax"   ))	
-	input2='recezione dati'
-else:
-	input2="no Input"
-	output2="no Output"
 
 
 #st.sidebar.write('You selected:', input1,output1,input2,output2)
@@ -761,20 +691,15 @@ with input_col:
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
 	st.write(" se...")
 	# ("Input1:")
-	st.image(input0path, width=cardWidth)
-	# ("Input2:")
-	st.image(input1path, width=cardWidth)
+	st.image(input0path, width=cardWidth) 
 with plus_col:    
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth*2)
-	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/plus.png", width=pluscardwidht)
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/plus.png", width=pluscardwidht) 
 with output_col:    
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
 	st.write(" allora...")
 	# ("Output1:")
-	st.image(output0path, width=cardWidth)
-	# ("Output2:")
-	st.image(output1path, width=cardWidth) 
+	st.image(output0path, width=cardWidth) 
 
 with code_col:
 	st.subheader("")
@@ -801,8 +726,8 @@ with edit:
 #        st.markdown("[Modifica...]("+urlis+")", unsafe_allow_html=True)
 
 
-#st.subheader("")
-#components.iframe(urlis, height=1000, scrolling=True)    
+st.subheader("")
+components.iframe(urlis, height=1000, scrolling=True)    
 
 
 
