@@ -675,7 +675,7 @@ def genURL (*args):#input_name, output_name):#here i am collecting chunks of cod
 
 
 
-urlis,jscode=genURL([input_name[0],output_name[0]],[input_name[1],output_name[1]])
+urlis,jscode=genURL([input_name[0],output_name[0]])
 
 
 
