@@ -53,7 +53,7 @@ input1 = st.sidebar.selectbox(
         ('Il pulsante premuto',
          'Il pulsante non è premuto',
          'L\'accelerazione è basso',
-         'L\'accelerazione è alta ',
+         'L\'accelerazione è alta',
          'La bussola punta ad Est'  ,
          'La bussola punta ad Ovest'  ,
          'La bussola punta a Nord',
