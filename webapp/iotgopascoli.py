@@ -682,7 +682,7 @@ urlis,jscode=genURL([input_name[0],output_name[0]])
 
 st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo-hor.png",width=380)
 #input_col, plus_col, output_col, pad, code_col= st.columns([1,1,1,1,6])
-pad2, input_col, plus_col, output_col, pad, code_col= st.columns([1,1,1,1,1,3])
+pad2, input_col, plus_col, output_col, pad, code_col= st.columns([1,1,1,1,1,2])
 with input_col:    
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
 	st.write(" se...")
