@@ -711,10 +711,6 @@ with output_col:
 #	st.code(jscode,language="javascript")
 
 
-e,edit  = st.columns([1,1])
-with edit:
-        #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60)
-        st.markdown("[Modifica...]("+urlis+")", unsafe_allow_html=True)
 
 #e,edit  = st.columns([1,1])
 #with edit:
@@ -726,5 +722,9 @@ st.subheader("")
 components.iframe(urlis, height=1000, scrolling=True)    
 
 
+e,edit  = st.columns([1,1])
+with edit:
+        #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60)
+        st.markdown("[Modifica...]("+urlis+")", unsafe_allow_html=True)
 
 #st.button("Refresh")
