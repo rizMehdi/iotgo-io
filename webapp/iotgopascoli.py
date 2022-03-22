@@ -9,6 +9,7 @@ cardWidth=130
 pluscardwidht=130
 missionCardWidth=160
 vertiPaddingWidth=35
+vertiPaddingWidthhalf=17
 codetitle=""
 codesubtitle=""
 groupnum="0"
@@ -679,7 +680,6 @@ urlis,jscode=genURL([input_name[0],output_name[0]])
 
 
 
-
 st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo-hor.png",width=380)
 #input_col, plus_col, output_col, pad, code_col= st.columns([1,1,1,1,6])
 pad2, input_col, plus_col, output_col, pad, code_col= st.columns([1,1,1,1,1,2])
@@ -690,7 +690,7 @@ with input_col:
 	st.image(input0path, width=cardWidth) 
 with plus_col:    
 	#st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth*2)
-	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth*0.75)
+	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidthhalf)
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/plus.png", width=pluscardwidht) 
 with output_col:    
 	#st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
