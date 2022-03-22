@@ -684,15 +684,15 @@ st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo-ho
 #input_col, plus_col, output_col, pad, code_col= st.columns([1,1,1,1,6])
 pad2, input_col, plus_col, output_col, pad, code_col= st.columns([1,1,1,1,1,2])
 with input_col:    
-	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
+	#st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
 	st.write(" se...")
 	# ("Input1:")
 	st.image(input0path, width=cardWidth) 
 with plus_col:    
-	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth*2)
+	#st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth*2)
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/plus.png", width=pluscardwidht) 
 with output_col:    
-	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
+	#st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
 	st.write(" allora...")
 	# ("Output1:")
 	st.image(output0path, width=cardWidth) 
