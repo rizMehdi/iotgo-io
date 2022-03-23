@@ -77,14 +77,6 @@ input1 = st.sidebar.selectbox('seleziona le tue carte di input e output', input_
 
 
 
-
-##	("buttonNotPress","buttonPress","accelLow" , "accelHigh"  , "compassE"  , 
-##         "compassW"  , "compassN"  , "compassS"  , "gestureShake"  , "gestureTilt"  ,
-##         "movementPresent"  ,"movementNotPresent"  , "noiseLow"  , "noiseHigh"  ,"sliderLow"  ,
-##         "sliderHigh"  , "tempLow"  ,"tempHigh"  ,"lightlevelLow","lightlevelHigh",
-##        "touchYes" ,"touchNo"  ,"noInput"))
-
-
 outputs_microbitv1= (     'Mostra un\'icona felice' ,
         'Mostra un\'icona triste' ,
         'Smette di mostrare un\'icona' ,	
@@ -108,12 +100,6 @@ outputs_exEnviroBit= ()
 
 output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 + outputs_exBosonKit + outputs_exEnviroBit
 output1 = st.sidebar.selectbox('   &   ',output_options)
-
-##	("iconHappy","iconSad","iconNone","lightOn","lightOff","lightOff",
-##         "musicHappy" ,"musicSad"  ,"musicNone"  ,"displayText"  ,"displayInput"  ,
-##         "displayNone"  ,"showStripRainbow"  ,"showStripBlack","fanOn"  ,
-##         "fanOff"  , "rotateMax"  , "noOutput",))
-
 
 
 
