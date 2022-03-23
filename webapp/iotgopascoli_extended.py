@@ -47,9 +47,7 @@ gamelevel=0
 input_name= ["no Input"  ,"no Input"  ,"no Input"]
 output_name=["no Output" ,"no Output" ,"no Output"]
 
-input1 = st.sidebar.selectbox(
-	'seleziona le tue carte di input e output',      
-	( 'no Input'  , 
+options=	( 'no Input'  , 
 	 'Il pulsante premuto',
          'Il pulsante non è premuto',
          'L\'accelerazione è basso',
@@ -72,7 +70,9 @@ input1 = st.sidebar.selectbox(
          'L\'intensità di luce è alta',
          'Il logo è toccato',
          'Il logo non è toccato',
-                 ))
+                 )
+input1 = st.sidebar.selectbox(
+	'seleziona le tue carte di input e output', options)
 
 
 ##	("buttonNotPress","buttonPress","accelLow" , "accelHigh"  , "compassE"  , 
