@@ -43,10 +43,6 @@ st.markdown(
         unsafe_allow_html=True,
 )
 
-gamelevel=0
-input_name= ["no Input"  ,"no Input"  ,"no Input"]
-output_name=["no Output" ,"no Output" ,"no Output"]
-
 
 inputs_microbitv1= ( 'no Input'  , 
 	 'Il pulsante premuto',
@@ -78,7 +74,7 @@ inputs_exBosonKit= ('C\'è movimento nei dintorni' ,
 
 inputs_exEnviroBit= ()
 
-input_options= inputs_microbitv1 + inputs_microbitv2 + inputs_exBosonKit + inputs_exEnviroBit
+input_options= inputs_exBosonKit + inputs_exEnviroBit
 input1 = st.sidebar.selectbox(
 	'seleziona le tue carte di input e output', input_options)
 
@@ -122,6 +118,10 @@ output1 = st.sidebar.selectbox(
 
 #st.sidebar.write('You selected:', input1,output1,input2,output2)
 
+
+gamelevel=0
+input_name= ["no Input"  ,"no Input"  ,"no Input"]
+output_name=["no Output" ,"no Output" ,"no Output"]
 
 
 
