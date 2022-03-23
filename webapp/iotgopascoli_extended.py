@@ -47,7 +47,8 @@ gamelevel=0
 input_name= ["no Input"  ,"no Input"  ,"no Input"]
 output_name=["no Output" ,"no Output" ,"no Output"]
 
-options=	( 'no Input'  , 
+
+inputs_microbitv1= ( 'no Input'  , 
 	 'Il pulsante premuto',
          'Il pulsante non è premuto',
          'L\'accelerazione è basso',
@@ -58,21 +59,28 @@ options=	( 'no Input'  ,
          'La bussola punta a Sud'  ,
          'Il gesto è scuotere' ,
          'Il gesto è inclinare' ,
-         'C\'è movimento nei dintorni' ,
-         'Non c\'è movimento nei dintorni',
-         'Il rumore è basso' ,
-         'Il rumore è alto',
-         'Il cursore è al minimo' ,
-         'Il cursore è al massimo',
          'La temperatura è bassa',
          'La temperatura è alta',
          'L\'intensità di luce è bassa',
          'L\'intensità di luce è alta',
-         'Il logo è toccato',
+		   )
+inputs_microbitv2= ( 'Il logo è toccato',
          'Il logo non è toccato',
-                 )
+         'Il rumore è basso' ,
+         'Il rumore è alto',
+		   )
+
+inputs_exBosonKit= ('C\'è movimento nei dintorni' ,
+         'Non c\'è movimento nei dintorni',
+         'Il cursore è al minimo' ,
+         'Il cursore è al massimo',
+		   )
+
+inputs_exEnviroBit= ()
+
+input_options= inputs_microbitv1 + inputs_microbitv2 + inputs_exBosonKit + inputs_exEnviroBit
 input1 = st.sidebar.selectbox(
-	'seleziona le tue carte di input e output', options)
+	'seleziona le tue carte di input e output', input_options)
 
 
 ##	("buttonNotPress","buttonPress","accelLow" , "accelHigh"  , "compassE"  , 
