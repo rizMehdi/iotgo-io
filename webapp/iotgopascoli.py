@@ -630,7 +630,7 @@ def genURL (*args):#input_name, output_name):#here i am collecting chunks of cod
                 if eachIOpair[1] in output_else_code:
                     else_code = output_else_code[eachIOpair[1]]+ '\n'
                 else:
-                    else_code="basic.pause(100)"
+                    else_code="basic.pause(1000)"
                 if eachIOpair[0] in output_else_code:#special cases for forecast: get_temp
                         else_code = output_else_code[eachIOpair[0]]+ '\n'
 
