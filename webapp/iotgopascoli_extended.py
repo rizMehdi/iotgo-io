@@ -44,8 +44,7 @@ st.markdown(
 )
 
 
-inputs_microbitv1= ( 'no Input'  , 
-	 'Il pulsante premuto',
+inputs_microbitv1= ('Il pulsante premuto',
          'Il pulsante non è premuto',
          'L\'accelerazione è basso',
          'L\'accelerazione è alta',
@@ -65,18 +64,18 @@ inputs_microbitv2= ( 'Il logo è toccato',
          'Il rumore è basso' ,
          'Il rumore è alto',
 		   )
-
 inputs_exBosonKit= ('C\'è movimento nei dintorni' ,
          'Non c\'è movimento nei dintorni',
          'Il cursore è al minimo' ,
          'Il cursore è al massimo',
 		   )
-
 inputs_exEnviroBit= ()
 
-input_options= inputs_exBosonKit + inputs_exEnviroBit
-input1 = st.sidebar.selectbox(
-	'seleziona le tue carte di input e output', input_options)
+input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 + inputs_exBosonKit + inputs_exEnviroBit
+input1 = st.sidebar.selectbox('seleziona le tue carte di input e output', input_options)
+
+
+
 
 
 ##	("buttonNotPress","buttonPress","accelLow" , "accelHigh"  , "compassE"  , 
@@ -85,28 +84,30 @@ input1 = st.sidebar.selectbox(
 ##         "sliderHigh"  , "tempLow"  ,"tempHigh"  ,"lightlevelLow","lightlevelHigh",
 ##        "touchYes" ,"touchNo"  ,"noInput"))
 
-output1 = st.sidebar.selectbox(
-	'   &   ',
-	(
-	'no Output', 
-        'Mostra un\'icona felice' ,
+
+outputs_microbitv1= (     'Mostra un\'icona felice' ,
         'Mostra un\'icona triste' ,
-        'Smette di mostrare un\'icona' ,
-  	'Accende una luce' ,
- 	'Spegne una luce' , 
-  	'Suona una melodia triste'  , 
-  	'Suona una melodia allegra'  , 
-	'Smette di suonare'   , 
+        'Smette di mostrare un\'icona' ,	
 	'Mostra del testo'  , 
 	'Mostra un numero'  , 
-	'Smette di mostrare testi o numeri'  , 
+	'Smette di mostrare testi o numeri'  ,
+		    )
+outputs_microbitv2= ('Suona una melodia triste'  , 
+  	'Suona una melodia allegra'  , 
+	'Smette di suonare'   , 
+		    )
+outputs_exBosonKit=('Accende una luce' ,
+ 	'Spegne una luce' , 	
 	'Attiva un\'animazione luminosa'  , 
 	'Spegne un\'animazione luminosa' , 	
 	'Accende un ventilatore'  , 
 	'Spegne un ventilatore'  ,
-	'Fa ruotare il motore' 
-         ))	
-        
+	'Fa ruotare il motore',
+		   )
+outputs_exEnviroBit= ()
+
+output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 + outputs_exBosonKit + outputs_exEnviroBit
+output1 = st.sidebar.selectbox('   &   ',output_options)
 
 ##	("iconHappy","iconSad","iconNone","lightOn","lightOff","lightOff",
 ##         "musicHappy" ,"musicSad"  ,"musicNone"  ,"displayText"  ,"displayInput"  ,
@@ -119,13 +120,7 @@ output1 = st.sidebar.selectbox(
 #st.sidebar.write('You selected:', input1,output1,input2,output2)
 
 
-gamelevel=0
-input_name= ["no Input"  ,"no Input"  ,"no Input"]
-output_name=["no Output" ,"no Output" ,"no Output"]
-
-
-
-it2en_in= {
+it2en_inout= {
     "Il pulsante premuto":"buttonPress",
     'Il pulsante non è premuto':"buttonNotPress",
     'L\'accelerazione è basso':"accelLow" , 
@@ -150,9 +145,6 @@ it2en_in= {
     'Il logo non è toccato':"touchNo"  , #v2    
     'no Input':"noInput",
     'recezione dati' :"recieveData",
-    }
-    
-it2en_out= {
     'Mostra un\'icona felice':"iconHappy",
     'Mostra un\'icona triste':"iconSad",
     'Smette di mostrare un\'icona':"iconNone",
@@ -169,14 +161,17 @@ it2en_out= {
 	'Accende un ventilatore':"fanOn"  , 
 	'Spegne un ventilatore':"fanOff"  ,
 	'Fa ruotare il motore':"rotateMin"  ,   
-	'no Output':"noOutput",#<<<<<<<------- new  card.
+	'no Output':"noOutput", 
         'invio dati' :"sendData",
-
     }
 
 
-input_name[0]= it2en_in[input1]
-output_name[0]=it2en_out[output1]
+
+gamelevel=0
+input_name= ["no Input"  ,"no Input"  ,"no Input"]
+output_name=["no Output" ,"no Output" ,"no Output"]
+input_name[0]= it2en_inout[input1]
+output_name[0]=it2en_inout[output1]
 
 
 
@@ -282,7 +277,7 @@ grabURL =    {
     
     "iconHappy":    "-outputPhy-ShowHappyIcon.png",
     "iconSad":      "-outputPhy-ShowSadIcon.png",
-     "iconNone":    "-outputPhy-StopShowIcon.png",
+    "iconNone":    "-outputPhy-StopShowIcon.png",
     "lightOn":      "-outputPhy-TurnOnLight.png",
     "lightOff":     "-outputPhy-TurnOffLight.png",
     "musicHappy":   "-outputPhy-PlayHappyMusic.png",
