@@ -500,7 +500,7 @@ output_code = {
 #   "speakInput" : "" , 
 #   "speakNone" : "" , 
 	"displayText" : "basic.showString(\"Ciao \")\n\tbasic.pause(1000)" , 
-	"displayInput": "basic.showString(\"string2send\")\n\tbasic.pause(1000)"  , 
+	"displayInput": "showNumber(9)\n\tbasic.pause(1000)"  , 
 	#"displayInput": "basic.showString(\""+input_name[gamelevel]+"\")\n\tbasic.pause(1000)"  , 
  	"displayNone" :"basic.clearScreen()\n\tbasic.pause(1000)" , 
 	"showStripRainbow" : "strip.showRainbow(1, 360)\n\tbasic.pause(1000)", 
