@@ -5,11 +5,7 @@ import urllib.parse
 import time
 import textwrap
 st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide",initial_sidebar_state="expanded")
-cardWidth=130
-pluscardwidht=130
-missionCardWidth=160
-vertiPaddingWidth=35
-vertiPaddingWidthhalf=17
+
 codetitle=""
 codesubtitle=""
 groupnum="0"
@@ -668,7 +664,11 @@ def genURL (*args):#input_name, output_name):#here i am collecting chunks of cod
 urlis,jscode=genURL([input_name[0],output_name[0]])
 
 
-
+cardWidth=150
+pluscardwidht=150
+missionCardWidth=160
+vertiPaddingWidth=35
+vertiPaddingWidthhalf=17
 
 st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo-hor.png",width=380)
 #input_col, plus_col, output_col, pad, code_col= st.columns([1,1,1,1,6])
