@@ -9,20 +9,10 @@ st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide",initial_sideb
 codetitle=""
 codesubtitle=""
 groupnum="0"
-st.markdown(
-        """
-        <style type="text/css">
-        iframe{
-        top: 0;
-        left: 0;
-        width: 100%;
-        max-width: 1200px;
-        min-width: 900px;
-        }
-        </style>
-        """,
-          unsafe_allow_html=True,
-)
+
+
+
+
 
 st.markdown(
         """
