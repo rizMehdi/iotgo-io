@@ -91,7 +91,7 @@ outputs_exEnviroBit= ()
 input_options=  ('no Input',) 
 output_options=  ('no Output',)
 	
-hardware = st.sidebar.radio("seleziona l\'elettronica che hai",("Micro:bit solo", "Micro:bit con BosonKit", "Micro:bit con EnviroBit"))
+hardware = st.sidebar.radio("Seleziona l\'elettronica che hai",("Micro:bit solo", "Micro:bit con BosonKit", "Micro:bit con EnviroBit"))
 if hardware == "Micro:bit solo":
 	input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 
 	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 
@@ -103,8 +103,8 @@ elif hardware == "Micro:bit con EnviroBit":
 	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 + outputs_exEnviroBit
 
 
-input1 =  st.sidebar.selectbox('seleziona la tua carte di input', input_options)
-output1 = st.sidebar.selectbox('seleziona la tua carte di output', output_options)
+input1 =  st.sidebar.selectbox('Seleziona la tua carte di input', input_options)
+output1 = st.sidebar.selectbox('Seleziona la tua carte di output', output_options)
 
 
 
