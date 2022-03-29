@@ -111,8 +111,8 @@ elif hardware == "Micro:bit con EnviroBit":
 	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 + outputs_exEnviroBit
 
 
-input1 = st.sidebar.selectbox('seleziona le tue carte di input e output', input_options)
-output1 = st.sidebar.selectbox('   &   ',output_options)
+input1 =  st.sidebar.selectbox('seleziona la tua carte di input', input_options)
+output1 = st.sidebar.selectbox('seleziona la tua carte di output', output_options)
 
 
 
