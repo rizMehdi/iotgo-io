@@ -40,6 +40,8 @@ st.markdown(
 )
 
 
+
+	 
 inputs_microbitv1= ('Il pulsante premuto',
          'Il pulsante non è premuto',
          'L\'accelerazione è basso',
@@ -67,9 +69,6 @@ inputs_exBosonKit= ('C\'è movimento nei dintorni' ,
 		   )
 inputs_exEnviroBit= ()
 
-input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 + inputs_exBosonKit + inputs_exEnviroBit
-input1 = st.sidebar.selectbox('seleziona le tue carte di input e output', input_options)
-
 
 
 
@@ -94,7 +93,22 @@ outputs_exBosonKit=('Accende una luce' ,
 		   )
 outputs_exEnviroBit= ()
 
-output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 + outputs_exBosonKit + outputs_exEnviroBit
+	 
+	
+
+
+hardware = st.sidebar.radio("seleziona l\'elettronica che hai",("Micro:bit solo", "Micro:bit con BosonKit", "Mirco:bit con EnviroBit"))
+if hardware == "Micro:bit solo":
+	input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 
+	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 
+if hardware == "Micro:bit con BosonKit":
+	input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 + inputs_exBosonKit 
+	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 + outputs_exBosonKit
+if hardware == "Micro:bit con EnviroBit":
+	input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 +  inputs_exEnviroBit
+	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 + outputs_exEnviroBit
+
+input1 = st.sidebar.selectbox('seleziona le tue carte di input e output', input_options)
 output1 = st.sidebar.selectbox('   &   ',output_options)
 
 
@@ -669,6 +683,8 @@ pluscardwidht=150
 missionCardWidth=160
 vertiPaddingWidth=35
 vertiPaddingWidthhalf=17
+
+
 
 st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo-hor.png",width=380)
 #input_col, plus_col, output_col, pad, code_col= st.columns([1,1,1,1,6])
