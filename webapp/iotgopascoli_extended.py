@@ -28,11 +28,11 @@ st.markdown(
         """
         <style>
         [data-testid="stSidebar"][aria-expanded="true"] > div:first-child {
-                width: 300px;
+                width: 350px;
         }
         [data-testid="stSidebar"][aria-expanded="false"] > div:first-child {
-                width: 300px;
-                margin-left: -300px;
+                width: 350px;
+                margin-left: -350px;
         }
         </style>
         """,
