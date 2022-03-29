@@ -165,7 +165,8 @@ langPrefix=['EN','IT','DE','UR']
 lang=1
 
 
-baseURL="https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/"
+baseURLold="https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/cards/"
+baseURL=   "https://raw.githubusercontent.com/IoTgo-app/iotgo-io/main/webapp_v2/images/cards_v2/"
 
 
 grabURL =    {
