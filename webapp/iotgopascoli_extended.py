@@ -221,7 +221,7 @@ grabURL =    {
     "playerCard"    :   "-playercard.png",#not used in app
 
     
-    "buttonNotPress":   "-inputPhysical-buttonNotpressed.png",
+    "buttonNotPress":   "-inputPhysical-buttonNotPress.png",
     "buttonPress":      "-inputPhysical-buttonPress.png",
     "accelLow":         "-inputPhysical-accelLow.png",
     "accelHigh" :       "-inputPhysical-accelHigh.png",
