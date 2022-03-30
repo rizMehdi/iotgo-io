@@ -746,16 +746,16 @@ function checkIframeLoaded() {
 <a id="status" href = test.html></a>"statusText"
 <iframe src="
 '''+urlis+'''
-" id="iframe_a" title="Iframe Example" height="1000"  width="700" style="border:none;" scrolling="yes"></iframe>
+" id="iframe_a" title="Iframe Example" height="1000"  width="700" style="border:none;" scrolling="yes" loading="eager"></iframe>
 //<body onload="checkIframeLoaded();"> 
 
 </body>
 '''
 
 
-#st.write("updateJ")
-components.iframe(urlis, height=1000, scrolling=True, loading="eager")   
-#components.html(htmliframe, height=1000, scrolling=False)
+st.write("updateK")
+#components.iframe(urlis, height=1000, scrolling=True)   
+components.html(htmliframe, height=1000, scrolling=False)
 
 
 
