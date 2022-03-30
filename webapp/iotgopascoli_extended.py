@@ -726,7 +726,7 @@ function checkIframeLoaded() {
     if (  iframeDoc.readyState  == 'complete' ) {
         //iframe.contentWindow.alert("Hello");
         iframe.contentWindow.onload = function(){
-            alert("I am loaded");
+            document.write("here is your code:");
         };
         // The loading is complete, call the function we want executed once the iframe is loaded
         afterLoading();
@@ -736,19 +736,15 @@ function checkIframeLoaded() {
     // If we are here, it is not loaded. Set things up so we check   the status again in 100 milliseconds
     window.setTimeout(checkIframeLoaded, 100);
 }
-
-function afterLoading(){
-    alert("I am here");
-}
 </script>
 
-<body onload="checkIframeLoaded();"> 
+
 <iframe src="
 '''+urlis+'''
-" name="iframe_a" title="Iframe Example" height="1000"  width="700" style="border:none;" scrolling=True></iframe>
+" name="iframe_a" title="Iframe Example" height="1000"  width="700" style="border:none;" scrolling=True onload="checkIframeLoaded()"></iframe>
 
 '''
-st.write("update4")
+st.write("update5")
 #components.iframe(urlis, height=1000, scrolling=True)   
 components.html(htmliframe, height=1000, scrolling=False)
 
