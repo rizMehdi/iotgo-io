@@ -720,9 +720,9 @@ htmliframe='''
 
 '''
 
-st.subheader("here it is2")
+st.subheader("here it is3")
 #components.iframe(urlis, height=1000, scrolling=True)   
-components.html(htmliframe, height=1000, width=900 scrolling=True)
+components.html(htmliframe, height=1000, width=900, scrolling=True)
 
 
 
