@@ -754,7 +754,7 @@ function checkIframeLoaded() {
 
 
 #st.write("updateJ")
-components.iframe(urlis, height=1000, scrolling=True)   
+components.iframe(urlis, height=1000, scrolling=True, loading="eager")   
 #components.html(htmliframe, height=1000, scrolling=False)
 
 
