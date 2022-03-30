@@ -725,18 +725,18 @@ htmliframe='''
 <iframe src="
 '''+urlis+'''
 " id="iframe_a" title="Iframe Example" height="1000"  width="700" style="border:none;" scrolling="yes" loading="eager"></iframe>
+<a id="status" href = test.html></a>
 
 <script type="text/javascript">
     document.getElementById('iframe_a').onload= function() {
-    	document.write("done")
-
+    document.getElementById("status").innerHTML="done";
     };
 </script>
 
 '''
 
 
-st.write("updatei")
+st.write("updatem")
 #components.iframe(urlis, height=1000, scrolling=True)   
 components.html(htmliframe, height=1000, scrolling=False)
 
