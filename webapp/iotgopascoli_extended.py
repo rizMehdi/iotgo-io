@@ -716,13 +716,13 @@ with edit:
 htmliframe='''
 <iframe src="
 '''+urlis+'''
-" name="iframe_a" title="Iframe Example height="1000" width="600""></iframe>
+" name="iframe_a" title="Iframe Example height="1000" width="1000""  scrolling=True></iframe>
 
 '''
 
-st.subheader("here it is 4")
+st.subheader("here it is 5")
 #components.iframe(urlis, height=1000, scrolling=True)   
-components.html(htmliframe, scrolling=True)
+components.html(htmliframe, height=1000, scrolling=False)
 
 
 
