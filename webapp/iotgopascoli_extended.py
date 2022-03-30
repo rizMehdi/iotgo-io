@@ -748,7 +748,7 @@ function afterLoading(){
 " name="iframe_a" title="Iframe Example" height="1000"  width="700" style="border:none;" scrolling=True></iframe>
 
 '''
-st.write("update3")
+st.write("update4")
 #components.iframe(urlis, height=1000, scrolling=True)   
 components.html(htmliframe, height=1000, scrolling=False)
 
