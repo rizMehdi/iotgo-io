@@ -761,9 +761,9 @@ htmliframe='''
 
 
 
-st.write("updateS")
-#components.iframe(urlis, height=1000, scrolling=True)   
-components.html(htmliframe, height=1000, scrolling=False)
+#st.write("updateS")
+components.iframe(urlis, height=1000, scrolling=True)   
+#components.html(htmliframe, height=1000, scrolling=False)
 
 
 
