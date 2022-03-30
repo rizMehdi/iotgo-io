@@ -719,45 +719,26 @@ with edit:
 
 
 	
+	
+	
 htmliframe='''
-<script>
-function checkIframeLoaded() {
-    // Get a handle to the iframe element
-    var iframe = document.getElementById('iframe_a');
-    var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-    var statusText = "not loaded";
-
-    // Check if loading is complete
-    if (  iframeDoc.readyState  == 'complete' ) {
-        //iframe.contentWindow.alert("Hello");
-        iframe.contentWindow.onload = function(){
-            //document.write("here is your code:");
-	    statusText = "loaded";
-        };
-        // The loading is complete, call the function we want executed once the iframe is loaded
-        document.getElementById("status").innerHTML =  statusText;
-        return;
-    } 
-
-    // If we are here, it is not loaded. Set things up so we check   the status again in 100 milliseconds
-    window.setTimeout(checkIframeLoaded, 100);
-}
-</script>
-
-<body onLoad = checkIframeLoaded()>
-<a id="status" href = test.html></a>"statusText"
 <iframe src="
 '''+urlis+'''
 " id="iframe_a" title="Iframe Example" height="1000"  width="700" style="border:none;" scrolling="yes" loading="eager"></iframe>
-//<body onload="checkIframeLoaded();"> 
 
-</body>
+<script type="text/javascript">
+    document.getElementById('iframe_a').onload= function() {
+    	document.write("done")
+
+    };
+</script>
+
 '''
 
 
-st.write("updateL")
-components.iframe(urlis, height=1000, scrolling=True)   
-#components.html(htmliframe, height=1000, scrolling=False)
+st.write("updatei")
+#components.iframe(urlis, height=1000, scrolling=True)   
+components.html(htmliframe, height=1000, scrolling=False)
 
 
 
