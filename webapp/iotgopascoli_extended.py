@@ -446,6 +446,8 @@ package_suffix = {
 	"rotateMax"         : "%60%60%60package%0Aservo%0A%60%60%60",
 	"showStripRainbow"  : "%60%60%60package%0Aneopixel%3Dgithub%3Amicrosoft%2Fpxt-neopixel%0A%0A%60%60%60", 
 	"showStripBlack"    : "%60%60%60package%0Aneopixel%3Dgithub%3Amicrosoft%2Fpxt-neopixel%0A%0A%60%60%60",
+	"showStripGreen"    : "%60%60%60package%0Aneopixel%3Dgithub%3Amicrosoft%2Fpxt-neopixel%0A%0A%60%60%60",
+	"showStripRed"    : "%60%60%60package%0Aneopixel%3Dgithub%3Amicrosoft%2Fpxt-neopixel%0A%0A%60%60%60",
 	"EB_humidityHigh"   : "%60%60%60package%0Aenvirobit%3Dgithub%3Apimoroni%2Fpxt-envirobit%0A%0A%60%60%60"	,
 	"EB_humidityLow":"%60%60%60package%0Aenvirobit%3Dgithub%3Apimoroni%2Fpxt-envirobit%0A%0A%60%60%60",
 	"EB_pressureHigh":"%60%60%60package%0Aenvirobit%3Dgithub%3Apimoroni%2Fpxt-envirobit%0A%0A%60%60%60"	,
