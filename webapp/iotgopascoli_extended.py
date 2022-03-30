@@ -721,7 +721,7 @@ function checkIframeLoaded() {
     // Get a handle to the iframe element
     var iframe = document.getElementById('iframe_a');
     var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-    var  = "not loaded";
+    var statusText = "not loaded";
 
     // Check if loading is complete
     if (  iframeDoc.readyState  == 'complete' ) {
@@ -751,7 +751,7 @@ function checkIframeLoaded() {
 '''
 
 
-st.write("updateE")
+st.write("updateF")
 #components.iframe(urlis, height=1000, scrolling=True)   
 components.html(htmliframe, height=1000, scrolling=False)
 
