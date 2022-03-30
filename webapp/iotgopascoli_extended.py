@@ -206,6 +206,7 @@ it2en_inout={
 'attiva un\'animazione luminosa (BosonKit)':"showStripRainbow" ,
 'spegne un\'animazione luminosa verde (BosonKit)':"showStripGreen",
 'spegne un\'animazione luminosa rossa (BosonKit)':"showStripRed",
+'no Output':"noOutput", 
 }
 
 it2en_inoutold= {
