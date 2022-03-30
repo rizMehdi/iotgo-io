@@ -699,6 +699,25 @@ with output_col:
 	# ("Output1:")
 	st.image(output0path, width=cardWidth) 
 
+with st.spinner('Wait for it...'):
+    time.sleep(5)
+st.success('Done!')
+
+
+e,edit  = st.columns([1,1])
+with edit:
+        #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60)
+        st.markdown("[Modifica...]("+urlis+")", unsafe_allow_html=True)
+
+	
+st.subheader("")
+components.iframe(urlis, height=1000, scrolling=True)   
+
+
+
+
+
+
 #with code_col:
 #	st.subheader("")
 #	st.subheader("")
@@ -720,14 +739,6 @@ with output_col:
 #        st.markdown("[Modifica...]("+urlis+")", unsafe_allow_html=True)
 
 
-
-e,edit  = st.columns([1,1])
-with edit:
-        #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60)
-        st.markdown("[Modifica...]("+urlis+")", unsafe_allow_html=True)
-
-	
-st.subheader("")
-components.iframe(urlis, height=1000, scrolling=True)    
+ 
 
 #st.button("Refresh")
