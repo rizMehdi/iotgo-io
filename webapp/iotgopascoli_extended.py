@@ -717,10 +717,10 @@ with edit:
 htmliframe='''
 <iframe src="
 '''+urlis+'''
-" name="iframe_a" title="Iframe Example" height="1000"  scrolling=True></iframe>
+" name="iframe_a" title="Iframe Example" height="1000"  width="700" style="border:none;" scrolling=True></iframe>
 
 '''
-st.write("update2")
+st.write("update3")
 #components.iframe(urlis, height=1000, scrolling=True)   
 components.html(htmliframe, height=1000, scrolling=False)
 
