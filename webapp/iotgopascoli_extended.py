@@ -71,12 +71,12 @@ inputs_exEnviroBit= ("c\'è tanta umidità (Envirobit)",
 "la temperatura è bassa (Envirobit)" ,
 "l\'intensità di luce è alta (Envirobit)",
 "l\'intensità di luce è bassa (Envirobit)",
-"il colore  è rosso (Envirobit)"
-"il colore  è verde (Envirobit)"
-"il colore  è blu (Envirobit)"
-"il colore  è nero (Envirobit)"
-"c\'è un applauso (Envirobit)"
-"non c’è un applauso (Envirobit)"
+"il colore  è rosso (Envirobit)",
+"il colore  è verde (Envirobit)",
+"il colore  è blu (Envirobit)",
+"il colore  è nero (Envirobit)",
+"c\'è un applauso (Envirobit)",
+"non c’è un applauso (Envirobit)",
 )
 
 inputs_exCloudBitPi= ()
