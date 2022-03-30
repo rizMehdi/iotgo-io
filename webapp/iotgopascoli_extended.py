@@ -373,11 +373,18 @@ grabURL =    {
     "musicHappy":   "-outputPhysical-musicHappy.png",
     "musicSad" :    "-outputPhysical-musicSad.png",
     "musicNone" :   "-outputPhysical-musicNone.png", 
+	
+    "musicAlarm" :   "-outputPhysical-musicAlarm.png", 
+	
     "displayText" : "-outputPhysical-displayText.png",  
     "displayInput": "-outputPhysical-displayInput.png",
     "displayNone" : "-outputPhysical-displayNone.png", 
     "showStripRainbow" :"-outputPhysical-showStripRainbow.png",
     "showStripBlack" :"-outputPhysical-showStripBlack.png",
+
+    "showStripGreen" :"-outputPhysical-showStripGreen.png",
+    "showStripRed" :"-outputPhysical-showStripRed.png",
+	
     "fanOn" :       "-outputPhysical-fanOn.png",	 
     "fanOff"  :     "-outputPhysical-fanOff.png",
     "rotateMin":    "-outputPhysical-rotateMin.png", 
