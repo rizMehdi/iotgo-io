@@ -682,11 +682,11 @@ vertiPaddingWidthhalf=17
 
 
 
-#st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo-hor.png",width=380)
-st.header("IoTgo")
+st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo-hor.png",width=380)
+#st.header("IoTgo")
 
 #input_col, plus_col, output_col, pad, code_col= st.columns([1,1,1,1,6])
-pad2, input_col, plus_col, output_col, pad, code_col= st.columns([1,1,1,1,1,2])
+input_col, plus_col, output_col, pad, code_col,pad2,= st.columns([1,1,1,1,1,2])
 with input_col:    
 	#st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
 	st.write(" se...")
@@ -711,17 +711,16 @@ prevUrlis=urlis
 
 e,edit  = st.columns([1,1])
 with edit:
-        #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60)
         st.markdown("[Modifica...]("+urlis+")", unsafe_allow_html=True)
 
 	
 htmliframe='''
 <iframe src="
 '''+urlis+'''
-" name="iframe_a" title="Iframe Example" height="1000" width="1000""  scrolling=True></iframe>
+" name="iframe_a" title="Iframe Example" height="1000"  scrolling=True></iframe>
 
 '''
-
+st.write("update2")
 #components.iframe(urlis, height=1000, scrolling=True)   
 components.html(htmliframe, height=1000, scrolling=False)
 
