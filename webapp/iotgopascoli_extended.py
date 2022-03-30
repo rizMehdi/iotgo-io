@@ -682,7 +682,9 @@ vertiPaddingWidthhalf=17
 
 
 
-st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo-hor.png",width=380)
+#st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo-hor.png",width=380)
+st.header("IoTgo")
+
 #input_col, plus_col, output_col, pad, code_col= st.columns([1,1,1,1,6])
 pad2, input_col, plus_col, output_col, pad, code_col= st.columns([1,1,1,1,1,2])
 with input_col:    
@@ -720,7 +722,6 @@ htmliframe='''
 
 '''
 
-st.subheader("here it is 6")
 #components.iframe(urlis, height=1000, scrolling=True)   
 components.html(htmliframe, height=1000, scrolling=False)
 
