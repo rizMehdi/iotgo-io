@@ -742,7 +742,7 @@ function checkIframeLoaded() {
 }
 </script>
 <body onLoad = checkIframeLoaded()>
-    <a id="status" href = test.html>your code is "statusText here</a>
+    <a id="status" href = test.html>your code is "statusText" here</a>
 </body>
 
 
@@ -753,7 +753,7 @@ function checkIframeLoaded() {
 '''
 
 
-st.write("update9")
+st.write("updateA")
 #components.iframe(urlis, height=1000, scrolling=True)   
 components.html(htmliframe, height=1000, scrolling=False)
 
