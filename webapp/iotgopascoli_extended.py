@@ -735,8 +735,12 @@ htmliframe='''
         //iframe.contentWindow.alert("Hello");
         iframe.contentWindow.onload = function(){ 
 	    statusText = "loaded";
-        };
-     document.getElementById("status").innerHTML =statusText;
+	    document.getElementById("status").innerHTML ="loaded";
+        }
+	else {
+	document.getElementById("status").innerHTML ="not loaded";
+	};
+     
 </script>
 
 '''
@@ -759,7 +763,7 @@ htmliframeold='''
 
 
 
-st.write("updateP")
+st.write("updateQ")
 #components.iframe(urlis, height=1000, scrolling=True)   
 components.html(htmliframe, height=1000, scrolling=False)
 
