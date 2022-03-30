@@ -704,7 +704,7 @@ with output_col:
 
 if prevUrlis != urlis:
 	with st.spinner('Plz wait. Generating code for you....'):
-    		time.sleep(2)
+    		time.sleep(0.1)
 	#st.success('Done!')
 prevUrlis=urlis
 
@@ -715,7 +715,6 @@ with edit:
 
 	
 htmliframe='''
-
 <script>
 function checkIframeLoaded() {
     // Get a handle to the iframe element
@@ -751,9 +750,9 @@ function checkIframeLoaded() {
 '''
 
 
-st.write("updateJ")
-#components.iframe(urlis, height=1000, scrolling=True)   
-components.html(htmliframe, height=1000, scrolling=False)
+#st.write("updateJ")
+components.iframe(urlis, height=1000, scrolling=True)   
+#components.html(htmliframe, height=1000, scrolling=False)
 
 
 
