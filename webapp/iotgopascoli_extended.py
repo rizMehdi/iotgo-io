@@ -738,10 +738,10 @@ function checkIframeLoaded() {
 }
 </script>
 
-
+<body onload="checkIframeLoaded();"> 
 <iframe src="
 '''+urlis+'''
-" name="iframe_a" title="Iframe Example" height="1000"  width="700" style="border:none;" scrolling=True onload="checkIframeLoaded()"></iframe>
+" name="iframe_a" title="Iframe Example" height="1000"  width="700" style="border:none;" scrolling="yes"></iframe>
 
 '''
 st.write("update5")
