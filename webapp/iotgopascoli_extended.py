@@ -79,32 +79,43 @@ inputs_exEnviroBit= ("c\'è tanta umidità (Envirobit)",
 "non c’è un applauso (Envirobit)"
 )
 
+inputs_exCloudBitPi= ()
+inputs_p2p= ('recezione dati',)
 
 
-
-outputs_microbitv1= (     'Mostra un\'icona felice' ,
-        'Mostra un\'icona triste' ,
-        'Smette di mostrare un\'icona' ,	
-	'Mostra del testo'  , 
-	'Mostra un numero'  , 
-	'Smette di mostrare testi o numeri'  ,
+outputs_microbitv1= ('suona una melodia allegra' ,
+'smette di suonare' ,
+'suona una melodia triste' ,
+"suona un allarme" ,
+'mostra un numero" ,
+'smette di mostrare testi o numeri' ,
+'mostra del testo' ,
+'mostra un\'icona felice',
+'smette di mostrare un\'icona',
+'mostra un\'icona triste', 
 		    )
-outputs_microbitv2= ('Suona una melodia triste'  , 
-  	'Suona una melodia allegra'  , 
-	'Smette di suonare'   , 
-		    )
-outputs_exBosonKit=('Accende una luce' ,
- 	'Spegne una luce' , 	
-	'Attiva un\'animazione luminosa'  , 
-	'Spegne un\'animazione luminosa' , 	
-	'Accende un ventilatore'  , 
-	'Spegne un ventilatore'  ,
-	'Fa ruotare il motore',
-		   )
-outputs_exEnviroBit= ()
 
-	 
-	
+outputs_microbitv2= ()
+
+
+outputs_exBosonKit= ('spegne un ventilatore (BosonKit)' ,
+'accende un ventilatore (BosonKit)' ,
+'spegne una luce (BosonKit)',
+'accende una luce (BosonKit)',
+'fa ruotare il motore (BosonKit)' ,
+'smette di ruotare il motore (BosonKit)' ,
+'spegne un\'animazione luminosa (BosonKit)',
+'attiva un\'animazione luminosa (BosonKit)' ,
+'spegne un\'animazione luminosa verde (BosonKit)',
+'spegne un\'animazione luminosa rossa (BosonKit)',
+		     )
+
+outputs_exEnviroBit=()
+#"accende i LED bianchi (Envirobit)"
+#"spegne i LED bianchi (Envirobit)"
+
+outputs_exCloudBitPi= ()
+outputs_p2p= ('invio dati',)	
 
 input_options=  ('no Input',) 
 output_options=  ('no Output',)
