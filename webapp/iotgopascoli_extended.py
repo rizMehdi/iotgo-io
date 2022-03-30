@@ -722,10 +722,10 @@ with edit:
 	
 	
 htmliframe='''
+<a id="status" href = test.html></a>
 <iframe src="
 '''+urlis+'''
 " id="iframe_a" title="Iframe Example" height="1000"  width="700" style="border:none;" scrolling="yes" loading="eager"></iframe>
-<a id="status" href = test.html></a>
 
 <script type="text/javascript">
     document.getElementById('iframe_a').onload= function() {
@@ -736,7 +736,7 @@ htmliframe='''
 '''
 
 
-st.write("updatem")
+st.write("updateN")
 #components.iframe(urlis, height=1000, scrolling=True)   
 components.html(htmliframe, height=1000, scrolling=False)
 
