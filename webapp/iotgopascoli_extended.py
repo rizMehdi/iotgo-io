@@ -59,7 +59,7 @@ inputs_exBosonKit= ('non c\'è movimento nei dintorni (BosonKit)' ,
 'c\'è movimento nei dintorn (BosonKit)' ,
 'il cursore è al massimo (BosonKit)' ,
 'il cursore è al minimo (BosonKit)' ,
-"il cursore è al medio (BosonKit)" ,
+#"il cursore è al medio (BosonKit)" ,
 		   )
 inputs_exEnviroBit= ("c\'è tanta umidità (Envirobit)",
 "c\'è poca umidità (Envirobit)",
