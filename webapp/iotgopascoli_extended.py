@@ -103,8 +103,8 @@ elif hardware == "Micro:bit con EnviroBit":
 	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 + outputs_exEnviroBit
 
 
-input1 =  st.sidebar.selectbox('Seleziona la tua carte di input', input_options)
-output1 = st.sidebar.selectbox('Seleziona la tua carte di output', output_options)
+input1 =  st.sidebar.selectbox('Seleziona la tua carta di input', input_options)
+output1 = st.sidebar.selectbox('Seleziona la tua carta di output', output_options)
 
 
 
@@ -741,12 +741,10 @@ function checkIframeLoaded() {
 </script>
 
 <body onLoad = checkIframeLoaded()>
-
 <a id="status" href = test.html></a>
-
 <iframe src="
 '''+urlis+'''
-" name="iframe_a" title="Iframe Example" height="1000"  width="700" style="border:none;" scrolling="yes"></iframe>
+" id="iframe_a" title="Iframe Example" height="1000"  width="700" style="border:none;" scrolling="yes"></iframe>
 //<body onload="checkIframeLoaded();"> 
 
 </body>
