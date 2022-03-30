@@ -390,9 +390,25 @@ grabURL =    {
 
     "sendData":"-sendData.png",
     "recieveData":"-recieveData.png",
-    
-
-    
+	
+"EB_humidityHigh"	:"-inputPhysical-EB_humidityHigh.png",
+"EB_humidityLow"	:"-inputPhysical-EB_humidityLow.png",
+"EB_pressureHigh"	:"-inputPhysical-EB_pressureHigh.png",
+"EB_pressureLow"	:"-inputPhysical-EB_pressureLow.png",
+"EB_noiseHigh"		:"-inputPhysical-EB_noiseHigh.png",
+"EB_noiseLow"		:"-inputPhysical-EB_noiseLow.png",
+"EB_tempHigh"		:"-inputPhysical-EB_tempHigh.png",
+"EB_tempLow"		:"-inputPhysical-EB_tempLow.png",
+"EB_lightlevelHigh"	:"-inputPhysical-EB_lightlevelHigh.png",
+"EB_lightlevelLow"	:"-inputPhysical-EB_lightlevelLow.png",
+"EB_colorIsRed"		:"-inputPhysical-EB_colorIsRed.png",
+"EB_colorIsGreen"	:"-inputPhysical-EB_colorIsGreen.png",
+"EB_colorIsBlue"	:"-inputPhysical-EB_colorIsBlue.png",
+"EB_colorIsBlack"	:"-inputPhysical-EB_colorIsBlack.png",
+"EB_clapYes"		:"-inputPhysical-EB_clapYes.png",
+"EB_clapNo"		:"-inputPhysical-EB_clapNo.png",
+"EB_whiteLEDon"		:"-outputPhysical-EB_whiteLEDon.png",
+"EB_whiteLEDoff"	:"-outputPhysical-EB_whiteLEDoff.png",
 }
 
 
