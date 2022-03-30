@@ -713,8 +713,16 @@ with edit:
         st.markdown("[Modifica...]("+urlis+")", unsafe_allow_html=True)
 
 	
-st.subheader("")
-components.iframe(urlis, height=1000, scrolling=True)   
+htmliframe='''
+<iframe src="
+'''+urlis+'''
+" name="iframe_a" title="Iframe Example"></iframe>
+
+'''
+
+#st.subheader("")
+#components.iframe(urlis, height=1000, scrolling=True)   
+components.html(htmliframe, height=1000, scrolling=True)
 
 
 
