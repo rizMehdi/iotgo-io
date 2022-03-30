@@ -721,7 +721,7 @@ with edit:
 	
 	
 	
-htmliframe='''
+htmliframeold='''
 <a id="status" href = test.html></a>blah
 <iframe src="
 '''+urlis+'''
@@ -743,7 +743,7 @@ htmliframe='''
 </script>
 '''
 
-htmliframeold='''
+htmliframe='''
 <a id="status" href = test.html></a>blah
 <iframe src="
 '''+urlis+'''
@@ -761,7 +761,7 @@ htmliframeold='''
 
 
 
-st.write("updateR")
+st.write("updateS")
 #components.iframe(urlis, height=1000, scrolling=True)   
 components.html(htmliframe, height=1000, scrolling=False)
 
