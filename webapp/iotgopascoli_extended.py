@@ -714,7 +714,9 @@ prevUrlis=urlis
 
 e,edit  = st.columns([1,1])
 with edit:
-        st.markdown("[Modifica...]("+urlis+")", unsafe_allow_html=True)
+        #st.markdown("[Modifica...]("+urlis+")", unsafe_allow_html=True)
+	st.write("[Modifica...]("+urlis+")")
+
 
 	
 htmliframe='''
@@ -753,9 +755,9 @@ function checkIframeLoaded() {
 '''
 
 
-st.write("updateK")
-#components.iframe(urlis, height=1000, scrolling=True)   
-components.html(htmliframe, height=1000, scrolling=False)
+st.write("updateL")
+components.iframe(urlis, height=1000, scrolling=True)   
+#components.html(htmliframe, height=1000, scrolling=False)
 
 
 
