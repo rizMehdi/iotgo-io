@@ -34,20 +34,25 @@ st.markdown(fix_sidebar,unsafe_allow_html=True)
 
 
 	 
-inputs_microbitv1= ('Il pulsante premuto',
-         'Il pulsante non è premuto',
-         'L\'accelerazione è basso',
-         'L\'accelerazione è alta',
-         'La bussola punta ad Est'  ,
-         'La bussola punta ad Ovest'  ,
-         'La bussola punta a Nord',
-         'La bussola punta a Sud'  ,
-         'Il gesto è scuotere' ,
-         'Il gesto è inclinare' ,
-         'La temperatura è bassa',
-         'La temperatura è alta',
-         'L\'intensità di luce è bassa',
-         'L\'intensità di luce è alta',
+inputs_microbitv1= ("il rumore è alto" ,
+		    'il rumore è basso' ,
+		    'il logo non è toccato', #v2 
+		    'il logo è toccato' ,#v2 
+		    "l\'accelerazione è alta" ,
+		    "l\'accelerazione è basso" ,
+		    "il pulsante non è premuto",
+		    "il pulsante è premuto",
+		    "la bussola punta ad Est",
+		    "la bussola punta a Nord" ,
+		    "la bussola punta a Sud" ,
+		    "la bussola punta ad Ovest" ,
+		    "il gesto è scuotere" ,
+		    "il gesto è inclinare" ,
+		    "l\'intensità di luce è alta",
+		    'l\'intensità di luce è bassa',
+		    'la temperatura è alta' ,
+		    'la temperatura è bassa'" ,
+	
 		   )
 inputs_microbitv2= ( 'Il logo è toccato',
          'Il logo non è toccato',
@@ -112,9 +117,74 @@ output1 = st.sidebar.selectbox('Seleziona la tua carta di output', output_option
 
 
 #st.sidebar.write('You selected:', input1,output1,input2,output2)
+it2en_intout={
+"il rumore è alto":"noiseHigh" ,
+'il rumore è basso':"noiseLow" ,
+'il logo non è toccato':"touchNo" , #v2 
+'il logo è toccato':"touchYes" ,#v2 
+"l\'accelerazione è alta":"accelHigh" ,
+"l\'accelerazione è basso":"accelLow" ,
+"il pulsante non è premuto":"buttonNotPress",
+"il pulsante è premuto":"buttonPress",
+"la bussola punta ad Est":"compassE" ,
+"la bussola punta a Nord":"compassN" ,
+"la bussola punta a Sud":"compassS" ,
+"la bussola punta ad Ovest":"compassW" ,
+"il gesto è scuotere":"gestureShake" ,
+"il gesto è inclinare":"gestureTilt" ,
+"l\'intensità di luce è alta":"lightlevelHigh",
+'l\'intensità di luce è bassa':"lightlevelLow",
+'la temperatura è alta':"tempHigh" ,
+'la temperatura è bassa':"tempLow" ,
+'recezione dati' :"recieveData",
+"c\'è tanta umidità (Envirobit)": "EB_humidityHigh",
+"c\'è poca umidità (Envirobit)" : "EB_humidityLow",
+"la pressione atmosferica è alta (Envirobit)" : "EB_pressureHigh"
+"la pressione atmosferica è bassa (Envirobit)" : "EB_pressureLow"
+'il rumore è alto (Envirobit)':"EB_noiseHigh" ,
+'Il rumore è basso (Envirobit)':"EB_noiseLow" ,
+"la temperatura è alta (Envirobit)":"EB_tempHigh" ,
+"la temperatura è bassa (Envirobit)":"EB_tempLow" ,
+"l\'intensità di luce è alta (Envirobit)":"EB_lightlevelHigh",
+"l\'intensità di luce è bassa (Envirobit)":"EB_lightlevelLow",
+"il colore  è rosso (Envirobit)": "EB_colorIsRed"
+"il colore  è verde (Envirobit)": "EB_colorIsGreen"
+"il colore  è blu (Envirobit)": "EB_colorIsBlue"
+"il colore  è nero (Envirobit)": "EB_colorIsBlack"
+"c\'è un applauso (Envirobit)": "EB_colorIsBlack"
+"non c’è un applauso (Envirobit)": "EB_colorIsBlack"
+'non c\'è movimento nei dintorni (BosonKit)':"movementNotPresent" ,
+'c\'è movimento nei dintorn (BosonKit)i':"movementPresent" ,
+'il cursore è al massimo (BosonKit)':"sliderHigh" ,
+'il cursore è al minimo (BosonKit)':"sliderLow" ,
+"il cursore è al medio (BosonKit)":"sliderMid" ,
+'no Input':"noInput",
+'suona una melodia allegra':"musicHappy" ,
+'smette di suonare':"musicNone" ,
+'suona una melodia triste':"musicSad" ,
+"suona un allarme":"musicAlarm" ,
+'mostra un numero':"displayInput" ,
+'smette di mostrare testi o numeri':"displayNone" ,
+'mostra del testo':"displayText" ,
+'mostra un\'icona felice':"iconHappy",
+'smette di mostrare un\'icona':"iconNone",
+'mostra un\'icona triste':"iconSad",
+'invio dati' :"sendData",
+"accende i LED bianchi (Envirobit)": "EB_whiteLEDon"
+"spegne i LED bianchi (Envirobit)": "EB_whiteLEDoff"
+'spegne un ventilatore (BosonKit)':"fanOff" ,
+'accende un ventilatore (BosonKit)':"fanOn" ,
+'spegne una luce (BosonKit)':"lightOff",
+'accende una luce (BosonKit)':"lightOn",
+'fa ruotare il motore (BosonKit)':"rotateMax" ,
+'smette di ruotare il motore (BosonKit)':"rotateMin" ,
+'spegne un\'animazione luminosa (BosonKit)':"showStripBlack",
+'attiva un\'animazione luminosa (BosonKit)':"showStripRainbow" ,
+'spegne un\'animazione luminosa verde (BosonKit)':"showStripGreen",
+'spegne un\'animazione luminosa rossa (BosonKit)':"showStripRed",
+}
 
-
-it2en_inout= {
+it2en_inoutold= {
     "Il pulsante premuto":"buttonPress",
     'Il pulsante non è premuto':"buttonNotPress",
     'L\'accelerazione è basso':"accelLow" , 
