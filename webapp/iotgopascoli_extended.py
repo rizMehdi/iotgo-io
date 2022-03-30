@@ -178,7 +178,7 @@ it2en_inout={
 "c\'è un applauso (Envirobit)": "EB_colorIsBlack",
 "non c’è un applauso (Envirobit)": "EB_colorIsBlack",
 'non c\'è movimento nei dintorni (BosonKit)':"movementNotPresent" ,
-'c\'è movimento nei dintorni (BosonKit)i':"movementPresent" ,
+'c\'è movimento nei dintorni (BosonKit)':"movementPresent" ,
 'il cursore è al massimo (BosonKit)':"sliderHigh" ,
 'il cursore è al minimo (BosonKit)':"sliderLow" ,
 "il cursore è al medio (BosonKit)":"sliderMid" ,
