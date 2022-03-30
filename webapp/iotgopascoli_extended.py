@@ -92,7 +92,7 @@ input_options=  ('no Input',)
 output_options=  ('no Output',)
 
 
-st.sidebar.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo3.png",width=380)
+st.sidebar.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo3.png",width=200)
 	
 hardware = st.sidebar.radio("Seleziona l\'elettronica che hai",("Solo Micro:bit", "Micro:bit con BosonKit", "Micro:bit con EnviroBit"))
 if hardware == "Solo Micro:bit":
