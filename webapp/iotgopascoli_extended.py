@@ -732,7 +732,6 @@ htmliframe='''
     var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
     var statusText = "not loaded";
     if (  iframeDoc.readyState  == 'complete' ) {
-        //iframe.contentWindow.alert("Hello");
         iframe.contentWindow.onload = function(){ 
 	    statusText = "loaded";
 	    document.getElementById("status").innerHTML ="loaded";
@@ -742,7 +741,6 @@ htmliframe='''
 	};
      
 </script>
-
 '''
 
 htmliframeold='''
@@ -763,7 +761,7 @@ htmliframeold='''
 
 
 
-st.write("updateQ")
+st.write("updateR")
 #components.iframe(urlis, height=1000, scrolling=True)   
 components.html(htmliframe, height=1000, scrolling=False)
 
