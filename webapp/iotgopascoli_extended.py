@@ -91,8 +91,8 @@ outputs_exEnviroBit= ()
 input_options=  ('no Input',) 
 output_options=  ('no Output',)
 	
-hardware = st.sidebar.radio("Seleziona l\'elettronica che hai",("Micro:bit solo", "Micro:bit con BosonKit", "Micro:bit con EnviroBit"))
-if hardware == "Micro:bit solo":
+hardware = st.sidebar.radio("Seleziona l\'elettronica che hai",("Solo Micro:bit", "Micro:bit con BosonKit", "Micro:bit con EnviroBit"))
+if hardware == "Solo Micro:bit":
 	input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 
 	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 
 elif hardware == "Micro:bit con BosonKit":
