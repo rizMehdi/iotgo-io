@@ -729,7 +729,7 @@ function checkIframeLoaded() {
         iframe.contentWindow.onload = function(){
             //document.write("here is your code:");
 	    statusText = "loaded";
-	    document.getElementById("status").innerHTML =  "your code is "+ statusText;
+	    document.getElementById("status").innerHTML =  statusText;
 
         };
         // The loading is complete, call the function we want executed once the iframe is loaded
@@ -742,20 +742,20 @@ function checkIframeLoaded() {
 }
 </script>
 
-
+<body onLoad = checkIframeLoaded()>
+    <a id="status" href = test.html>"statusText"</a>
+</body>
 
 <iframe src="
 '''+urlis+'''
 " name="iframe_a" title="Iframe Example" height="1000"  width="700" style="border:none;" scrolling="yes"></iframe>
 //<body onload="checkIframeLoaded();"> 
 
-<body onLoad = checkIframeLoaded()>
-    <a id="status" href = test.html>your code is "statusText" here</a>
-</body>
+
 '''
 
 
-st.write("updateB")
+st.write("updateC")
 #components.iframe(urlis, height=1000, scrolling=True)   
 components.html(htmliframe, height=1000, scrolling=False)
 
