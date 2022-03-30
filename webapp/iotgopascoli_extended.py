@@ -34,11 +34,7 @@ st.markdown(fix_sidebar,unsafe_allow_html=True)
 
 
 	 
-inputs_microbitv1= ("il rumore è alto" ,
-		    'il rumore è basso' ,
-		    'il logo non è toccato', #v2 
-		    'il logo è toccato' ,#v2 
-		    "l\'accelerazione è alta" ,
+inputs_microbitv1= ("l\'accelerazione è alta" ,
 		    "l\'accelerazione è basso" ,
 		    "il pulsante non è premuto",
 		    "il pulsante è premuto",
@@ -51,20 +47,37 @@ inputs_microbitv1= ("il rumore è alto" ,
 		    "l\'intensità di luce è alta",
 		    'l\'intensità di luce è bassa',
 		    'la temperatura è alta' ,
-		    'la temperatura è bassa'" ,
+		    'la temperatura è bassa' ,
 	
 		   )
-inputs_microbitv2= ( 'Il logo è toccato',
-         'Il logo non è toccato',
-         'Il rumore è basso' ,
-         'Il rumore è alto',
+inputs_microbitv2= ( "il rumore è alto" ,
+		    'il rumore è basso' ,
+		    'il logo non è toccato', #v2 
+		    'il logo è toccato' ,#v2 
 		   )
-inputs_exBosonKit= ('C\'è movimento nei dintorni' ,
-         'Non c\'è movimento nei dintorni',
-         'Il cursore è al minimo' ,
-         'Il cursore è al massimo',
+inputs_exBosonKit= ('non c\'è movimento nei dintorni (BosonKit)' ,
+'c\'è movimento nei dintorn (BosonKit)' ,
+'il cursore è al massimo (BosonKit)' ,
+'il cursore è al minimo (BosonKit)' ,
+"il cursore è al medio (BosonKit)" ,
 		   )
-inputs_exEnviroBit= ()
+inputs_exEnviroBit= ("c\'è tanta umidità (Envirobit)",
+"c\'è poca umidità (Envirobit)",
+"la pressione atmosferica è alta (Envirobit)",
+"la pressione atmosferica è bassa (Envirobit)",
+'il rumore è alto (Envirobit)' ,
+'Il rumore è basso (Envirobit)' ,
+"la temperatura è alta (Envirobit)" ,
+"la temperatura è bassa (Envirobit)" ,
+"l\'intensità di luce è alta (Envirobit)",
+"l\'intensità di luce è bassa (Envirobit)",
+"il colore  è rosso (Envirobit)"
+"il colore  è verde (Envirobit)"
+"il colore  è blu (Envirobit)"
+"il colore  è nero (Envirobit)"
+"c\'è un applauso (Envirobit)"
+"non c’è un applauso (Envirobit)"
+)
 
 
 
