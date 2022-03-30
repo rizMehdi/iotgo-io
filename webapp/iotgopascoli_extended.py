@@ -90,6 +90,9 @@ outputs_exEnviroBit= ()
 
 input_options=  ('no Input',) 
 output_options=  ('no Output',)
+
+
+st.sidebar.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo3.png",width=380)
 	
 hardware = st.sidebar.radio("Seleziona l\'elettronica che hai",("Solo Micro:bit", "Micro:bit con BosonKit", "Micro:bit con EnviroBit"))
 if hardware == "Solo Micro:bit":
@@ -682,7 +685,7 @@ vertiPaddingWidthhalf=17
 
 
 
-st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo-hor.png",width=380)
+#st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo-hor.png",width=380)
 #st.header("IoTgo")
 
 #input_col, plus_col, output_col, pad, code_col= st.columns([1,1,1,1,6])
