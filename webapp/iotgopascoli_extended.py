@@ -314,6 +314,7 @@ output0path= baseURL+langPrefix[lang]+grabURL[output_name[0]]
 
 
 urlis=""
+prevUrlis=""
 jscode=""
 
 
@@ -699,9 +700,11 @@ with output_col:
 	# ("Output1:")
 	st.image(output0path, width=cardWidth) 
 
-with st.spinner('Wait for it...'):
-    time.sleep(5)
-st.success('Done!')
+if prevUrlis != urlis:
+	with st.spinner('Plz wait. Generating code for you....'):
+    		time.sleep(2)
+	#st.success('Done!')
+prevUrlis=urlis
 
 
 e,edit  = st.columns([1,1])
