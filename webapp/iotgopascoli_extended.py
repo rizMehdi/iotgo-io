@@ -728,6 +728,26 @@ htmliframe='''
 " id="iframe_a" title="Iframe Example" height="1000"  width="700" style="border:none;" scrolling="yes" loading="eager"></iframe>
 
 <script type="text/javascript">
+   var iframe = document.getElementById('iframe_a');
+    var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+    var statusText = "not loaded";
+    if (  iframeDoc.readyState  == 'complete' ) {
+        //iframe.contentWindow.alert("Hello");
+        iframe.contentWindow.onload = function(){ 
+	    statusText = "loaded";
+        };
+     document.getElementById("status").innerHTML =statusText;
+</script>
+
+'''
+
+htmliframeold='''
+<a id="status" href = test.html></a>blah
+<iframe src="
+'''+urlis+'''
+" id="iframe_a" title="Iframe Example" height="1000"  width="700" style="border:none;" scrolling="yes" loading="eager"></iframe>
+
+<script type="text/javascript">
     document.getElementById('iframe_a').onload= function() {
     document.getElementById("status").innerHTML="done";
     };
@@ -736,7 +756,10 @@ htmliframe='''
 '''
 
 
-st.write("updateO")
+
+
+
+st.write("updateP")
 #components.iframe(urlis, height=1000, scrolling=True)   
 components.html(htmliframe, height=1000, scrolling=False)
 
