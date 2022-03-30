@@ -741,7 +741,7 @@ function checkIframeLoaded() {
 </script>
 
 <body onLoad = checkIframeLoaded()>
-<a id="status" href = test.html></a>
+<a id="status" href = test.html></a>"statusText"
 <iframe src="
 '''+urlis+'''
 " id="iframe_a" title="Iframe Example" height="1000"  width="700" style="border:none;" scrolling="yes"></iframe>
@@ -751,7 +751,7 @@ function checkIframeLoaded() {
 '''
 
 
-st.write("updateI")
+st.write("updateJ")
 #components.iframe(urlis, height=1000, scrolling=True)   
 components.html(htmliframe, height=1000, scrolling=False)
 
