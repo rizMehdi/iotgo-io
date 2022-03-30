@@ -141,7 +141,7 @@ output1 = st.sidebar.selectbox('Seleziona la tua carta di output', output_option
 
 
 #st.sidebar.write('You selected:', input1,output1,input2,output2)
-it2en_intout={
+it2en_inout={
 "il rumore è alto":"noiseHigh" ,
 'il rumore è basso':"noiseLow" ,
 'il logo non è toccato':"touchNo" , #v2 
@@ -163,20 +163,20 @@ it2en_intout={
 'recezione dati' :"recieveData",
 "c\'è tanta umidità (Envirobit)": "EB_humidityHigh",
 "c\'è poca umidità (Envirobit)" : "EB_humidityLow",
-"la pressione atmosferica è alta (Envirobit)" : "EB_pressureHigh"
-"la pressione atmosferica è bassa (Envirobit)" : "EB_pressureLow"
+"la pressione atmosferica è alta (Envirobit)" : "EB_pressureHigh",
+"la pressione atmosferica è bassa (Envirobit)" : "EB_pressureLow",
 'il rumore è alto (Envirobit)':"EB_noiseHigh" ,
 'Il rumore è basso (Envirobit)':"EB_noiseLow" ,
 "la temperatura è alta (Envirobit)":"EB_tempHigh" ,
 "la temperatura è bassa (Envirobit)":"EB_tempLow" ,
 "l\'intensità di luce è alta (Envirobit)":"EB_lightlevelHigh",
 "l\'intensità di luce è bassa (Envirobit)":"EB_lightlevelLow",
-"il colore  è rosso (Envirobit)": "EB_colorIsRed"
-"il colore  è verde (Envirobit)": "EB_colorIsGreen"
-"il colore  è blu (Envirobit)": "EB_colorIsBlue"
-"il colore  è nero (Envirobit)": "EB_colorIsBlack"
-"c\'è un applauso (Envirobit)": "EB_colorIsBlack"
-"non c’è un applauso (Envirobit)": "EB_colorIsBlack"
+"il colore  è rosso (Envirobit)": "EB_colorIsRed",
+"il colore  è verde (Envirobit)": "EB_colorIsGreen",
+"il colore  è blu (Envirobit)": "EB_colorIsBlue",
+"il colore  è nero (Envirobit)": "EB_colorIsBlack",
+"c\'è un applauso (Envirobit)": "EB_colorIsBlack",
+"non c’è un applauso (Envirobit)": "EB_colorIsBlack",
 'non c\'è movimento nei dintorni (BosonKit)':"movementNotPresent" ,
 'c\'è movimento nei dintorn (BosonKit)i':"movementPresent" ,
 'il cursore è al massimo (BosonKit)':"sliderHigh" ,
@@ -194,8 +194,8 @@ it2en_intout={
 'smette di mostrare un\'icona':"iconNone",
 'mostra un\'icona triste':"iconSad",
 'invio dati' :"sendData",
-"accende i LED bianchi (Envirobit)": "EB_whiteLEDon"
-"spegne i LED bianchi (Envirobit)": "EB_whiteLEDoff"
+"accende i LED bianchi (Envirobit)": "EB_whiteLEDon",
+"spegne i LED bianchi (Envirobit)": "EB_whiteLEDoff",
 'spegne un ventilatore (BosonKit)':"fanOff" ,
 'accende un ventilatore (BosonKit)':"fanOn" ,
 'spegne una luce (BosonKit)':"lightOff",
