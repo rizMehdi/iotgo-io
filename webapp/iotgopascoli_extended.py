@@ -138,7 +138,7 @@ elif hardware == "Micro:bit con EnviroBit":
 input1 =  st.sidebar.selectbox('Seleziona la tua carta di input', input_options)
 output1 = st.sidebar.selectbox('Seleziona la tua carta di output', output_options)
 
-
+st.sidebar.write("[Misc icons created by Freepik - Flaticon] https://www.flaticon.com/free-icons/dial-pad")
 
 #st.sidebar.write('You selected:', input1,output1,input2,output2)
 it2en_inout={
