@@ -342,7 +342,7 @@ grabURL =    {
     "touchNo"	:       "-inputPhysical-touchNo.png",
     "sliderLow":        "-inputPhysical-sliderLow.png",
     "sliderMid":        "-inputPhysical-sliderMid.png",#not used. 
-    "sliderHigh":       "-inputPhysical-sliderMax.png",
+    "sliderHigh":       "-inputPhysical-sliderHigh.png",
     "tempLow"  :        "-inputPhysical-tempLow.png",
     "tempHigh" :        "-inputPhysical-tempHigh.png",
     "lightlevelLow" :   "-inputPhysical-lightlevelLow.png",
