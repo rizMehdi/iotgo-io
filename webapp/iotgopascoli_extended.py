@@ -883,7 +883,7 @@ prevUrlis=urlis
 e,edit  = st.columns([1,1])
 with edit:
         #st.markdown("[Modifica...]("+urlis+")", unsafe_allow_html=True)
-	st.write("[Modifica...]("+urlis+")")
+	st.write("[Modifica codice...]("+urlis+")")
 
 
 	
@@ -956,7 +956,7 @@ components.iframe(urlis, height=1000, scrolling=True)
 #e,edit  = st.columns([1,1])
 #with edit:
 #        #st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=60)
-#        st.markdown("[Modifica...]("+urlis+")", unsafe_allow_html=True)
+#        st.markdown("[Modifica codice...]("+urlis+")", unsafe_allow_html=True)
 
 
  
