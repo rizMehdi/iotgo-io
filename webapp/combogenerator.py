@@ -822,7 +822,7 @@ for eachinput in input_options:
         urlis,jscode=(genURL([eachinput,eachoutput]))
         with open('combos.csv', 'a+') as f:
             writer = csv.writer(f)
-            writer.writerow([totalcombos,eachinput,eachoutput,urlis])
+            writer.writerow([totalcombos,eachinput, '+',eachoutput,urlis])
         st.write(totalcombos,eachinput,eachoutput,urlis)
         #print('combo#',totalcombos, '=', eachinput, '+', eachoutput)
         
