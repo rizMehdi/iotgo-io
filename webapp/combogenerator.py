@@ -825,7 +825,7 @@ for eachinput in input_options:
     #        writer.writerow([totalcombos,eachinput,eachoutput,urlis])
         st.write(totalcombos,eachinput,'+',eachoutput,urlis)
 	with st.expander("see code"):
-		components.iframe(urlis, height=1000, scrolling=True) 
+	     components.iframe(urlis, height=1000, scrolling=True) 
 
         #print('combo#',totalcombos, '=', eachinput, '+', eachoutput)
         
