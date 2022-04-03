@@ -1,6 +1,6 @@
 #For PascoliBZ- 29March22
 import streamlit as st
-#import streamlit.components.v1 as components
+import streamlit.components.v1 as components
 import urllib.parse
 import time
 import textwrap
@@ -812,18 +812,21 @@ def genURL (*args):#input_name, output_name):#here i am collecting chunks of cod
 
 
 header = ['combo#', 'input', 'output', 'url']
-with open('countries.csv', 'a+') as f:
-    writer = csv.writer(f)
-    writer.writerow(header)
+#with open('countries.csv', 'a+') as f:
+ #   writer = csv.writer(f)
+  #  writer.writerow(header)
 totalcombos=0
 for eachinput in input_options:
     for eachoutput in output_options:
         totalcombos=totalcombos+1
         urlis,jscode=(genURL([eachinput,eachoutput]))
-        with open('combos.csv', 'a+') as f:
-            writer = csv.writer(f)
-            writer.writerow([totalcombos,eachinput,eachoutput,urlis])
+   #     with open('combos.csv', 'a+') as f:
+   #         writer = csv.writer(f)
+    #        writer.writerow([totalcombos,eachinput,eachoutput,urlis])
         st.write(totalcombos,eachinput,'+',eachoutput,urlis)
+	with st.expander("see code"):
+		components.iframe(urlis, height=1000, scrolling=True) 
+
         #print('combo#',totalcombos, '=', eachinput, '+', eachoutput)
         
         
