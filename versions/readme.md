@@ -15,3 +15,4 @@ Gallarate: Day2, 2021 (IT), without scanner, [![Open in Streamlit](https://stati
 
 Gallarate: Day1, 2021 (IT), with scanner, [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/iotgo-app/iotgo-io/main/versions/gallarate_day1.py)
 
+ 
