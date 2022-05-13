@@ -9,7 +9,7 @@ st.set_page_config(page_title="IoTgo",page_icon=None,layout="wide",initial_sideb
 codetitle=""
 codesubtitle=""
 groupnum="0"
-
+gamelevel=0
 
 
 hide_img_fs = '''
