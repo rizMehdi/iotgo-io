@@ -457,8 +457,8 @@ grabURL =    {
 
 input0path=  baseURL+langPrefix[lang]+grabURL[ input_name[0]]
 output0path= baseURL+langPrefix[lang]+grabURL[output_name[0]]
-#input2path=  baseURL+langPrefix[lang]+grabURL[ input_name[2]]
-#output2path= baseURL+langPrefix[lang]+grabURL[output_name[2]]
+input2path=  baseURL+langPrefix[lang]+grabURL[ input_name[2]]
+output2path= baseURL+langPrefix[lang]+grabURL[output_name[2]]
     
  
 
@@ -891,15 +891,21 @@ with input_col:
 	st.write(" se...")
 	# ("Input1:")
 	st.image(input0path, width=cardWidth) 
+	# ("Input2:")
+	if gamelevel=1: st.image(input0path, width=cardWidth) 
 with plus_col:    
 	#st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth*2)
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidthhalf)
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/plus.png", width=pluscardwidht) 
+	if gamelevel=1: st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/plus.png", width=pluscardwidht) 
+
 with output_col:    
 	#st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
 	st.write(" allora...")
 	# ("Output1:")
 	st.image(output0path, width=cardWidth) 
+	# ("Output1:")
+	if gamelevel=1: st.image(output0path, width=cardWidth) 
 
 if prevUrlis != urlis:
 	with st.spinner('Plz wait. Generating code for you....'):
