@@ -149,9 +149,10 @@ output2="no Output"
 p2p = st.sidebar.checkbox('Attiva il livello peer-2-peer')
 if p2p==True:
 	gamelevel=1
-	p2ptype = st.sidebar.selectbox(
-		'sono...', 
-		('--', 'invio dati', 'ricevo dati' ))
+	p2ptype = st.sidebar.radio("Sono...",('invio dati', 'ricevo dati'))
+# 	p2ptype = st.sidebar.selectbox(
+# 		'sono...', 
+# 		('----', 'invio dati', 'ricevo dati' ))
 	if p2ptype=='invio dati':
 		input2 = st.sidebar.selectbox('Seleziona la tua seconda carta di input', ('no Input',) + inputs_microbitv1 + inputs_microbitv2)
 		output2= 'invio dati' 
