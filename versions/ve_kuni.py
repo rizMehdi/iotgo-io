@@ -144,8 +144,8 @@ input1 =  st.sidebar.selectbox('Seleziona la tua carta di input', input_options)
 output1 = st.sidebar.selectbox('Seleziona la tua carta di output', output_options)
 st.sidebar.markdown("""---""")
 
-
-
+input2="no Input"
+output2="no Output"
 p2p = st.sidebar.checkbox('Attiva il livello peer-2-peer')
 if p2p==True:
 	gamelevel=1
