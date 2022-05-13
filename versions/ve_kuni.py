@@ -148,7 +148,7 @@ st.markdown("""---""")
 
 p2p = st.sidebar.checkbox('Enable Peer-2-peer level')
 if p2p==True:
-     gamelevel=1
+	gamelevel=1
 	st.sidebar.markdown("""livello 2:---""")
 	p2ptype = st.sidebar.selectbox(
 		'sono...', 
