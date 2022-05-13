@@ -146,11 +146,9 @@ st.sidebar.markdown("""---""")
 
 
 
-p2p = st.sidebar.checkbox('Enable Peer-2-peer level')
+p2p = st.sidebar.checkbox('Attiva il livello peer-2-peer')
 if p2p==True:
 	gamelevel=1
-	st.sidebar.markdown("""livello 2:
-		---""")
 	p2ptype = st.sidebar.selectbox(
 		'sono...', 
 		('--', 'invio dati', 'ricevo dati' ))
