@@ -123,21 +123,46 @@ output_options=  ('no Output',)
 
 st.sidebar.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo3.png",width=200)
 	
-hardware = st.sidebar.radio("Seleziona l\'elettronica che hai",("Solo Micro:bit", "Micro:bit con BosonKit", "Micro:bit con EnviroBit"))
-if hardware == "Solo Micro:bit":
-	input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 
-	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 
-elif hardware == "Micro:bit con BosonKit":
-	input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 + inputs_exBosonKit 
-	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 + outputs_exBosonKit
-elif hardware == "Micro:bit con EnviroBit":
-	input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 +  inputs_exEnviroBit
-	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 + outputs_exEnviroBit
 
-st.sidebar.markdown("""---""")
+# hardware = st.sidebar.radio("Seleziona l\'elettronica che hai",("Solo Micro:bit", "Micro:bit con BosonKit", "Micro:bit con EnviroBit"))
+# if hardware == "Solo Micro:bit":
+# 	input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 
+# 	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 
+# elif hardware == "Micro:bit con BosonKit":
+# 	input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 + inputs_exBosonKit 
+# 	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 + outputs_exBosonKit
+# elif hardware == "Micro:bit con EnviroBit":
+# 	input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 +  inputs_exEnviroBit
+# 	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 + outputs_exEnviroBit
+
+
+input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 
+output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2
+
+st.markdown("""---""")
 input1 =  st.sidebar.selectbox('Seleziona la tua carta di input', input_options)
 output1 = st.sidebar.selectbox('Seleziona la tua carta di output', output_options)
-st.sidebar.markdown("""---""")
+st.markdown("""---""")
+
+
+
+p2p = st.sidebar.checkbox('Enable Peer-2-peer level')
+if p2p==True:
+     gamelevel=1
+	st.sidebar.markdown("""livello 2:
+	---""")
+	p2ptype = st.sidebar.selectbox(
+		'sono...', 
+		('--', 'invio dati', 'ricevo dati' ))
+	if p2ptype=='invio dati':
+		input2 = st.sidebar.selectbox(('no Input',) + inputs_microbitv1 + inputs_microbitv2)
+		output2= 'invio dati' 
+	elif  p2ptype=='ricevo dati': #'ricevo dati'
+		output2 = st.sidebar.selectbox(('no Output',) + outputs_microbitv1 + outputs_microbitv2)
+		input2='recezione dati'
+	else:
+		input2="no Input"
+		output2="no Output"
 
 
 
@@ -262,6 +287,8 @@ input_name= ["no Input"  ,"no Input"  ,"no Input"]
 output_name=["no Output" ,"no Output" ,"no Output"]
 input_name[0]= it2en_inout[input1]
 output_name[0]=it2en_inout[output1]
+input_name[1]= it2en_inout[input1]
+output_name[1]=it2en_inout[output1]
 
 
 
