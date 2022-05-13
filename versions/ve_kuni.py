@@ -288,8 +288,8 @@ input_name= ["no Input"  ,"no Input"  ,"no Input"]
 output_name=["no Output" ,"no Output" ,"no Output"]
 input_name[0]= it2en_inout[input1]
 output_name[0]=it2en_inout[output1]
-input_name[1]= it2en_inout[input1]
-output_name[1]=it2en_inout[output1]
+input_name[1]= it2en_inout[input2]
+output_name[1]=it2en_inout[output2]
 
 
 
