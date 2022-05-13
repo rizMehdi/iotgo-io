@@ -895,12 +895,12 @@ with input_col:
 	# ("Input1:")
 	st.image(input0path, width=cardWidth) 
 	# ("Input2:")
-	if gamelevel=1: st.image(input0path, width=cardWidth) 
+	if gamelevel==1: st.image(input0path, width=cardWidth) 
 with plus_col:    
 	#st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth*2)
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidthhalf)
 	st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/plus.png", width=pluscardwidht) 
-	if gamelevel=1: st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/plus.png", width=pluscardwidht) 
+	if gamelevel==1: st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/plus.png", width=pluscardwidht) 
 
 with output_col:    
 	#st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
@@ -908,7 +908,7 @@ with output_col:
 	# ("Output1:")
 	st.image(output0path, width=cardWidth) 
 	# ("Output1:")
-	if gamelevel=1: st.image(output0path, width=cardWidth) 
+	if gamelevel==1: st.image(output0path, width=cardWidth) 
 
 if prevUrlis != urlis:
 	with st.spinner('Plz wait. Generating code for you....'):
