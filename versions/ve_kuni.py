@@ -163,6 +163,8 @@ if p2p==True:
 	else:
 		input2="no Input"
 		output2="no Output"
+		gamelevel=0
+
 
 
 
@@ -282,7 +284,6 @@ it2en_inoutold= {
 
 
 
-gamelevel=0
 input_name= ["no Input"  ,"no Input"  ,"no Input"]
 output_name=["no Output" ,"no Output" ,"no Output"]
 input_name[0]= it2en_inout[input1]
