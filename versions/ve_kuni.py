@@ -139,29 +139,30 @@ st.sidebar.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/ap
 input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 
 output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2
 
-st.sidebar.markdown("""---""")
-input1 =  st.sidebar.selectbox('Seleziona la tua carta di input', input_options)
-output1 = st.sidebar.selectbox('Seleziona la tua carta di output', output_options)
-st.sidebar.markdown("""---""")
+#st.sidebar.markdown("""---""")
+#input1 =  st.sidebar.selectbox('Seleziona la tua carta di input', input_options)
+#output1 = st.sidebar.selectbox('Seleziona la tua carta di output', output_options)
+#st.sidebar.markdown("""---""")
 
 input2="no Input"
 output2="no Output"
-p2p = st.sidebar.checkbox('Attiva il livello peer-2-peer')
+#p2p = st.sidebar.checkbox('Attiva il livello peer-2-peer')
+p2p=True
 if p2p==True:
-	gamelevel=1
+	#gamelevel=1
 	p2ptype = st.sidebar.radio("Sono...",('invio dati', 'ricevo dati'))
 # 	p2ptype = st.sidebar.selectbox(
 # 		'sono...', 
 # 		('----', 'invio dati', 'ricevo dati' ))
 	if p2ptype=='invio dati':
-		input2 = st.sidebar.selectbox('Seleziona la tua seconda carta di input', ('no Input',) + inputs_microbitv1 + inputs_microbitv2)
-		output2= 'invio dati' 
+		input1 = st.sidebar.selectbox('Seleziona la tua seconda carta di input', ('no Input',) + inputs_microbitv1 + inputs_microbitv2)
+		output1= 'invio dati' 
 	elif  p2ptype=='ricevo dati': #'ricevo dati'
-		output2 = st.sidebar.selectbox('Seleziona la tua seconda carta di output', ('no Output',) + outputs_microbitv1 + outputs_microbitv2)
-		input2='recezione dati'
+		output1 = st.sidebar.selectbox('Seleziona la tua seconda carta di output', ('no Output',) + outputs_microbitv1 + outputs_microbitv2)
+		input1='recezione dati'
 	else:
-		input2="no Input"
-		output2="no Output"
+		input1="no Input"
+		output1="no Output"
 		gamelevel=0
 
 
