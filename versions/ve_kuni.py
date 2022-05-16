@@ -147,6 +147,8 @@ elif hardware == "Micro:bit con BosonKit":
 
 input2="no Input"
 output2="no Output"
+
+st.sidebar.markdown("""---""")
 #p2p = st.sidebar.checkbox('Attiva il livello peer-2-peer')
 p2p=True
 if p2p==True:
