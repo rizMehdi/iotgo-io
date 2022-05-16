@@ -520,8 +520,8 @@ on_start = {
 "musicNone": "music.setVolume(255)",
 "musicSad": "music.setVolume(255)",
 "musicAlarm": "music.setVolume(255)",
-"sendData":"radio.setGroup(1)",# todo: set group automatically
-"recieveData":"radio.setGroup(1)",# todo: set group automatically
+"sendData":  "radio.setGroup(99)",# todo: set group automatically
+"recieveData":"radio.setGroup(99)",# todo: set group automatically
 "rotateMax":"servos.P1.setRange(0,180)",
 "rotateMid":"servos.P1.setRange(0,180)",
 "rotateMin":"servos.P1.setRange(0,180)",
