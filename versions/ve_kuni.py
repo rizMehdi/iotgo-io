@@ -156,10 +156,10 @@ if p2p==True:
 # 		'sono...', 
 # 		('----', 'invio dati', 'ricevo dati' ))
 	if p2ptype=='invio dati':
-		input1 = st.sidebar.selectbox('Seleziona la tua seconda carta di input',input_options)
+		input1 = st.sidebar.selectbox('Seleziona la tua carta di input',input_options)
 		output1= 'invio dati' 
 	elif  p2ptype=='ricevo dati': #'ricevo dati'
-		output1 = st.sidebar.selectbox('Seleziona la tua seconda carta di output', output_options)
+		output1 = st.sidebar.selectbox('Seleziona la tua carta di output', output_options)
 		input1='recezione dati'
 	else:
 		input1="no Input"
