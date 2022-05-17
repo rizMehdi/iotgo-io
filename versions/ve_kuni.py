@@ -531,7 +531,7 @@ package_suffix = {
  
 
 on_end = {
-  	"recieveData":   '\nradio.onReceivedValue(function (name, value) {\n\tif (name == "replace_me" && value == 1) {\n\t\trecieved = 1\n\t}\n})',
+  	"recieveData":   '\nradio.onReceivedValue(function (name, value) {\n\tif (name == "replace_me" && value == 1) {\n\t\t received = 1\n\t}\n})',
         }
 
 
@@ -596,7 +596,7 @@ input_code = {
 "lightlevelLow" :"input.lightLevel() < 127",
 "tempHigh" :"input.temperature() >= 28" ,
 "tempLow" :"input.temperature() < 28",
-"recieveData":"recieved == 1",
+"recieveData":"received == 1",
 "EB_humidityHigh":"envirobit.getHumidity() >= 40",
 "EB_humidityLow":"envirobit.getHumidity() < 40",
 "EB_pressureHigh":"envirobit.getPressure() >= 1013",
