@@ -170,6 +170,25 @@ if p2p==True:
 
 
 
+st.sidebar.markdown("""---""")		
+secondLevel = st.sidebar.checkbox('Aggiungere un ulteriore livello di comunicazione')
+if secondLevel==True:
+	gamelevel=1
+	if p2ptype=='invio dati':
+		st.sidebar.write('Stavi inviando dati, ora riceviamo anche i dati:')
+		output2 = st.sidebar.selectbox('Seleziona la tua carta di output', output_options)
+		input2='recezione dati'
+	elif  p2ptype=='ricevo dati':  
+		st.sidebar.write('Stavi ricevendo dati, ora inviamo anche i dati:')		
+		input2 = st.sidebar.selectbox('Seleziona la tua carta di input',input_options)
+		output2= 'invio dati' 
+	else:
+		input2="no Input"
+		output2="no Output"
+ 
+
+
+
 
 #st.sidebar.write('You selected:', input1,output1,input2,output2)
 it2en_inout={
