@@ -123,7 +123,7 @@ output_options=  ('no Output',)
 
 def resetCards():
 	gamelevel=0
-	secondLevel=False
+	#secondLevel=False
 # 	if p2ptype=="invio dati":
 # 		input1="no Input"
 # 		output1='invio dati'
