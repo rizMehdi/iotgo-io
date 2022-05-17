@@ -11,6 +11,8 @@ codesubtitle=""
 groupnum="0"
 gamelevel=0
 
+
+
 hide_menu_style = """
         <style>
         #MainMenu {visibility: hidden; }
@@ -86,6 +88,8 @@ inputs_exEnviroBit= ("c\'è tanta umidità (Envirobit)",
 )
 
 inputs_exCloudBitPi= ()
+
+inputs_exOthers= ()
 inputs_p2p= ('recezione dati',)
 
 
@@ -121,6 +125,8 @@ outputs_exEnviroBit=()
 #"spegne i LED bianchi (Envirobit)"
 
 outputs_exCloudBitPi= ()
+outputs_exOthers= ()
+
 outputs_p2p= ('invio dati',)	
 
 input_options=  ('no Input',) 
@@ -146,8 +152,8 @@ st.sidebar.markdown("""---""")
 hardware = st.sidebar.radio("Seleziona l\'elettronica che hai",("Solo Micro:bit", "Micro:bit con BosonKit"))
 # hardware = st.sidebar.radio("Seleziona l\'elettronica che hai",("Solo Micro:bit", "Micro:bit con BosonKit", "Micro:bit con EnviroBit"))
 if hardware == "Solo Micro:bit":
-	input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 
-	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 
+	input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 + inputs_exOthers
+	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 +outputs_exOthers 
 elif hardware == "Micro:bit con BosonKit":
 	input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 + inputs_exBosonKit 
 	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 + outputs_exBosonKit
