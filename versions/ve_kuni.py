@@ -1047,8 +1047,6 @@ components.iframe(urlis, height=1000, scrolling=True)
 st.markdown("""---""")
 st.write("Un progetto di / A project of:")
 st.image("https://raw.githubusercontent.com/IoTgo-app/iotgo-io/main/images/unilogo.png",width=600)
-
-
-st.sidebar.markdown("""---""")
-st.sidebar.write("v2.0.4")
+st.markdown("""---""")
+st.write("v2.0.5")
 
