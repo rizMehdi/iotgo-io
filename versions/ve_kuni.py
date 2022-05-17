@@ -1047,5 +1047,6 @@ components.iframe(urlis, height=1000, scrolling=True)
 st.markdown("""---""")
 st.write("Un progetto di / A project of:")
 st.image("https://raw.githubusercontent.com/IoTgo-app/iotgo-io/main/images/unilogo.png",width=600)
-st.write("v2.0.5")
+version="v2.0.5"
+st.markdown("<h1 style='text-align: right; color: grey;'>"+version+"</h1>", unsafe_allow_html=True)
 
