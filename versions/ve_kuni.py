@@ -38,7 +38,6 @@ st.markdown(hide_menu_style, unsafe_allow_html=True)
 st.markdown(hide_img_fs, unsafe_allow_html=True)
 st.markdown(fix_sidebar,unsafe_allow_html=True)
 
-st.sidebar.write("v2.0.0")
 
 	 
 inputs_microbitv1= ("l\'accelerazione è alta" ,
@@ -1045,4 +1044,4 @@ components.iframe(urlis, height=1000, scrolling=True)
 
 #st.button("Refresh")
 
-st.sidebar.write("v2.0.1")
+st.sidebar.write("v2.0.2")
