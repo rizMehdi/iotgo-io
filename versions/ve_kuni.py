@@ -1044,4 +1044,5 @@ components.iframe(urlis, height=1000, scrolling=True)
 
 #st.button("Refresh")
 
-st.sidebar.write("v2.0.2")
+st.sidebar.markdown("""---""")
+st.sidebar.write("v2.0.3")
