@@ -148,12 +148,13 @@ elif hardware == "Micro:bit con BosonKit":
 input2="no Input"
 output2="no Output"
 
-st.sidebar.markdown("""---""")
-#p2p = st.sidebar.checkbox('Attiva il livello peer-2-peer')
+st.sidebar.markdown("""---""")#p2p = st.sidebar.checkbox('Attiva il livello peer-2-peer')
+if gamelevel==0: disableLevel0changes=False
 p2p=True
 if p2p==True:
-	#gamelevel=1
-	p2ptype = st.sidebar.radio("Sono...",('invio dati', 'ricevo dati'))
+	if gamelevel==1: disableLevel0changes=True
+		
+	p2ptype = st.sidebar.radio("Sono...",('invio dati', 'ricevo dati'),disableLevel0changes)
 # 	p2ptype = st.sidebar.selectbox(
 # 		'sono...', 
 # 		('----', 'invio dati', 'ricevo dati' ))
