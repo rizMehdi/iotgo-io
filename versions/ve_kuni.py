@@ -26,27 +26,17 @@ button[title="View fullscreen"]{
 
 fix_sidebar= """
 <style>
-[data-testid="stSidebar"][aria-expanded="true"] > div:first-child {
-	width: 350px;}
-[data-testid="stSidebar"][aria-expanded="false"] > div:first-child {
-	width: 350px;margin-left: -350px;}
+[data-testid="stSidebar"][aria-expanded="true"] > div:first-child {width: 350px;}
+[data-testid="stSidebar"][aria-expanded="false"] > div:first-child {width: 350px;margin-left: -350px;}
 </style>
 """
 
 
-sidebar_color="""
-<style>
-.sidebar .sidebar-content {
-    background-image: linear-gradient(#ece9e8,#ece9e8);
-    color: white;
-}
-</style>
-"""
+
 
 st.markdown(hide_menu_style, unsafe_allow_html=True)
 st.markdown(hide_img_fs, unsafe_allow_html=True)
 st.markdown(fix_sidebar,unsafe_allow_html=True)
-st.markdown(sidebar_color,unsafe_allow_html=True)
 
 st.sidebar.write("v2.0.0")
 
@@ -214,7 +204,7 @@ if secondLevel==True:
 
 
 
-st.sidebar.write("v2.0.0")
+
 
 
 
@@ -1054,3 +1044,5 @@ components.iframe(urlis, height=1000, scrolling=True)
  
 
 #st.button("Refresh")
+
+st.sidebar.write("v2.0.1")
