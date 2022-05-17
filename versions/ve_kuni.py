@@ -830,7 +830,7 @@ def genURL (*args):#input_name, output_name):#here i am collecting chunks of cod
             if True:#eachIOpair[0] != "noInput" and eachIOpair[1] != "noOuput":
                 if eachIOpair[1] in output_code:
                     if eachIOpair[1]=="sendData":
-				        if_body_code=output_code[eachIOpair[1]].replace("inputName",input_name[0]).replace("inputValue","1")
+                        if_body_code=output_code[eachIOpair[1]].replace("inputName",input_name[0]).replace("inputValue","1")
                         #if_body_code=output_code[eachIOpair[1]].replace("inputName",input_name[gamelevel]).replace("inputValue","1")
                        ##if_body_code=output_code[eachIOpair[1]].replace("inputName",input_name[gamelevel]).replace("inputValue",input_sensorValue[input_name[gamelevel]])
                     else:
