@@ -16,7 +16,6 @@ hide_menu_style = """
         #MainMenu {visibility: hidden; }
         </style>
         """
-st.markdown(hide_menu_style, unsafe_allow_html=True)
 
 hide_img_fs = '''
 <style>
@@ -38,13 +37,13 @@ fix_sidebar= """
 sidebar_color="""
 <style>
 .sidebar .sidebar-content {
-    background-image: linear-gradient(#ECE9E8,#ECE9E8);
-    color: red;
+    background-image: linear-gradient(#ece9e8,#ece9e8);
+    color: white;
 }
 </style>
 """
 
-
+st.markdown(hide_menu_style, unsafe_allow_html=True)
 st.markdown(hide_img_fs, unsafe_allow_html=True)
 st.markdown(fix_sidebar,unsafe_allow_html=True)
 st.markdown(sidebar_color,unsafe_allow_html=True)
