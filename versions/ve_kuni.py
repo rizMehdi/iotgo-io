@@ -35,8 +35,7 @@ fix_sidebar= """
 """
 
 
-sidebar_color=
-    """
+sidebar_color="""
 <style>
 .sidebar .sidebar-content {
     background-image: linear-gradient(#ECE9E8,#ECE9E8);
