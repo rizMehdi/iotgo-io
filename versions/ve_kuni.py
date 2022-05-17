@@ -164,8 +164,7 @@ if gamelevel==0: disableLevel0changes=False
 p2p=True
 
 if p2p==True:
-	p2ptype = st.sidebar.radio("Sono...",('invio dati', 'ricevo dati'),on_click=resetCards)
-	if p2ptype=
+	p2ptype = st.sidebar.radio("Sono...",('invio dati', 'ricevo dati'),on_change=resetCards)
 	if p2ptype=='invio dati':
 		input1 = st.sidebar.selectbox('Seleziona la tua carta di input',input_options)
 		output1= 'invio dati' 
