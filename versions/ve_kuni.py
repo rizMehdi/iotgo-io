@@ -1044,6 +1044,11 @@ components.iframe(urlis, height=1000, scrolling=True)
  
 
 #st.button("Refresh")
+st.markdown("""---""")
+st.write("Un progetto di / A project of:")
+st.image("https://raw.githubusercontent.com/IoTgo-app/iotgo-io/main/images/unilogo.png",width=300)
+
 
 st.sidebar.markdown("""---""")
-st.sidebar.write("v2.0.3")
+st.sidebar.write("v2.0.4")
+
