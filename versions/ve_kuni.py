@@ -121,7 +121,7 @@ input_options=  ('no Input',)
 output_options=  ('no Output',)
 
 
-def resetCards()
+def resetCards():
 	gamelevel=0
 # 	if p2ptype=="invio dati":
 # 		input1="no Input"
