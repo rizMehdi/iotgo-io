@@ -123,6 +123,7 @@ output_options=  ('no Output',)
 
 def resetCards():
 	gamelevel=0
+	secondLevel=False
 # 	if p2ptype=="invio dati":
 # 		input1="no Input"
 # 		output1='invio dati'
@@ -160,7 +161,6 @@ input2="no Input"
 output2="no Output"
 
 st.sidebar.markdown("""---""")#p2p = st.sidebar.checkbox('Attiva il livello peer-2-peer')
-if gamelevel==0: disableLevel0changes=False
 p2p=True
 
 if p2p==True:
