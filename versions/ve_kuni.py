@@ -48,7 +48,7 @@ st.markdown(hide_img_fs, unsafe_allow_html=True)
 st.markdown(fix_sidebar,unsafe_allow_html=True)
 st.markdown(sidebar_color,unsafe_allow_html=True)
 
-
+st.sidebar.write("v2.0.0")
 
 	 
 inputs_microbitv1= ("l\'accelerazione è alta" ,
@@ -212,6 +212,9 @@ if secondLevel==True:
 		output2="no Output"
  
 
+
+
+st.sidebar.write("v2.0.0")
 
 
 
