@@ -121,6 +121,17 @@ input_options=  ('no Input',)
 output_options=  ('no Output',)
 
 
+def resetCards()
+	gamelevel=0
+# 	if p2ptype=="invio dati":
+# 		input1="no Input"
+# 		output1='invio dati'
+# 	elif p2ptype=="recezione dati":
+# 		input1="no Input"
+# 		output1='recezione dati'
+# 	input2="no Input"
+# 	output2="no Output"
+
 st.sidebar.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo3.png",width=200)
 	
 
@@ -151,10 +162,10 @@ output2="no Output"
 st.sidebar.markdown("""---""")#p2p = st.sidebar.checkbox('Attiva il livello peer-2-peer')
 if gamelevel==0: disableLevel0changes=False
 p2p=True
-if p2p==True:
-	if gamelevel==1: disableLevel0changes=True
-	p2ptype = st.sidebar.radio("Sono...",('invio dati', 'ricevo dati'),disabled=disableLevel0changes)
 
+if p2p==True:
+	p2ptype = st.sidebar.radio("Sono...",('invio dati', 'ricevo dati'),on_click=resetCards)
+	if p2ptype=
 	if p2ptype=='invio dati':
 		input1 = st.sidebar.selectbox('Seleziona la tua carta di input',input_options)
 		output1= 'invio dati' 
