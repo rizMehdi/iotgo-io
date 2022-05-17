@@ -39,7 +39,7 @@ sidebar_color="""
 <style>
 .sidebar .sidebar-content {
     background-image: linear-gradient(#ECE9E8,#ECE9E8);
-    color: white;
+    color: red;
 }
 </style>
 """
