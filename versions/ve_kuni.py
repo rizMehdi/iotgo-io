@@ -16,6 +16,7 @@ gamelevel=0
 hide_menu_style = """
         <style>
         #MainMenu {visibility: hidden; }
+        footer {visibility: hidden;}
         </style>
         """
 
