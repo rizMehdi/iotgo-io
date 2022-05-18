@@ -89,7 +89,11 @@ inputs_exEnviroBit= ("c\'è tanta umidità (Envirobit)",
 
 inputs_exCloudBitPi= ()
 
-inputs_exOthers= ()
+inputs_exOthers= ("l\'umidità del suolo è bassa",
+"l\'umidità del suolo è alta",
+)
+
+
 inputs_p2p= ('recezione dati',)
 
 
@@ -281,6 +285,8 @@ it2en_inout={
 'spegne un\'animazione luminosa verde (BosonKit)':"showStripGreen",
 'spegne un\'animazione luminosa rossa (BosonKit)':"showStripRed",
 'no Output':"noOutput", 
+"l\'umidità del suolo è bassa":"soilMoistureLow",#new
+"l\'umidità del suolo è alta":"soilMoistureHigh",#new
 }
 
 it2en_inoutold= {
@@ -491,6 +497,10 @@ grabURL =    {
 "EB_clapNo"		:"-inputPhysical-EB_clapNo.png",
 "EB_whiteLEDon"		:"-outputPhysical-EB_whiteLEDon.png",
 "EB_whiteLEDoff"	:"-outputPhysical-EB_whiteLEDoff.png",
+
+
+"soilMoistureHigh":"-inputPhysical-soilMoistureHigh.png"
+"soilMoistureLow":"-inputPhysical-soilMoistureLow.png",#new
 }
 
 
@@ -634,6 +644,10 @@ input_code = {
 "sliderHigh":"pins.analogReadPin(AnalogPin.P2) >= 1000" ,
 "sliderLow":"pins.analogReadPin(AnalogPin.P2) <= 100" ,
 "sliderMid":"pins.analogReadPin(AnalogPin.P2) > 500 && pins.analogReadPin(AnalogPin.P2) <= 700",
+
+"soilMoistureHigh":"pins.analogReadPin(AnalogPin.P1) >= 500",#new
+"soilMoistureLow":"pins.analogReadPin(AnalogPin.P1) < 500",#new
+
 "forecastHumidityHigh" :"forecastName == \"humid\" && forecastValue >= 0.4",
 "forecastHumidityLow" :"forecastName == \"humid\" && forecastValue < 0.4",
 "forecastprecipHigh" :"forecastName == \"precip\" && forecastValue >= 0.5",
@@ -696,6 +710,11 @@ input_sensorValue = {
 "sliderHigh":"pins.analogReadPin(AnalogPin.P0)" ,
 "sliderLow":"pins.analogReadPin(AnalogPin.P0)" ,
 "sliderMid":"pins.analogReadPin(AnalogPin.P0)",
+
+"soilMoistureHigh":"pins.analogReadPin(AnalogPin.P1)",#new
+"soilMoistureLow":"pins.analogReadPin(AnalogPin.P1)",#new
+
+
 "forecastHumidityHigh" :"forecastValue",
 "forecastHumidityLow" :"forecastValue",
 "forecastprecipHigh" :"forecastValue",
