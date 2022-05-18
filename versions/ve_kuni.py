@@ -499,7 +499,7 @@ grabURL =    {
 "EB_whiteLEDoff"	:"-outputPhysical-EB_whiteLEDoff.png",
 
 
-"soilMoistureHigh":"-inputPhysical-soilMoistureHigh.png"
+"soilMoistureHigh":"-inputPhysical-soilMoistureHigh.png",
 "soilMoistureLow":"-inputPhysical-soilMoistureLow.png",#new
 }
 
