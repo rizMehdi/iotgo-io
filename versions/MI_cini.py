@@ -958,8 +958,8 @@ vertiPaddingWidthhalf=17
 #st.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo-hor.png",width=380)
 #st.header("IoTgo")
 
-#input_col, plus_col, output_col, pad, code_col= st.columns([1,1,1,1,6])
-input_col, plus_col, output_col, pad, code_col,pad2,= st.columns([1,1,1,1,1,2])
+input_col, plus_col, output_col, pad, code_col= st.columns([1,1,1,1,6])
+#input_col, plus_col, output_col, pad, code_col,pad2,= st.columns([1,1,1,1,1,2])
 with input_col:    
 	#st.image("https://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/blankcard.png", width=vertiPaddingWidth)
 	st.write(" se...")
@@ -980,6 +980,29 @@ with output_col:
 	st.image(output0path, width=cardWidth) 
 	# ("Output1:")
 	if gamelevel==1: st.image(output1path, width=cardWidth) 
+
+
+
+
+with code_col:
+	st.subheader("")
+	st.subheader("")
+	st.markdown(
+        """
+        <style> .font{
+        font-size:50px;}
+        </style>
+        """,
+        unsafe_allow_html=True,
+        )
+	st.code(jscode,language="javascript")
+
+
+
+
+
+
+
 
 if prevUrlis != urlis:
 	with st.spinner('Plz wait. Generating code for you....'):
