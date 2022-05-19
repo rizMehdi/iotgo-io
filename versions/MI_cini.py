@@ -169,14 +169,11 @@ st.sidebar.markdown("""---""")
 
 input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 + inputs_exOthers
 output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 +outputs_exOthers
-
-
 # input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 
 # output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2
 
-#st.sidebar.markdown("""---""")
-#input1 =  st.sidebar.selectbox('Seleziona la tua carta di input', input_options)
-#output1 = st.sidebar.selectbox('Seleziona la tua carta di output', output_options)
+input1 =  st.sidebar.selectbox('Seleziona la tua carta di input', input_options)
+output1 = st.sidebar.selectbox('Seleziona la tua carta di output', output_options)
 #st.sidebar.markdown("""---""")
 
 input2="no Input"
@@ -198,8 +195,7 @@ if p2p==True:
 		output1="no Output"
 		gamelevel=0
 
-input1 = st.sidebar.selectbox('Seleziona la tua carta di input', input_options)
-output1 = st.sidebar.selectbox('Seleziona la tua carta di output', output_options) 
+
 
 
 st.sidebar.markdown("""---""")		
@@ -211,6 +207,10 @@ if secondLevel==True:
 	output2 = st.sidebar.selectbox('Seleziona la tua carta di output ', output_options) 
 
  
+
+
+
+
 
 
 
