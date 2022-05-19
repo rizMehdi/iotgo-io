@@ -184,7 +184,7 @@ output2="no Output"
 
 # st.sidebar.markdown("""---""")#p2p = st.sidebar.checkbox('Attiva il livello peer-2-peer')
 
-# p2p=True
+p2p=False
 if p2p==True:
 	p2ptype = st.sidebar.radio("Sono...",('invio dati', 'ricevo dati'),on_change=resetCards)
 	if p2ptype=='invio dati':
