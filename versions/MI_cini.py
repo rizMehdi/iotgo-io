@@ -191,7 +191,7 @@ if secondLevel==True:
         gamelevel=1
 	    input2 = st.sidebar.selectbox('Seleziona la tua carta di input ', input_options)
 	    output2 = st.sidebar.selectbox('Seleziona la tua carta di output ', output_options) 
-    elif p2p=True:
+    elif p2p==True:
         p2ptype = st.sidebar.radio("Sono...",('invio dati', 'ricevo dati'),on_change=resetCards)
         if p2ptype=='invio dati':
             input1 = st.sidebar.selectbox('Seleziona la tua carta di input',input_options)
