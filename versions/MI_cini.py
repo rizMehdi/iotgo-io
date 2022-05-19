@@ -29,8 +29,8 @@ button[title="View fullscreen"]{
 
 fix_sidebar= """
 <style>
-[data-testid="stSidebar"][aria-expanded="true"] > div:first-child {width: 350px;}
-[data-testid="stSidebar"][aria-expanded="false"] > div:first-child {width: 350px;margin-left: -350px;}
+[data-testid="stSidebar"][aria-expanded="true"] > div:first-child {width: 300px;}
+[data-testid="stSidebar"][aria-expanded="false"] > div:first-child {width: 300px;margin-left: -300px;}
 </style>
 """
 
@@ -1093,6 +1093,6 @@ components.iframe(urlis, height=1000, scrolling=True)
 st.markdown("""---""")
 # st.write("Un progetto di / A project of:")
 # st.image("https://raw.githubusercontent.com/IoTgo-app/iotgo-io/main/images/unilogo.png",width=600)
-version="mecini_1.1.0"
+version="mecini_1.1.1"
 st.write("IoTgo version: "+version)
 # st.markdown("<h6 style='text-align: right; color: grey;'>By Mehdi Rizvi | "+version+"</h6>", unsafe_allow_html=True)
