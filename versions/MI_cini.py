@@ -181,30 +181,26 @@ output2="no Output"
 
 # st.sidebar.markdown("""---""")#p2p = st.sidebar.checkbox('Attiva il livello peer-2-peer')
 
-p2p=False
-if p2p==True:
-	p2ptype = st.sidebar.radio("Sono...",('invio dati', 'ricevo dati'),on_change=resetCards)
-	if p2ptype=='invio dati':
-		input1 = st.sidebar.selectbox('Seleziona la tua carta di input',input_options)
-		output1= 'invio dati' 
-	elif  p2ptype=='ricevo dati': #'ricevo dati'
-		output1 = st.sidebar.selectbox('Seleziona la tua carta di output', output_options)
-		input1='recezione dati'
-	else:
-		input1="no Input"
-		output1="no Output"
-		gamelevel=0
-
-
-
+p2p=True
 
 st.sidebar.markdown("""---""")		
 # secondLevel = st.sidebar.checkbox('Aggiungere un ulteriore livello di comunicazione')
 secondLevel = st.sidebar.checkbox('Aggiungere un ulteriore livello')
 if secondLevel==True:
-	gamelevel=1
-	input2 = st.sidebar.selectbox('Seleziona la tua carta di input ', input_options)
-	output2 = st.sidebar.selectbox('Seleziona la tua carta di output ', output_options) 
+	if p2p=False:
+        gamelevel=1
+	    input2 = st.sidebar.selectbox('Seleziona la tua carta di input ', input_options)
+	    output2 = st.sidebar.selectbox('Seleziona la tua carta di output ', output_options) 
+    elif p2p=True:
+        p2ptype = st.sidebar.radio("Sono...",('invio dati', 'ricevo dati'),on_change=resetCards)
+        if p2ptype=='invio dati':
+            input1 = st.sidebar.selectbox('Seleziona la tua carta di input',input_options)
+            output1= 'invio dati' 
+        elif  p2ptype=='ricevo dati': #'ricevo dati'
+            output1 = st.sidebar.selectbox('Seleziona la tua carta di output', output_options)
+            input1='recezione dati'
+
+
 
  
 
