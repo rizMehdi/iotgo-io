@@ -187,7 +187,7 @@ st.sidebar.markdown("""---""")
 # secondLevel = st.sidebar.checkbox('Aggiungere un ulteriore livello di comunicazione')
 secondLevel = st.sidebar.checkbox('Aggiungere un ulteriore livello')
 if secondLevel==True:
-	if p2p=False:
+	if p2p==False:
         gamelevel=1
 	    input2 = st.sidebar.selectbox('Seleziona la tua carta di input ', input_options)
 	    output2 = st.sidebar.selectbox('Seleziona la tua carta di output ', output_options) 
