@@ -113,17 +113,24 @@ outputs_microbitv1= ('suona una melodia allegra' ,
 outputs_microbitv2= ()
 
 
+# outputs_exBosonKit= ('spegne un ventilatore (BosonKit)' ,
+# 'accende un ventilatore (BosonKit)' ,
+# 'spegne una luce (BosonKit)',
+# 'accende una luce (BosonKit)',
+# 'fa ruotare il motore (BosonKit)' ,
+# 'smette di ruotare il motore (BosonKit)' ,
+# 'spegne un\'animazione luminosa (BosonKit)',
+# 'attiva un\'animazione luminosa (BosonKit)' ,
+# 'spegne un\'animazione luminosa verde (BosonKit)',
+# 'spegne un\'animazione luminosa rossa (BosonKit)',
+# 		     )
+
 outputs_exBosonKit= ('spegne un ventilatore (BosonKit)' ,
 'accende un ventilatore (BosonKit)' ,
-'spegne una luce (BosonKit)',
-'accende una luce (BosonKit)',
-'fa ruotare il motore (BosonKit)' ,
-'smette di ruotare il motore (BosonKit)' ,
 'spegne un\'animazione luminosa (BosonKit)',
 'attiva un\'animazione luminosa (BosonKit)' ,
-'spegne un\'animazione luminosa verde (BosonKit)',
-'spegne un\'animazione luminosa rossa (BosonKit)',
-		     )
+)
+
 
 outputs_exEnviroBit=()
 #"accende i LED bianchi (Envirobit)"
@@ -154,21 +161,21 @@ st.sidebar.image("https://raw.githubusercontent.com/IoTgo-app/iotgo-io/main/imag
 # st.sidebar.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo3.png",width=200)
 st.sidebar.markdown("""---""")
 
-hardware = st.sidebar.radio("Seleziona l\'elettronica che hai",("Solo Micro:bit", "Micro:bit con BosonKit"))
-# hardware = st.sidebar.radio("Seleziona l\'elettronica che hai",("Solo Micro:bit", "Micro:bit con BosonKit", "Micro:bit con EnviroBit"))
-if hardware == "Solo Micro:bit":
-	input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 + inputs_exOthers
-	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 +outputs_exOthers 
-elif hardware == "Micro:bit con BosonKit":
-	input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 + inputs_exBosonKit 
-	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 + outputs_exBosonKit
-# elif hardware == "Micro:bit con EnviroBit":
-# 	input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 +  inputs_exEnviroBit
-# 	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 + outputs_exEnviroBit
+# hardware = st.sidebar.radio("Seleziona l\'elettronica che hai",("Solo Micro:bit", "Micro:bit con BosonKit"))
+# # hardware = st.sidebar.radio("Seleziona l\'elettronica che hai",("Solo Micro:bit", "Micro:bit con BosonKit", "Micro:bit con EnviroBit"))
+# if hardware == "Solo Micro:bit":
+# 	input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 + inputs_exOthers
+# 	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 +outputs_exOthers 
+# elif hardware == "Micro:bit con BosonKit":
+# 	input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 + inputs_exBosonKit 
+# 	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 + outputs_exBosonKit
+# # elif hardware == "Micro:bit con EnviroBit":
+# # 	input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 +  inputs_exEnviroBit
+# # 	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 + outputs_exEnviroBit
 
 
-# input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 
-# output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2
+input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 #+  inputs_exEnviroBit
+output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2+ outputs_exEnviroBit
 
 #st.sidebar.markdown("""---""")
 #input1 =  st.sidebar.selectbox('Seleziona la tua carta di input', input_options)
