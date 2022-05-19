@@ -185,7 +185,7 @@ output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2+ outpu
 input2="no Input"
 output2="no Output"
 
-st.sidebar.markdown("""---""")#p2p = st.sidebar.checkbox('Attiva il livello peer-2-peer')
+# st.sidebar.markdown("""---""")#p2p = st.sidebar.checkbox('Attiva il livello peer-2-peer')
 p2p=True
 
 if p2p==True:
