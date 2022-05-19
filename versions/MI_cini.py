@@ -1074,5 +1074,5 @@ st.markdown("""---""")
 st.write("Un progetto di / A project of:")
 st.image("https://raw.githubusercontent.com/IoTgo-app/iotgo-io/main/images/unilogo.png",width=600)
 version="mecini_1.0.0"
-st.write("Mehdi Rizvi | IoTgo version "+version)
+st.write("Mehdi Rizvi | IoTgo version: "+version)
 # st.markdown("<h6 style='text-align: right; color: grey;'>By Mehdi Rizvi | "+version+"</h6>", unsafe_allow_html=True)
