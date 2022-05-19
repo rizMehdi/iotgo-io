@@ -188,15 +188,15 @@ st.sidebar.markdown("""---""")
 secondLevel = st.sidebar.checkbox('Aggiungere un ulteriore livello')
 if secondLevel==True:
     gamelevel=1
-	if p2p==False:
-	    input2 = st.sidebar.selectbox('Seleziona la tua carta di input ', input_options)
+    if p2p==False:
+        input2 = st.sidebar.selectbox('Seleziona la tua carta di input ', input_options)
 	    output2 = st.sidebar.selectbox('Seleziona la tua carta di output ', output_options) 
     elif p2p==True:
         p2ptype = st.sidebar.radio("Sono...",('invio dati', 'ricevo dati'),on_change=resetCards)
         if p2ptype=='invio dati':
             input2 = st.sidebar.selectbox('Seleziona la tua carta di input',input_options)
             output2= 'invio dati' 
-        elif  p2ptype=='ricevo dati': #'ricevo dati'
+        elif p2ptype=='ricevo dati': #'ricevo dati'
             output2 = st.sidebar.selectbox('Seleziona la tua carta di output', output_options)
             input2='recezione dati'
 
