@@ -944,8 +944,8 @@ elif gamelevel==1:
 	
 
 
-cardWidth=150
-pluscardwidht=150
+cardWidth=130
+pluscardwidht=130
 missionCardWidth=160
 vertiPaddingWidth=35
 vertiPaddingWidthhalf=17
