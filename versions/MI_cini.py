@@ -154,17 +154,21 @@ st.sidebar.image("https://raw.githubusercontent.com/IoTgo-app/iotgo-io/main/imag
 # st.sidebar.image("http://raw.githubusercontent.com/rizMehdi/IoTgo/main/images/applogo3.png",width=200)
 st.sidebar.markdown("""---""")
 
-hardware = st.sidebar.radio("Seleziona l\'elettronica che hai",("Solo Micro:bit", "Micro:bit con BosonKit"))
-# hardware = st.sidebar.radio("Seleziona l\'elettronica che hai",("Solo Micro:bit", "Micro:bit con BosonKit", "Micro:bit con EnviroBit"))
-if hardware == "Solo Micro:bit":
-	input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 + inputs_exOthers
-	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 +outputs_exOthers 
-elif hardware == "Micro:bit con BosonKit":
-	input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 + inputs_exBosonKit 
-	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 + outputs_exBosonKit
-# elif hardware == "Micro:bit con EnviroBit":
-# 	input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 +  inputs_exEnviroBit
-# 	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 + outputs_exEnviroBit
+# hardware = st.sidebar.radio("Seleziona l\'elettronica che hai",("Solo Micro:bit", "Micro:bit con BosonKit"))
+# # hardware = st.sidebar.radio("Seleziona l\'elettronica che hai",("Solo Micro:bit", "Micro:bit con BosonKit", "Micro:bit con EnviroBit"))
+# if hardware == "Solo Micro:bit":
+# 	input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 + inputs_exOthers
+# 	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 +outputs_exOthers 
+# elif hardware == "Micro:bit con BosonKit":
+# 	input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 + inputs_exBosonKit 
+# 	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 + outputs_exBosonKit
+# # elif hardware == "Micro:bit con EnviroBit":
+# # 	input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 +  inputs_exEnviroBit
+# # 	output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 + outputs_exEnviroBit
+
+
+input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 + inputs_exOthers
+output_options=  ('no Output',) + outputs_microbitv1 + outputs_microbitv2 +outputs_exOthers
 
 
 # input_options=  ('no Input',) + inputs_microbitv1 + inputs_microbitv2 
@@ -178,9 +182,9 @@ elif hardware == "Micro:bit con BosonKit":
 input2="no Input"
 output2="no Output"
 
-st.sidebar.markdown("""---""")#p2p = st.sidebar.checkbox('Attiva il livello peer-2-peer')
-p2p=True
+# st.sidebar.markdown("""---""")#p2p = st.sidebar.checkbox('Attiva il livello peer-2-peer')
 
+# p2p=True
 if p2p==True:
 	p2ptype = st.sidebar.radio("Sono...",('invio dati', 'ricevo dati'),on_change=resetCards)
 	if p2ptype=='invio dati':
@@ -194,23 +198,17 @@ if p2p==True:
 		output1="no Output"
 		gamelevel=0
 
+input1 = st.sidebar.selectbox('Seleziona la tua carta di input', input_options)
+output1 = st.sidebar.selectbox('Seleziona la tua carta di output', output_options) 
 
 
 st.sidebar.markdown("""---""")		
 secondLevel = st.sidebar.checkbox('Aggiungere un ulteriore livello di comunicazione')
 if secondLevel==True:
 	gamelevel=1
-	if p2ptype=='invio dati':
-		st.sidebar.write('Stavi inviando dati, ora riceviamo anche i dati:')
-		output2 = st.sidebar.selectbox('Seleziona la tua carta di output ', output_options)
-		input2='recezione dati'
-	elif  p2ptype=='ricevo dati':  
-		st.sidebar.write('Stavi ricevendo dati, ora inviamo anche i dati:')		
-		input2 = st.sidebar.selectbox('Seleziona la tua carta di input ',input_options)
-		output2= 'invio dati' 
-	else:
-		input2="no Input"
-		output2="no Output"
+	input2 = st.sidebar.selectbox('Seleziona la tua carta di input ', input_options)
+	output2 = st.sidebar.selectbox('Seleziona la tua carta di output ', output_options) 
+
  
 
 
