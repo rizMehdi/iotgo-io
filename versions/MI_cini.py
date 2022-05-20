@@ -829,7 +829,7 @@ output_else_code={
 
 
 
-
+p2ptype=""
 freeplaymode=True
 alwaysfreeplaymode=True
 def genURL (*args):#input_name, output_name):#here i am collecting chunks of code, encoding them, and concatenating them into a URL:
@@ -1014,7 +1014,9 @@ with edit:
 	st.write("[Modifica codice...]("+urlis+")")
 
 
-	
+if p2ptype=="recievo dati":
+    st.warning('ricorda che devi cambiare la parola "sostituisci" in tuo codice con quello che ti aspetti di ricevere dai tuoi amici')
+
 	
 	
 htmliframeold='''
