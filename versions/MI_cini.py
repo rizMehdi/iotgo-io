@@ -1010,7 +1010,7 @@ prevUrlis=urlis
 warnings=0
 #warnings:
 
-with st.expander("Warnings:", expanded=True)
+with st.expander("Warnings:", expanded=True):
     if input_name[0]=="soilMoistureHigh" or input_name[0]=="soilMoistureLow" or  input_name[1]=="soilMoistureHigh" or input_name[1]=="soilMoistureLow":
         st.warning(':electric_plug: ricorda che il sensore di umidità del suolo è esterno. Deve essere fissato fisicamente al micro:bit.')
         warnings+=1
