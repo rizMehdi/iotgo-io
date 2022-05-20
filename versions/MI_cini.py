@@ -1057,7 +1057,7 @@ if warnings>0:
 e,edit  = st.columns([1,1])
 with edit:
         #st.markdown("[Modifica...]("+urlis+")", unsafe_allow_html=True)
-	st.write("[Modifica codice...]("+urlis+")")
+	st.write("[Scarica o modifica codice...]("+urlis+")")
 
 
 
