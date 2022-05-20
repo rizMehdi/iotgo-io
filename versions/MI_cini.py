@@ -1026,8 +1026,9 @@ with warnings:
     if p2ptype=="ricevo dati":
         st.warning(':exclamation: ricorda che devi cambiare la parola "replace" nel tuo codice con quello che ti aspetti di ricevere dai tuoi amici')
 
-if secondLevel==True:
-    st.warning(':warning: ricorda che il numero del gruppo deve corrispondere a quello dei tuoi amici con cui stai comunicando.' st.checkbox("h3llo"))
+if secondLevel==True and warningcheck==True:
+    warningcheck=st.checkbox("h3llo")
+    st.warning(':warning: ricorda che il numero del gruppo deve corrispondere a quello dei tuoi amici con cui stai comunicando.')
 
 
 e,edit  = st.columns([1,1])
