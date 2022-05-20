@@ -1009,12 +1009,12 @@ prevUrlis=urlis
 
 
 #warnings:
-# if input_name[0]=="soilMoistureHigh" or input_name[0]=="soilMoistureLow" or  input_name[1]=="soilMoistureHigh" or input_name[1]=="soilMoistureLow":
-#     st.warning(':electric_plug: ricorda che il sensore di umidità del suolo è esterno. Deve essere fissato fisicamente al micro:bit.')
-# if secondLevel==True:
-#     st.warning(':warning: ricorda che il numero del gruppo deve corrispondere a quello dei tuoi amici con cui stai comunicando.')
-# if p2ptype=="ricevo dati":
-#     st.warning(':exclamation: ricorda che devi cambiare la parola "replace" nel tuo codice con quello che ti aspetti di ricevere dai tuoi amici')
+if input_name[0]=="soilMoistureHigh" or input_name[0]=="soilMoistureLow" or  input_name[1]=="soilMoistureHigh" or input_name[1]=="soilMoistureLow":
+    st.warning(':electric_plug: ricorda che il sensore di umidità del suolo è esterno. Deve essere fissato fisicamente al micro:bit.')
+if secondLevel==True:
+    st.warning(':warning: ricorda che il numero del gruppo deve corrispondere a quello dei tuoi amici con cui stai comunicando.')
+if p2ptype=="ricevo dati":
+    st.warning(':exclamation: ricorda che devi cambiare la parola "replace" nel tuo codice con quello che ti aspetti di ricevere dai tuoi amici')
 
 
 # checkboxes,warnings  = st.columns([1,5])
@@ -1026,10 +1026,10 @@ prevUrlis=urlis
 #     if p2ptype=="ricevo dati":
 #         st.warning(':exclamation: ricorda che devi cambiare la parola "replace" nel tuo codice con quello che ti aspetti di ricevere dai tuoi amici')
 
-warningcheck=False
-if secondLevel==True and warningcheck==False:
-    warningcheck=st.checkbox("h3llo")
-    st.warning(':warning: ricorda che il numero del gruppo deve corrispondere a quello dei tuoi amici con cui stai comunicando.')
+# warningcheck=False
+# if secondLevel==True and warningcheck==False:
+#     warningcheck=st.checkbox("h3llo")
+#     st.warning(':warning: ricorda che il numero del gruppo deve corrispondere a quello dei tuoi amici con cui stai comunicando.')
 
 
 e,edit  = st.columns([1,1])
