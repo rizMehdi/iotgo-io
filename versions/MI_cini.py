@@ -11,6 +11,12 @@ codesubtitle=""
 groupnum="0"
 gamelevel=0
 
+hide_expander_border = """
+<style>
+.st-bd {border-style: none;}
+</style>
+"""
+
 
 
 hide_menu_style = """
@@ -40,6 +46,7 @@ fix_sidebar= """
 st.markdown(hide_menu_style, unsafe_allow_html=True)
 st.markdown(hide_img_fs, unsafe_allow_html=True)
 st.markdown(fix_sidebar,unsafe_allow_html=True)
+st.markdown(hide_expander_border, unsafe_allow_html=True)
 
 
 	 
