@@ -747,10 +747,10 @@ input_sensorValue = {
 
 
 output_code = {
-"musicHappy" : "music.startMelody(music.builtInMelody(Melodies.Birthday), MelodyOptions.Forever)\n\tbasic.pause(6000)",
+"musicHappy" : "music.startMelody(music.builtInMelody(Melodies.Birthday), MelodyOptions.Forever)\n\tbasic.pause(9000)",
 "musicNone" : "music.stopMelody(MelodyStopOptions.All)\n\tbasic.pause(1000)" ,
-"musicSad" : "music.startMelody(music.builtInMelody(Melodies.Funeral), MelodyOptions.Forever)\n\tbasic.pause(6000)",
-"musicAlarm" : "music.playMelody(\"A C5 A C5 A C5 A C5\",110)\n\tbasic.pause(6000)",
+"musicSad" : "music.startMelody(music.builtInMelody(Melodies.Funeral), MelodyOptions.Forever)\n\tbasic.pause(9000)",
+"musicAlarm" : "music.playMelody(\"A C5 A C5 A C5 A C5\",110)\n\tbasic.pause(9000)",
 "displayInput": "basic.showNumber(0)\n\tbasic.pause(1000)" ,
 "displayNone" :"basic.clearScreen()\n\tbasic.pause(1000)" ,
 "displayText" : "basic.showString(\"Ciao \")\n\tbasic.pause(1000)" ,
@@ -1082,7 +1082,7 @@ components.iframe(urlis, height=1000, scrolling=True)
 st.markdown("""---""")
 st.write("Un progetto di / A project of:")
 st.image("https://raw.githubusercontent.com/IoTgo-app/iotgo-io/main/images/unilogo.png",width=600)
-version="ve_2.0.9"
+version="ve_2.0.11"
 st.write("Mehdi Rizvi | IoTgo version "+version)
 # st.markdown("<h6 style='text-align: right; color: grey;'>By Mehdi Rizvi | "+version+"</h6>", unsafe_allow_html=True)
 
