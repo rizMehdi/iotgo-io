@@ -1030,11 +1030,11 @@ if p2ptype=="ricevo dati":
     warnings+=1
 
 if warnings>0:
-    with st.expander("Warnings ("+str(warnings)+")", expanded=True):
+    with st.expander("Warnings ("+str(:warning: warnings)+")", expanded=True):
         if externalWarning==True:
             st.warning(':electric_plug: ricorda che il sensore di umidità del suolo è esterno. Deve essere fissato fisicamente al micro:bit.')
         if radioGroupWarning==True:
-            st.warning(':warning: ricorda che il numero del gruppo deve corrispondere a quello dei tuoi amici con cui stai comunicando.')
+            st.warning(':mega: ricorda che il numero del gruppo deve corrispondere a quello dei tuoi amici con cui stai comunicando.')
         if receiveDataWarning==True:
             st.warning(':exclamation: ricorda che devi cambiare la parola "replace" nel tuo codice con quello che ti aspetti di ricevere dai tuoi amici')
 
