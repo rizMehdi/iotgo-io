@@ -1095,6 +1095,6 @@ components.iframe(urlis, height=1000, scrolling=True)
 st.markdown("""---""")
 # st.write("Un progetto di / A project of:")
 # st.image("https://raw.githubusercontent.com/IoTgo-app/iotgo-io/main/images/unilogo.png",width=600)
-version="mecini_1.1.3"
+version="mecini_1.2.0"
 st.write("IoTgo version: "+version)
 # st.markdown("<h6 style='text-align: right; color: grey;'>By Mehdi Rizvi | "+version+"</h6>", unsafe_allow_html=True)
