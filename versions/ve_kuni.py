@@ -876,9 +876,9 @@ def genURL (*args):#input_name, output_name):#here i am collecting chunks of cod
                 if eachIOpair[1] in output_code:
                     if eachIOpair[1]=="sendData":
                         if p2ptype=='invio dati': #gamelevel==0:
-                            if_body_code=output_code[eachIOpair[1]].replace("inputName",input_name[0]).replace("inputValue","1")
+                            if_body_code=output_code[eachIOpair[1]].replace("inputName",input_name[0][0:8]).replace("inputValue","1")
                         elif p2ptype=='ricevo dati': #gamelevel==1:
-                            if_body_code=output_code[eachIOpair[1]].replace("inputName",input_name[1]).replace("inputValue","1")
+                            if_body_code=output_code[eachIOpair[1]].replace("inputName",input_name[1][0:8]).replace("inputValue","1")
                         #if_body_code=output_code[eachIOpair[1]].replace("inputName",input_name[gamelevel]).replace("inputValue","1")
                        ##if_body_code=output_code[eachIOpair[1]].replace("inputName",input_name[gamelevel]).replace("inputValue",input_sensorValue[input_name[gamelevel]])
                     else:
@@ -1082,7 +1082,7 @@ components.iframe(urlis, height=1000, scrolling=True)
 st.markdown("""---""")
 st.write("Un progetto di / A project of:")
 st.image("https://raw.githubusercontent.com/IoTgo-app/iotgo-io/main/images/unilogo.png",width=600)
-version="ve_2.0.8"
+version="ve_2.0.9"
 st.write("Mehdi Rizvi | IoTgo version "+version)
 # st.markdown("<h6 style='text-align: right; color: grey;'>By Mehdi Rizvi | "+version+"</h6>", unsafe_allow_html=True)
 
