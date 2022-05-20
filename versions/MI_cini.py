@@ -1025,7 +1025,7 @@ if p2ptype=="ricevo dati":
 if warnings>0:
     with st.expander("Warnings:", expanded=True):
         if externalWarning==True:
-        st.warning(':electric_plug: ricorda che il sensore di umidità del suolo è esterno. Deve essere fissato fisicamente al micro:bit.')
+            st.warning(':electric_plug: ricorda che il sensore di umidità del suolo è esterno. Deve essere fissato fisicamente al micro:bit.')
         if radioGroupWarning==True:
             st.warning(':warning: ricorda che il numero del gruppo deve corrispondere a quello dei tuoi amici con cui stai comunicando.')
         if receiveDataWarning==True:
