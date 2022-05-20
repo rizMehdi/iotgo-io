@@ -1010,7 +1010,8 @@ prevUrlis=urlis
 
 if p2ptype=="ricevo dati":
     st.warning('ricorda che devi cambiare la parola "replace" in tuo codice con quello che ti aspetti di ricevere dai tuoi amici')
-
+if [input_name[0] or [input_name[1] == "soilMoistureHigh" or "soilMoistureLow":
+    st.warning('ricorda che il sensore di umidità del suolo è esterno. Deve essere fissato fisicamente al micro:bit.')
 
 e,edit  = st.columns([1,1])
 with edit:
