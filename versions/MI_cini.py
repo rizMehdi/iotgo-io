@@ -182,6 +182,7 @@ output2="no Output"
 # st.sidebar.markdown("""---""")#p2p = st.sidebar.checkbox('Attiva il livello peer-2-peer')
 
 p2p=True
+p2ptype=""
 
 st.sidebar.markdown("""---""")		
 # secondLevel = st.sidebar.checkbox('Aggiungere un ulteriore livello di comunicazione')
@@ -829,7 +830,6 @@ output_else_code={
 
 
 
-p2ptype=""
 freeplaymode=True
 alwaysfreeplaymode=True
 def genURL (*args):#input_name, output_name):#here i am collecting chunks of code, encoding them, and concatenating them into a URL:
@@ -1095,6 +1095,6 @@ components.iframe(urlis, height=1000, scrolling=True)
 st.markdown("""---""")
 # st.write("Un progetto di / A project of:")
 # st.image("https://raw.githubusercontent.com/IoTgo-app/iotgo-io/main/images/unilogo.png",width=600)
-version="mecini_1.2.0"
+version="mecini_1.2.1"
 st.write("IoTgo version: "+version)
 # st.markdown("<h6 style='text-align: right; color: grey;'>By Mehdi Rizvi | "+version+"</h6>", unsafe_allow_html=True)
