@@ -1012,7 +1012,7 @@ prevUrlis=urlis
 if input_name[0]=="soilMoistureHigh" or input_name[0]=="soilMoistureLow" or  input_name[1]=="soilMoistureHigh" or input_name[1]=="soilMoistureLow":
     st.warning(':exclamation: ricorda che il sensore di umidità del suolo è esterno. Deve essere fissato fisicamente al micro:bit.')
 if p2ptype=="ricevo dati":
-    st.warning(':exclamation: ricorda che devi cambiare la parola "replace" in tuo codice con quello che ti aspetti di ricevere dai tuoi amici')
+    st.warning(':exclamation: ricorda che devi cambiare la parola "replace" nel tuo codice con quello che ti aspetti di ricevere dai tuoi amici')
 
 
 
