@@ -1008,14 +1008,15 @@ if prevUrlis != urlis:
 prevUrlis=urlis
 
 
+if p2ptype=="ricevo dati":
+    st.warning('ricorda che devi cambiare la parola "replace" in tuo codice con quello che ti aspetti di ricevere dai tuoi amici')
+
+
 e,edit  = st.columns([1,1])
 with edit:
         #st.markdown("[Modifica...]("+urlis+")", unsafe_allow_html=True)
 	st.write("[Modifica codice...]("+urlis+")")
 
-
-if p2ptype=="ricevo dati":
-    st.warning('ricorda che devi cambiare la parola "replace" in tuo codice con quello che ti aspetti di ricevere dai tuoi amici')
 
 
 	
