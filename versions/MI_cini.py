@@ -1015,7 +1015,8 @@ with edit:
 
 
 if p2ptype=="ricevo dati":
-    st.warning('ricorda che devi cambiare la parola "sostituisci" in tuo codice con quello che ti aspetti di ricevere dai tuoi amici')
+    st.warning('ricorda che devi cambiare la parola "replace" in tuo codice con quello che ti aspetti di ricevere dai tuoi amici')
+
 
 	
 	
