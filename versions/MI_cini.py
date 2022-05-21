@@ -1140,11 +1140,14 @@ st.markdown("""---""")
 # st.write("Un progetto di / A project of:")
 # st.image("https://raw.githubusercontent.com/IoTgo-app/iotgo-io/main/images/unilogo.png",width=600)
 version="mecini_1.2.1"
-st.write("IoTgo version: "+version)
-# st.markdown("<h6 style='text-align: right; color: grey;'>By Mehdi Rizvi | "+version+"</h6>", unsafe_allow_html=True)
+# st.write("IoTgo version: "+version)
+# # st.markdown("<h6 style='text-align: right; color: grey;'>By Mehdi Rizvi | "+version+"</h6>", unsafe_allow_html=True)
 
 
-authorbadge="""
+badges="""
+![Version](https://img.shields.io/badge/IoTgo%20Version-"""+version+"""-orange) 
 [![Mehdi Rizvi](https://img.shields.io/badge/Author-@rizMehdi-grey.svg?colorA=gray&colorB=dodgerblue&logo=github)](https://github.com/rizMehdi/)
 """
-st.markdown(authorbadge,  unsafe_allow_html=False)
+st.markdown(badges,  unsafe_allow_html=False)
+
+ 
