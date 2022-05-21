@@ -1088,7 +1088,7 @@ version="ve2.0.12"
 # # st.markdown("<h6 style='text-align: right; color: grey;'>By Mehdi Rizvi | "+version+"</h6>", unsafe_allow_html=True)
 
 badges="""
-![Version](https://img.shields.io/badge/IoTgo%20Version-"""+version+"""-orange) | 
+![Version](https://img.shields.io/badge/IoTgo%20Version-"""+version+"""-orange)     
 [![Mehdi Rizvi](https://img.shields.io/badge/Author-@rizMehdi-grey.svg?colorA=gray&colorB=dodgerblue&logo=github)](https://github.com/rizMehdi/)
 """
 st.markdown(badges,  unsafe_allow_html=False)
