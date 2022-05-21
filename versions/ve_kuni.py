@@ -1095,6 +1095,6 @@ authorBadge="""
 st.markdown(authorBadge,  unsafe_allow_html=False)
 
 versionBadge="""
-![Version](https://img.shields.io/badge/IoTgo%20"""+version+"""-orange)
+![Version](https://img.shields.io/badge/IoTgo%20Version-"""+version+"""-orange)
 """
 st.markdown(versionBadge,  unsafe_allow_html=False)
