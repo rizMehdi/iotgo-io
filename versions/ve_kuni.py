@@ -1089,8 +1089,10 @@ version="ve_2.0.11"
 
 versionBadge="""
 ![Version](https://img.shields.io/badge/IoTgo%20Version-"""+version+"""-orange)
+[![Mehdi Rizvi](https://img.shields.io/badge/Author-@rizMehdi-grey.svg?colorA=gray&colorB=dodgerblue&logo=github)](https://github.com/rizMehdi/)
+
 """
-st.markdown(versionBadge+" | "+authorBadge,  unsafe_allow_html=False)
+st.markdown(versionBadge,  unsafe_allow_html=False)
 
 authorBadge="""
 [![Mehdi Rizvi](https://img.shields.io/badge/Author-@rizMehdi-grey.svg?colorA=gray&colorB=dodgerblue&logo=github)](https://github.com/rizMehdi/)
