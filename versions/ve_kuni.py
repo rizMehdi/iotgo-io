@@ -1082,20 +1082,15 @@ components.iframe(urlis, height=1000, scrolling=True)
 st.markdown("""---""")
 st.write("Un progetto di / A project of:")
 st.image("https://raw.githubusercontent.com/IoTgo-app/iotgo-io/main/images/unilogo.png",width=600)
-version="ve_2.0.11"
+version="ve_2.0.12"
 
 # st.write("IoTgo version "+version)
 # # st.markdown("<h6 style='text-align: right; color: grey;'>By Mehdi Rizvi | "+version+"</h6>", unsafe_allow_html=True)
 
-versionBadge="""
+badges="""
 ![Version](https://img.shields.io/badge/IoTgo%20Version-"""+version+"""-orange)
 [![Mehdi Rizvi](https://img.shields.io/badge/Author-@rizMehdi-grey.svg?colorA=gray&colorB=dodgerblue&logo=github)](https://github.com/rizMehdi/)
-
 """
-st.markdown(versionBadge,  unsafe_allow_html=False)
+st.markdown(badges,  unsafe_allow_html=False)
 
-authorBadge="""
-[![Mehdi Rizvi](https://img.shields.io/badge/Author-@rizMehdi-grey.svg?colorA=gray&colorB=dodgerblue&logo=github)](https://github.com/rizMehdi/)
-"""
-st.markdown(authorBadge,  unsafe_allow_html=False)
-
+ 
