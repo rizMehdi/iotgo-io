@@ -1087,14 +1087,13 @@ version="ve_2.0.11"
 # st.write("IoTgo version "+version)
 # # st.markdown("<h6 style='text-align: right; color: grey;'>By Mehdi Rizvi | "+version+"</h6>", unsafe_allow_html=True)
 
-
+versionBadge="""
+![Version](https://img.shields.io/badge/IoTgo%20Version-"""+version+"""-orange)
+"""
+st.markdown(versionBadge+" | "+authorBadge,  unsafe_allow_html=False)
 
 authorBadge="""
 [![Mehdi Rizvi](https://img.shields.io/badge/Author-@rizMehdi-grey.svg?colorA=gray&colorB=dodgerblue&logo=github)](https://github.com/rizMehdi/)
 """
 st.markdown(authorBadge,  unsafe_allow_html=False)
 
-versionBadge="""
-![Version](https://img.shields.io/badge/IoTgo%20Version-"""+version+"""-orange)
-"""
-st.markdown(versionBadge,  unsafe_allow_html=False)
