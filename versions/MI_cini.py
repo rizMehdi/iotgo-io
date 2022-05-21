@@ -1142,3 +1142,11 @@ st.markdown("""---""")
 version="mecini_1.2.1"
 st.write("IoTgo version: "+version)
 # st.markdown("<h6 style='text-align: right; color: grey;'>By Mehdi Rizvi | "+version+"</h6>", unsafe_allow_html=True)
+
+
+
+# [![GitHub contributors](https://img.shields.io/github/contributors/pcsingh/WhatsApp-Chat-Analyzer?logo=github)]
+# (https://github.com/pcsingh/WhatsApp-Chat-Analyzer/graphs/contributors) 
+
+[![Mehdi Rizvi](https://img.shields.io/badge/Author-@rizMehdi-gray.svg?colorA=gray&colorB=dodgerblue&logo=github)]
+(https://github.com/rizMehdi/)
