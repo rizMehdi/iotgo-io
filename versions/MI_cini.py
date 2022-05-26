@@ -614,8 +614,8 @@ input_code = {
 "noiseLow" :"input.soundLevel() < 128" , #v2
 "touchNo" :"!input.logoIsPressed()" , #v2
 "touchYes" :"input.logoIsPressed()" , #v2
-"accelHigh":"input.acceleration(Dimension.X) >= 511" ,
-"accelLow":"input.acceleration(Dimension.X) < 511" ,
+"accelHigh":"input.acceleration(Dimension.X) >= 511 || input.acceleration(Dimension.Y) >= 511" ,
+"accelLow":"input.acceleration(Dimension.) < 511 && input.acceleration(Dimension.Y) < 511" ,
 "buttonNotPress":"!input.buttonIsPressed(Button.A)",
 "buttonPress":"input.buttonIsPressed(Button.A)",
 "compassE" :"input.compassHeading() >= 45 && input.compassHeading() < 135" ,
