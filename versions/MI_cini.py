@@ -875,14 +875,18 @@ def genURL (*args):#input_name, output_name):#here i am collecting chunks of cod
                         if p2ptype=='invio dati' and gamelevel==1: #gamelevel==0:
                             if_body_code=output_code[eachIOpair[1]].replace("inputName",input_name[1][0:8]).replace("inputValue","1")
 #                             if_body_code=output_code[eachIOpair[1]].replace("inputName",input_name[0][0:8]).replace("inputValue","1")
-                        elif p2ptype=='ricevo dati': #gamelevel==1: #NOT NEEDED REALLY
-                            if_body_code=output_code[eachIOpair[1]].replace("inputName",input_name[1][0:8]).replace("inputValue","1")
+                        # elif p2ptype=='ricevo dati': #gamelevel==1: #NOT NEEDED REALLY
+                        #     if_body_code=output_code[eachIOpair[1]].replace("inputName",input_name[1][0:8]).replace("inputValue","1")
                         #if_body_code=output_code[eachIOpair[1]].replace("inputName",input_name[gamelevel]).replace("inputValue","1")
                        ##if_body_code=output_code[eachIOpair[1]].replace("inputName",input_name[gamelevel]).replace("inputValue",input_sensorValue[input_name[gamelevel]])
                     else:
                         if_body_code=output_code[eachIOpair[1]]
                 if eachIOpair[1] in output_else_code:
-                    else_code = output_else_code[eachIOpair[1]]+ '\n'
+                    if eachIOpair[1]=="sendData":
+                        if p2ptype=='invio dati' and gamelevel==1: #gamelevel==0:
+                            if_body_code=output_code[eachIOpair[1]].replace("inputName",input_name[1][0:8]).replace("inputValue","1")
+                        else:
+                            else_code = output_else_code[eachIOpair[1]]+ '\n'
                 else:
                     else_code="basic.pause(100)"
                 if eachIOpair[0] in output_else_code:#special cases for forecast: get_temp
