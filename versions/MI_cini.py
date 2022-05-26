@@ -887,8 +887,8 @@ def genURL (*args):#input_name, output_name):#here i am collecting chunks of cod
                     if eachIOpair[1]=="sendData":
                         if p2ptype=='invio dati' and gamelevel==1: #gamelevel==0:
                             else_code=output_else_code[eachIOpair[1]].replace("inputName",input_name[1][0:8])+ '\n'#.replace("inputValue","0")+ '\n'
-                        else:
-                            else_code = output_else_code[eachIOpair[1]]+ '\n'
+                    else:
+                        else_code = output_else_code[eachIOpair[1]]+ '\n'
                 else:
                     else_code="basic.pause(100)"
                 if eachIOpair[0] in output_else_code:#special cases for forecast: get_temp
