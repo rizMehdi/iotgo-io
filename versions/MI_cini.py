@@ -563,7 +563,8 @@ package_suffix = {
  
 
 on_end = {
-  	"recieveData":   '\nradio.onReceivedValue(function (name, value) {\n\tif (name == "replace" && value == 1) {\n\t\t received = 1\n\t}\n})',
+  	# "recieveData":   '\nradio.onReceivedValue(function (name, value) {\n\tif (name == "replace" && value == 1) {\n\t\t received = 1\n\t}\n})',  	  
+    "recieveData":   '\nradio.onReceivedValue(function (name, value) {\n\tif (name == "replace") {\n\t\t received = value\n\t}\n})',
         }
 
 
