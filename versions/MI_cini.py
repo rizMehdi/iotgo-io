@@ -867,6 +867,7 @@ def genURL (*args):#input_name, output_name):#here i am collecting chunks of cod
     jscode= jscode + 'basic.forever(function () {' + '\n'
     #-----------if-else-code---------
     if_body_code=""
+    else_code=""
     if freeplaymode==True or alwaysfreeplaymode==True:
         for eachIOpair in args: #in,out
             if True:#eachIOpair[0] != "noInput" and eachIOpair[1] != "noOuput":
@@ -884,7 +885,7 @@ def genURL (*args):#input_name, output_name):#here i am collecting chunks of cod
                 if eachIOpair[1] in output_else_code:
                     if eachIOpair[1]=="sendData":
                         if p2ptype=='invio dati' and gamelevel==1: #gamelevel==0:
-                            if_body_code=output_code[eachIOpair[1]].replace("inputName",input_name[1][0:8]).replace("inputValue","1")
+                            else_code=output_code[eachIOpair[1]].replace("inputName",input_name[1][0:8]).replace("inputValue","1")
                         else:
                             else_code = output_else_code[eachIOpair[1]]+ '\n'
                 else:
