@@ -754,7 +754,7 @@ output_code = {
 "iconNone": "basic.clearScreen()\n\tbasic.pause(1000)",
 "iconSad": "basic.showIcon(IconNames.Sad)\n\tbasic.pause(1000)",
 # "sendData": "radio.sendValue(\"inputName\",inputValue)",
-"sendData": "radio.sendValue(\"inputName\",10)\n\tbasic.pause(1000)",
+"sendData": "radio.sendValue(\"inputName\",1)\n\tbasic.pause(1000)",
 "EB_whiteLEDon":"envirobit.setLEDs(envirobit.OnOff.On)",
 "EB_whiteLEDoff":"envirobit.setLEDs(envirobit.OnOff.Off)",
 "fanOff" : "pins.digitalWritePin(DigitalPin.P1,0)\n\tbasic.pause(1000)",
@@ -885,7 +885,7 @@ def genURL (*args):#input_name, output_name):#here i am collecting chunks of cod
                 if eachIOpair[1] in output_else_code:
                     if eachIOpair[1]=="sendData":
                         if p2ptype=='invio dati' and gamelevel==1: #gamelevel==0:
-                            else_code=output_code[eachIOpair[1]].replace("inputName",input_name[1][0:8])+ '\n'#.replace("inputValue","0")+ '\n'
+                            else_code=output_else_code[eachIOpair[1]].replace("inputName",input_name[1][0:8])+ '\n'#.replace("inputValue","0")+ '\n'
                         else:
                             else_code = output_else_code[eachIOpair[1]]+ '\n'
                 else:
